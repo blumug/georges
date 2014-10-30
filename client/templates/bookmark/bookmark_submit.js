@@ -54,9 +54,14 @@ Template.bookmarkSubmit.events(
 	}
 });
 
+
+// parse the input "tags"
+// return a list of string (tags)
+// ex: "#unpeu #beaucoup #alafolie"
+//  |=> [ "#unpeu", "#beaucoup", #alafolie" ]
 var createdTags = function(tags)
 {
-	var tab = [];
+	var parsedTags = [];
 	var i = 0;
 	var x;
 	var y;
@@ -71,9 +76,9 @@ var createdTags = function(tags)
 
 		if (x != -1 && (tags[x] == ' ' || tags[x] == '#' || x >= tags.length))
 		{
-			tab[i++] = tags.substr(y, x);
+			parsedTags[i++] = tags.substr(y, x);
 			tags = tags.substr(x);
 		}
 	}
-	return (tab);
+	return (parsedTags);
 }
