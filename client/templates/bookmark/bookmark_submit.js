@@ -12,7 +12,7 @@ Template.bookmarkSubmit.events(
 			{
 				url: $(events.target).find('[name=url]').val(),
 				title: $(events.target).find('[name=title]').val(),
-				summuary: $(events.target).find('[name=summuary]').val(),
+				summary: $(events.target).find('[name=summary]').val(),
 				thumbnail: "",
 				tag: "",
 				dateCreated: new Date(),

@@ -2,7 +2,7 @@
 
 /* ###### loginButtons ##### */
 
-ul .navbar-inverse .form-control
+.navbar-inverse .form-control .dropdown-menu
 {
 	color: #208FEA;
 }
