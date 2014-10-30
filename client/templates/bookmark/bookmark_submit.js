@@ -10,7 +10,6 @@ Template.bookmarkSubmit.events(
 			title: $(events.target).find('[name=title]').val()
 		};
 
-		post._id = Posts.insert(post);
 		Router.go('postPage', post);
 	}
 });
