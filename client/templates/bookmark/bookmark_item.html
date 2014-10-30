@@ -1,17 +1,19 @@
 <template name="bookmarkItem">
-  <div class="bookmark">
+  <div class="bookmark list-group-item">
     <div class="bookmark-content">
-      <input type="text" value="{{lien}}">
-      <input type="text" value="{{titre}}">
-      <input type="text" value="{{thumbnail}}">
-      <input type="text" value="{{tags}}">
-      <input type="text" value="{{dateCreating}}">
-      <input type="text" value="{{dateModify}}">
-      <input type="text" value="{{counterVisualisation}}">
-      <input type="text" value="{{counterClick}}">
-      <input type="text" value="{{versionText}}">
-      <input type="text" value="{{resum}}">
-      <input type="text" value="{{idUser}}">
+      <p>
+        {{url}}<br/>
+        {{title}}<br/>
+        {{summuary}}<br/>
+        {{thumbnail}}<br/>
+        {{tag}}<br/>
+        {{dateCreated}}<br/>
+        {{dateModified}}<br/>
+        {{counterView}}<br/>
+        {{counterClick}}<br/>
+        {{versionText}}<br/>
+        {{idUser}}<br/>
+      </p>
     </div>
   </div>
 </template>

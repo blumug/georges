@@ -1,1 +1,10 @@
 /* CSS declarations go here */
+
+/* ###### loginButtons ##### */
+
+ul .navbar-inverse .form-control
+{
+	color: #208FEA;
+}
+
+/* ######  ##### */
