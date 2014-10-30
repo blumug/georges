@@ -2,7 +2,12 @@
 
 /* ###### loginButtons ##### */
 
-.navbar-inverse .form-control .dropdown-menu
+#login-email
+{
+	color: #208FEA;
+}
+
+#login-password
 {
 	color: #208FEA;
 }
