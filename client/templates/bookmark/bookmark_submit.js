@@ -8,13 +8,15 @@ Template.bookmarkSubmit.events(
 
 		if (user !== null)
 		{
+
+			var tags = createdTags($(events.target).find('[name=tags]').val());
 			var bookmark = 
 			{
 				url: $(events.target).find('[name=url]').val(),
 				title: $(events.target).find('[name=title]').val(),
 				description: $(events.target).find('[name=description]').val(),
 				thumbnail: "",
-				tag: "",
+				tag: tags,
 				dateCreated: new Date(),
 				dateModified: new Date(),
 				counterView: 0,
@@ -51,3 +53,27 @@ Template.bookmarkSubmit.events(
 		}
 	}
 });
+
+var createdTags = function(tags)
+{
+	var tab = [];
+	var i = 0;
+	var x;
+	var y;
+
+	while (tags !== "")
+	{
+		x = tags.indexOf("#");
+		y = x++;
+
+		while (x != -1 && x < tags.length && tags[x] != ' ' && tags[x] != '#')
+			x++;
+
+		if (x != -1 && (tags[x] == ' ' || tags[x] == '#' || x >= tags.length))
+		{
+			tab[i++] = tags.substr(y, x);
+			tags = tags.substr(x);
+		}
+	}
+	return (tab);
+}
