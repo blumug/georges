@@ -12,7 +12,7 @@ Template.bookmarkSubmit.events(
 			{
 				url: $(events.target).find('[name=url]').val(),
 				title: $(events.target).find('[name=title]').val(),
-				summary: $(events.target).find('[name=summary]').val(),
+				description: $(events.target).find('[name=description]').val(),
 				thumbnail: "",
 				tag: "",
 				dateCreated: new Date(),
@@ -25,8 +25,17 @@ Template.bookmarkSubmit.events(
 
 			if (bookmark.url !== "")
 			{
-				Bookmarks.insert(bookmark);
-				Router.go('/');
+				if (Bookmarks.findOne({url: bookmark.url}) !== undefined)
+				{
+					var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>This url does already exist in your list.</p></div>');
+					$("#alertConnexion").append(e);
+					e.attr('id', 'myid');
+				}
+				else
+				{
+					Bookmarks.insert(bookmark);
+					Router.go('/');
+				}
 			}
 			else
 			{
