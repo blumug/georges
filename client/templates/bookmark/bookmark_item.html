@@ -1,12 +1,12 @@
 <template name="bookmarkItem">
   <div class="bookmark">
     <div class="bookmark-content">
-      
-  <h3></h3>    
-      {{#each tags}}
-        {{> tag}}
-      {{/each}}
-      <a href="{{pathFor 'bookmarkPage'}}" style="float: right" class="btn btn-success ">Edit</a>
+      <h3>
+        {{> titleItem}}
+        {{#each tags}}
+          {{> tag}}
+        {{/each}}
+        <a href="{{pathFor 'bookmarkPage'}}" style="float: right" class="btn btn-success ">Edit</a>
       </h3>
     </div>
   </div>
@@ -17,5 +17,9 @@
 </template>
 
 <template name="titleItem">
-  <a href="http://{{url}} " target="_blank">{{title}}</a><small><span>{{url}}</span></small>
+  {{#if url}}
+    <a href="http://{{url}} " target="_blank">{{title}}</a>
+  {{ else }}
+    <a href="http://{{url}} " target="_blank">{{url}}</a>
+  {{/if}}
 </template>
