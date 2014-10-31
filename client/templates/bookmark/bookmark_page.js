@@ -10,7 +10,7 @@ Template.bookmarkPage.events({
                 description: $(events.target).find('[name=description]').val(),
                 thumbnail: $(events.target).find('[name=thumbnail]').val(),
                 tags: tags,
-                dateCreated: $(events.target).find('[name=dateCreated]').val(),
+                dateCreated: this.dateCreated,
                 dateModified: new Date(),
                 counterView: $(events.target).find('[name=counterView]').val(),
                 counterClick: $(events.target).find('[name=counterClick]').val(),
@@ -35,6 +35,9 @@ Template.bookmarkPage.events({
 });
 Handlebars.registerHelper("prettifyDate", function(timestamp) {
     return new Date(timestamp).toLocaleDateString();
+});
+Handlebars.registerHelper("prettifyTags", function(tags) {
+    return tags.join(" ");
 });
 // parse the input "tags"
 // return a list of string (tags)

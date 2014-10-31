@@ -20,7 +20,7 @@ Template.bookmarkSubmit.events({
             };
             if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
             if (Bookmarks.findOne({
-                url: bookmark.url
+                url: bookmark.url, userId: user._id
             }) !== undefined) {
                 var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>This url does already exist in your list.</p></div>');
                 $("#alertConnexion").append(e);
