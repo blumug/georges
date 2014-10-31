@@ -16,7 +16,7 @@ Template.bookmarkSubmit.events(
 				title: $(events.target).find('[name=title]').val(),
 				description: $(events.target).find('[name=description]').val(),
 				thumbnail: "",
-				tag: tags,
+				tags: tags,
 				dateCreated: new Date(),
 				dateModified: new Date(),
 				counterView: 0,
@@ -84,6 +84,9 @@ var parsedTags = function(tags)
 	return (parsedTags);
 }
 
+// created new Element od collection Tags
+// or up the value counterWrite of the element
+// return void
 var createdTags = function(arrayTags)
 {
 	var x = 0;
