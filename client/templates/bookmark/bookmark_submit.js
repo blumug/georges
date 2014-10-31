@@ -25,6 +25,7 @@ Template.bookmarkSubmit.events({
                     $("#alertConnexion").append(e);
                     e.attr('id', 'myid');
                 } else {
+                    createdTags(tags);
                     Bookmarks.insert(bookmark);
                     Router.go('/');
                 }

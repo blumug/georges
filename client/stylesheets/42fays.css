@@ -1,5 +1,19 @@
 /* CSS declarations go here */
 
+html body
+{
+	background-color: #eee;
+}
+
+.bookmark
+{
+	background-color: #ffffff;
+	padding: 5px;
+	border: rgb(207, 207, 216) solid 1px;
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+
 /* ###### loginButtons ##### */
 
 #login-email
