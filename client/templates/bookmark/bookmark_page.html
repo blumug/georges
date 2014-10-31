@@ -1,17 +1,68 @@
 <template name="bookmarkPage">
-	<div class="bookmarkPage">
-		<p>
-			{{url}}<br/>
-			{{title}}<br/>
-			{{description}}<br/>
-			{{thumbnail}}<br/>
-			{{tag}}<br/>
-			{{prettifyDate dateCreated}}<br/>
-			{{prettifyDate dateModified}}<br/>
-			{{counterView}}<br/>
-			{{counterClick}}<br/>
-			{{versionText}}<br/>
-			{{idUser}}<br/>
-		</p>
+<form class="main form">
+    <div class="form-group" id="alertConnexion">
     </div>
+    <div class="form-group">
+        <label class="control-label" for="url">* URL</label>
+        <div class="controls">
+            <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control" required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="tags">Tags</label>
+        <div class="controls">
+            <input name="tags" id="tags" type="text" value="{{tags}}" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="title">Title</label>
+        <div class="controls">
+            <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your Bookmark" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="resume">Desciption</label>
+        <div class="controls">
+            <input name="desciption" id="desciption" type="text" value="{{description}}" placeholder="Write your desciption" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="resume">Created date</label>
+        <div class="controls">
+            <input name="createdDate" id="createdDate" type="text" value="{{prettifyDate dateCreated}}" class="form-control" disabled/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="resume">Modified date</label>
+        <div class="controls">
+            <input name="modifiedDate" id="modifiedDate" type="text" value="{{prettifyDate dateModified}}" class="form-control" disabled/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="resume">Summary</label>
+        <div class="controls">
+            <input name="summary" id="summary" type="text" value="{{summary}}" placeholder="Write your summaty" class="form-control" disabled="" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="resume">Counter view</label>
+        <div class="controls">
+            <input name="counterView" id="counterView" type="text" value="{{counterView}}" class="form-control" disabled/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="resume">Counter click</label>
+        <div class="controls">
+            <input name="counterClick" id="counterClick" type="text" value="{{counterClick}}" class="form-control" disabled/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="resume">Text version</label>
+        <div class="controls">
+            <input name="versionText" id="versionText" type="text" value="{{versionText}}" class="form-control" disabled/>
+        </div>
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary"/>
+    <input href="" style="margin-left: 10px" name="btnDelete" id="btnDelete" class="btn btn-danger" value="Delete" />
+</form>
 </template>

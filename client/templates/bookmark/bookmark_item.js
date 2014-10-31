@@ -3,3 +3,8 @@ Template.bookmarkItem.helpers({
         return (this.tags);
     }
 });
+Template.bookmarkItem.events({
+    'click #btnDelete': function() {
+        Bookmarks.remove(this._id);
+    }
+});

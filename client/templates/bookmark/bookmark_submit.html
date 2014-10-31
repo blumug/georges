@@ -1,32 +1,32 @@
 <template name="bookmarkSubmit">
-  <form class="main form">
+<form class="main form">
     <div class="form-group" id="alertConnexion">
-      
+
     </div>
     <div class="form-group">
-      <label class="control-label" for="url">* URL  <span class="label label-warning" id="spanUrl" style="visibility: hidden;" >Warning</span></label>
-      <div class="controls">
-          <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control"/>
-      </div>
+        <label class="control-label" for="url">* URL</label>
+        <div class="controls">
+            <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control" required/>
+        </div>
     </div>
     <div class="form-group">
-      <label class="control-label" for="tags">Tags</label>
-      <div class="controls">
-          <input name="tags" id="tags" type="text" value="" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
-      </div>
+        <label class="control-label" for="tags">Tags</label>
+        <div class="controls">
+            <input name="tags" id="tags" type="text" value="" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
+        </div>
     </div>
     <div class="form-group">
-      <label class="control-label" for="title">Title</label>
-      <div class="controls">
-          <input name="title" id="title" type="text" value="" placeholder="Name your Bookmark" class="form-control"/>
-      </div>
+        <label class="control-label" for="title">Title</label>
+        <div class="controls">
+            <input name="title" id="title" type="text" value="" placeholder="Name your Bookmark" class="form-control"/>
+        </div>
     </div>
     <div class="form-group">
-      <label class="control-label" for="resume">Desciption</label>
-      <div class="controls">
-          <input name="desciption" id="desciption" type="text" value="" placeholder="Write your desciption" class="form-control"/>
-      </div>
+        <label class="control-label" for="resume">Desciption</label>
+        <div class="controls">
+            <input name="desciption" id="desciption" type="text" value="" placeholder="Write your desciption" class="form-control"/>
+        </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
-  </form>
+</form>
 </template>

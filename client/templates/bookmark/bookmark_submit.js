@@ -14,28 +14,21 @@ Template.bookmarkSubmit.events({
                 dateModified: new Date(),
                 counterView: 0,
                 counterClick: 0,
+                summary: "",
                 versionText: "",
                 userId: user._id
             };
-
-            if (bookmark.url.indexOf("://") == -1)
-                bookmark.url = "http://" + bookmark.url;
-
-            if (bookmark.url !== "") {
-                if (Bookmarks.findOne({
-                    url: bookmark.url
-                }) !== undefined) {
-                    var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>This url does already exist in your list.</p></div>');
-                    $("#alertConnexion").append(e);
-                    e.attr('id', 'myid');
-                } else {
-                    createdTags(tags);
-                    Bookmarks.insert(bookmark);
-                    Router.go('/');
-                }
+            if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
+            if (Bookmarks.findOne({
+                url: bookmark.url
+            }) !== undefined) {
+                var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>This url does already exist in your list.</p></div>');
+                $("#alertConnexion").append(e);
+                e.attr('id', 'myid');
             } else {
-                document.getElementById("spanUrl").style.visibility = "visible";
-                document.getElementById("url").focus();
+                createdTags(tags);
+                Bookmarks.insert(bookmark);
+                Router.go('/');
             }
         } else {
             var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>You need to be connected.</p></div>');

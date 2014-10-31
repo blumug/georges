@@ -1,25 +1,24 @@
 <template name="bookmarkItem">
-  <div class="bookmark">
+<div class="bookmark">
     <div class="bookmark-content">
-      <h3>
+        <h3>
         {{> titleItem}}
         {{#each tags}}
-          {{> tag}}
+        {{> tag}}
         {{/each}}
+        <a href="" style="float: right; margin-left: 10px" class="btn btn-danger" name="btnDelete" id="btnDelete">Delete</a>
         <a href="{{pathFor 'bookmarkPage'}}" style="float: right" class="btn btn-success ">Edit</a>
-      </h3>
+        </h3>
     </div>
-  </div>
+</div>
 </template>
-
 <template name="tag">
-  <a href="" class="btn btn-default btn-xs">{{this}}</a>
+<a href="" class="btn btn-default btn-xs">{{this}}</a>
 </template>
-
 <template name="titleItem">
-  {{#if title}}
-    <a href="{{url}}" target="_blank">{{title}}</a>
-  {{ else }}
-    <a href="{{url}}" target="_blank">{{url}}</a>
-  {{/if}}
+{{#if title}}
+<a href="{{url}}" target="_blank">{{title}}</a>
+{{ else }}
+<a href="{{url}}" target="_blank">{{url}}</a>
+{{/if}}
 </template>

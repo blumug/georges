@@ -1,31 +1,23 @@
 /* CSS declarations go here */
 
-html body
-{
-	background-color: #eee;
+html body {
+    background-color: #eee;
 }
-
-.bookmark
-{
-	background-color: #ffffff;
-	padding: 5px;
-	padding-right: 15px;
-	padding-left: 15px;
-	border: rgb(207, 207, 216) solid 1px;
-	border-radius: 5px;
-	margin-bottom: 3px;
+.bookmark {
+    background-color: #ffffff;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: rgb(207, 207, 216) solid 1px;
+    border-radius: 5px;
+    margin-bottom: 3px;
 }
-
 /* ###### loginButtons ##### */
 
-#login-email
-{
-	color: #208FEA;
+#login-email {
+    color: #208FEA;
 }
-
-#login-password
-{
-	color: #208FEA;
+#login-password {
+    color: #208FEA;
 }
-
 /* ######  ##### */
