@@ -1,7 +1,8 @@
 <template name="bookmarkItem">
   <div class="bookmark">
     <div class="bookmark-content">
-      <h3><a href="http://{{url}} " target="_blank">{{title}}</a><small><span>{{url}}</span></small>
+      
+  <h3></h3>    
       {{#each tags}}
         {{> tag}}
       {{/each}}
@@ -13,4 +14,8 @@
 
 <template name="tag">
   <a href="" class="btn btn-default btn-xs">{{this}}</a>
+</template>
+
+<template name="titleItem">
+  <a href="http://{{url}} " target="_blank">{{title}}</a><small><span>{{url}}</span></small>
 </template>
