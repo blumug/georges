@@ -1,2 +1,2 @@
-Meteor.subscribe('bookmarks');
+Meteor.subscribe('bookmarks', Meteor.userId());
 Meteor.subscribe('tags');

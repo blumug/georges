@@ -15,7 +15,7 @@ Template.bookmarkSubmit.events({
                 counterView: 0,
                 counterClick: 0,
                 versionText: "",
-                idUser: user._id
+                userId: user._id
             };
             if (bookmark.url !== "") {
                 if (Bookmarks.findOne({
