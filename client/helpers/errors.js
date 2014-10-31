@@ -1,4 +1,4 @@
-Errors = Mongo.collection(null);
+Errors = Mongo.Collection(null);
 throwError = function(message) {
     Errors.insert({
         message: message
