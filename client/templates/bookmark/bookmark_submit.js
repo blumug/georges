@@ -9,7 +9,7 @@ Template.bookmarkSubmit.events(
 		if (user !== null)
 		{
 
-			var tags = createdTags($(events.target).find('[name=tags]').val());
+			var tags = parsedTags($(events.target).find('[name=tags]').val());
 			var bookmark = 
 			{
 				url: $(events.target).find('[name=url]').val(),
@@ -35,6 +35,7 @@ Template.bookmarkSubmit.events(
 				}
 				else
 				{
+
 					Bookmarks.insert(bookmark);
 					Router.go('/');
 				}
@@ -59,7 +60,7 @@ Template.bookmarkSubmit.events(
 // return a list of string (tags)
 // ex: "#unpeu #beaucoup #alafolie"
 //  |=> [ "#unpeu", "#beaucoup", #alafolie" ]
-var createdTags = function(tags)
+var parsedTags = function(tags)
 {
 	var parsedTags = [];
 	var i = 0;
@@ -81,4 +82,31 @@ var createdTags = function(tags)
 		}
 	}
 	return (parsedTags);
+}
+
+var createdTags = function(arrayTags)
+{
+	var x = 0;
+	var newTag = 
+	{
+		name: "",
+		counterWrite: 1
+	};
+
+	while (x < arrayTags.length)
+	{
+		var tag = Tags.findOne({name: arrayTags[x]});
+
+		if (tag == undefined)
+		{
+			newTag.name = arrayTags[x]
+			Tags.insert(newTag);
+		}
+		else
+		{
+			Meteor.call("upCounterWrite", tag._id);
+		}
+
+		x++;
+	}
 }
