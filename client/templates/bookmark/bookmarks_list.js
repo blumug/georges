@@ -1,9 +1,16 @@
 Template.bookmarksList.helpers({
     bookmarks: function() {
+        var filter = Session.get('searchBar');
         if (Meteor.user()) {
-            return (Bookmarks.find({
-                userId: Meteor.user()._id
-            }))
+            if (filter === undefined) {
+                return (Bookmarks.find({
+                    userId: Meteor.user()._id
+                }));
+            } else {
+                return (Bookmarks.find({
+                    tags: filter
+                }, {sort: {dateCreated: -1}}));
+            }
         }
     }
 });
