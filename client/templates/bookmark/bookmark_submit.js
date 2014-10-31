@@ -17,6 +17,10 @@ Template.bookmarkSubmit.events({
                 versionText: "",
                 userId: user._id
             };
+
+            if (bookmark.url.indexOf("http://") == -1)
+                bookmark.url = "http://" + bookmark.url;
+
             if (bookmark.url !== "") {
                 if (Bookmarks.findOne({
                     url: bookmark.url
