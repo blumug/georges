@@ -31,6 +31,7 @@ Template.bookmarkPage.events({
     },
     'click #btnDelete': function() {
         Bookmarks.remove(this._id);
+        Router.go('/');
     }
 });
 Handlebars.registerHelper("prettifyDate", function(timestamp) {

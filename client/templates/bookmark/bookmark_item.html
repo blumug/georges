@@ -6,11 +6,29 @@
         {{#each tags}}
         {{> tag}}
         {{/each}}
-        <a href="" style="float: right; margin-left: 10px" class="btn btn-danger" name="btnDelete" id="btnDelete">Delete</a>
+        <a href="" style="float: right; margin-left: 10px" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete</a>
         <a href="{{pathFor 'bookmarkPage'}}" style="float: right" class="btn btn-success ">Edit</a>
         </h3>
     </div>
 </div>
+
+<div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Warning</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want delete this bookmark</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    <button type="button" name="btnDelete" id="btnDelete" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 <template name="tag">
 <a href="" class="btn btn-default btn-xs">{{this}}</a>
