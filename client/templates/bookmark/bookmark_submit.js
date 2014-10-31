@@ -63,18 +63,18 @@ var createdTags = function(tags)
 {
 	var parsedTags = [];
 	var i = 0;
-	var x;
+	var x = 0;
 	var y;
 
-	while (tags !== "")
+	while (tags !== "" && y != -1)
 	{
 		x = tags.indexOf("#");
 		y = x++;
 
-		while (x != -1 && x < tags.length && tags[x] != ' ' && tags[x] != '#')
+		while (y != -1 && x < tags.length && tags[x] != ' ' && tags[x] != '#')
 			x++;
 
-		if (x != -1 && (tags[x] == ' ' || tags[x] == '#' || x >= tags.length))
+		if (y != -1 && (tags[x] == ' ' || tags[x] == '#' || x >= tags.length))
 		{
 			parsedTags[i++] = tags.substr(y, x);
 			tags = tags.substr(x);
