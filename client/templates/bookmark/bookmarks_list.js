@@ -2,7 +2,7 @@ Template.bookmarksList.helpers({
     bookmarks: function() {
         var filter = Session.get('searchBar');
         if (Meteor.user()) {
-            if (filter === undefined) {
+            if (filter === undefined || filter === '') {
                 return (Bookmarks.find({
                     userId: Meteor.user()._id
                 }));
