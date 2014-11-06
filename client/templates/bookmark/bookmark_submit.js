@@ -20,15 +20,20 @@ Template.bookmarkSubmit.events({
             };
             if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
             if (Bookmarks.findOne({
-                url: bookmark.url, userId: user._id
+                url: bookmark.url,
+                userId: user._id
             }) !== undefined) {
                 var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>This url does already exist in your list.</p></div>');
                 $("#alertConnexion").append(e);
                 e.attr('id', 'myid');
             } else {
                 createdTags(tags);
-                Bookmarks.insert(bookmark);
-                Router.go('/');
+                Meteor.call('bookmarkInsert', bookmark, function(error, result) {
+                    if (error) return alert(error.reason);
+                    Router.go('/');
+                });
+                // Bookmarks.insert(bookmark);
+                // Router.go('/');
             }
         } else {
             var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>You need to be connected.</p></div>');
