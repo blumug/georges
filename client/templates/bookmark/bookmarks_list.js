@@ -16,7 +16,7 @@ Template.bookmarksList.helpers({
                 {
                     var parsedTags = ParsedTags(filter);
 
-                    return (Bookmarks.find({tags: { $elemMatch: { $all: { parsedTags }}}}, {sort: {dateCreated: -1}}));
+                    return (Bookmarks.find({tags: { $in: { parsedTags }}}, {sort: {dateCreated: -1}}));
                 }
                 else
                 {
