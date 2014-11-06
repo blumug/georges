@@ -19,7 +19,7 @@ Template.bookmarksList.helpers({
                 }
                 else
                 {
-
+                    return (Bookmarks.find({url: /.*filter.*/}, {sort: {dateCreated: -1}}));
                 }
             }
         }
