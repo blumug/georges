@@ -5,3 +5,10 @@ Template.header.events(
 		Session.set("searchBar", $("#tagSearch").val());
 	}
 });
+
+Template.header.helpers({
+	'searchBar': function()
+	{
+		return Session.get("searchBar");
+	}
+})
