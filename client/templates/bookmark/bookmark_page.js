@@ -45,5 +45,9 @@ Handlebars.registerHelper("prettifyDate", function(timestamp) {
     return new Date(timestamp).toLocaleDateString();
 });
 Handlebars.registerHelper("prettifyTags", function(tags) {
-    return tags.join(" ");
+  var tagString = '';
+    _.each(tags, function (tag) {
+      tagString = '#' + tag + ' ';
+    })
+    return tagString;
 });
