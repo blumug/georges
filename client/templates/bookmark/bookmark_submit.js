@@ -15,17 +15,9 @@ Template.bookmarkSubmit.events({
             CreatedTags(tags);
             Meteor.call('bookmarkInsert', bookmark, function(error, result) {
                 if (error) return alert(error.reason);
-                if (result.bookmarkExists) {
-                    var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>This url does already exist in your list.</p></div>');
-                    $("#alertConnexion").append(e);
-                    e.attr('id', 'myid');
-                }
+                if (result.bookmarkExists) DisplayErrorSubmit("This url does already exist in your list.");
                 Router.go('/');
             });
-        } else {
-            var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>You need to be connected.</p></div>');
-            $("#alertConnexion").append(e);
-            e.attr('id', 'myid');
-        }
+        } else DisplayErrorSubmit("You need to be connected.");
     }
 });

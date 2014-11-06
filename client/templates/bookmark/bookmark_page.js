@@ -30,14 +30,10 @@ Template.bookmarkPage.events({
                     Router.go('/');
                 });
             } else {
-                var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>Url already use.</p></div>');
-                $("#alertConnexion").append(e);
-                e.attr('id', 'myid');
+                DisplayErrorSubmit("Url already use.");
             }
         } else {
-            var e = $('<div class="alert alert-dismissable alert-warning"><button type="button" class="close" data-dismiss="alert">×</button><h4>Warning!</h4><p>You need to be connected.</p></div>');
-            $("#alertConnexion").append(e);
-            e.attr('id', 'myid');
+            DisplayErrorSubmit("You need to be connected.");
         }
     },
     'click #btnDelete': function() {
