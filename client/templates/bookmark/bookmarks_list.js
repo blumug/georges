@@ -20,7 +20,7 @@ Template.bookmarksList.helpers({
                     })
                 } else {
                     return (Bookmarks.find({
-                        url: /filter/
+                        $where: "this.url.indexOf(\"" + filter + "\") != -1"
                     }, {
                         sort: {
                             dateCreated: -1
