@@ -14,12 +14,13 @@ Template.bookmarksList.helpers({
             {
                 if (filter.indexOf("#") != -1)
                 {
-                    var parsedTags = ParsedTags(filter)
-                    return (Bookmarks.find({tags: { $all: parsedTags}}, {sort: {dateCreated: -1}}));
+                    var parsedTags = ParsedTags(filter);
+
+                    return (Bookmarks.find({tags: { $elemMatch: { $all: { parsedTags }}}}, {sort: {dateCreated: -1}}));
                 }
                 else
                 {
-                    return (Bookmarks.find({url: /.*filter.*/}, {sort: {dateCreated: -1}}));
+                    return (Bookmarks.find({url: /filter/}, {sort: {dateCreated: -1}}));
                 }
             }
         }
