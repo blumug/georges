@@ -1,8 +1,63 @@
 /* CSS declarations go here */
+body {
+  padding-top: 56px;
+  /*background-color: white;*/
+}
 
+.textLayer div {
+    padding-top:5px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+.textLayer div:hover {
+    text-decoration: underline;
+    background-color: rgba(140,140,140, 0.5);
+    border-radius:5px;
+    cursor: pointer;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.2s;
+
+}
+
+.document-item {
+}
+
+.search-bar {
+    margin-top:20px;
+}
+
+.navbar-jbl42 {
+    background-color: #2c3e50;
+}
+
+.navbar-jbl42 a {
+    color: white;
+} 
+
+.navbar-jbl42 .nav > li > a:hover,
+.navbar-jbl42 .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #34495e;
+}
+
+.panel-collapse {
+    background-color: #f5f5f5;
+}
+
+/*
 html body {
     background-color: #eee;
 }
+*/
 .bookmark {
     background-color: #ffffff;
     padding: 5px;
@@ -14,13 +69,20 @@ html body {
 }
 /* ###### loginButtons ##### */
 
-#login-email {
+#login-other-options a {
+    color: black;
+}
+
+#login-dropdown-list.open a.dropdown-toggle {
+    background: black;
+}
+/*#login-email {
     color: #208FEA;
 }
 #login-password {
     color: #208FEA;
 }
-/* ######  ##### */
+*//* ######  ##### */
 
 div.bookmark-content {
     min-height: 44px;
@@ -32,6 +94,7 @@ div.url {
 }
 
 div.tags {
+    margin-top:6px;
     margin-bottom:4px;
 }
 div.tags a{
