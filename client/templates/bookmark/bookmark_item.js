@@ -31,6 +31,15 @@ Template.bookmarkItem.events({
 Template.tag.events({
     'click a': function() {
         var bar = Session.get("searchBar");
-        if (bar == undefined || bar == '' || bar.indexOf(this.toString()) != -1) Session.set("searchBar", bar + " " + this.toString());
+        var tag = this.toString();
+        if (!tag) return;
+
+        if (tag[0] != '#') {
+            tag = '#' + tag;
+        }
+        if (bar == undefined || bar == '' || bar.indexOf(tag) == -1) {
+            bar = bar + " " + tag;
+            Session.set("searchBar", bar);
+        }
     }
 });
