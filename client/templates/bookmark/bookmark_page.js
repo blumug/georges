@@ -24,8 +24,7 @@ Template.bookmarkPage.events({
                 url: bookmark.url,
                 userId: bookmark.userId
             }).count() == 0) {
-                Meteor.call('removeBookmark', this._id);
-                Meteor.call('bookmarkUpdate', bookmark, function(error, result) {
+                Meteor.call('bookmarkUpdate', bookmark, this._id, function(error, result) {
                     if (error) return alert(error.reason);
                     Router.go('/');
                 });

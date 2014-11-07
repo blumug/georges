@@ -15,7 +15,10 @@ Template.bookmarkSubmit.events({
             CreatedTags(tags);
             Meteor.call('bookmarkInsert', bookmark, function(error, result) {
                 if (error) return alert(error.reason);
-                if (result.bookmarkExists) DisplayErrorSubmit("This url does already exist in your list.");
+                if (result.bookmarkExists) {
+                    DisplayErrorSubmit("This url does already exist in your list.");
+                    return;
+                }
                 Router.go('/');
             });
         } else DisplayErrorSubmit("You need to be connected.");
