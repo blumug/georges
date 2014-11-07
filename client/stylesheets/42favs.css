@@ -9,7 +9,7 @@ html body {
     padding-right: 15px;
     padding-left: 15px;
     border: rgb(207, 207, 216) solid 1px;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-bottom: 3px;
 }
 /* ###### loginButtons ##### */
@@ -21,3 +21,24 @@ html body {
     color: #208FEA;
 }
 /* ######  ##### */
+
+div.bookmark-content {
+    min-height: 44px;
+}
+
+div.url {
+    font-size:20px;
+    margin-bottom:0;
+}
+
+div.tags {
+    margin-bottom:4px;
+}
+div.tags a{
+    font-size:12px;
+}
+
+div.actions {
+    float: right;
+    margin-top:12px;
+}

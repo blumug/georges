@@ -1,14 +1,19 @@
 <template name="bookmarkItem">
 <div class="bookmark">
     <div class="bookmark-content">
-        <h3>
+        <div class="actions">
+            <a href="{{pathFor 'bookmarkPage'}}" class="btn btn-success ">Edit</a>
+            <a href="" class="btn btn-danger btnPreviewDelete">Delete</a>
+        </div>
+
+        <div class="url">
         {{> titleItem}}
+        </div>
+        <div class="tags">
         {{#each tags}}
         {{> tag}}
         {{/each}}
-        <a href="" style="float: right; margin-left: 10px" class="btn btn-danger btnPreviewDelete">Delete</a>
-        <a href="{{pathFor 'bookmarkPage'}}" style="float: right" class="btn btn-success ">Edit</a>
-        </h3>
+        </div>
     </div>
 </div>
 </template>
