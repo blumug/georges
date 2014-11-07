@@ -16,20 +16,21 @@ Meteor.publish('bookmarks', function(option, filter) {
                 }
             })
         } else {
-            return Bookmarks.find({userId: this.userId,
+            return Bookmarks.find({
+                userId: this.userId,
                 $or: [{
                     url: {
-                        $regex: "" + filter + "*",
+                        $regex: filter,
                         $options: "si"
                     }
                 }, {
                     title: {
-                        $regex: "" + filter + "*",
+                        $regex: filter,
                         $options: "si"
                     }
                 }, {
                     description: {
-                        $regex: "" + filter + "*",
+                        $regex: filter,
                         $options: "si"
                     }
                 }]
