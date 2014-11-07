@@ -8,7 +8,7 @@ Template.bookmarkItem.events({
         Bookmarks.remove(this._id);
     },
     'click .btnPreviewDelete': function(event, tmp) {
-        Session.set("id-delete", this._id);
+        var idDelete = this._id;
         bootbox.dialog({
             message: "Do you want delete this bookmark",
             title: "Warning",
@@ -21,7 +21,7 @@ Template.bookmarkItem.events({
                     label: "Delete",
                     className: "btn-danger",
                     callback: function() {
-                        Meteor.call("removeBookmark", Session.get("id-delete"));
+                        Meteor.call("removeBookmark", idDelete);
                     }
                 }
             }

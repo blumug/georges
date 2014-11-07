@@ -37,7 +37,7 @@ Template.bookmarkPage.events({
         }
     },
     'click .btnDelete': function() {
-        Session.set("id-delete", this._id);
+        var idDelete = this._id;
         bootbox.dialog({
             message: "Do you want delete this bookmark",
             title: "Warning",
@@ -50,7 +50,7 @@ Template.bookmarkPage.events({
                     label: "Delete",
                     className: "btn-danger",
                     callback: function() {
-                        Meteor.call("removeBookmark", Session.get("id-delete"));
+                        Meteor.call("removeBookmark", idDelete);
                         Router.go('/');
                     }
                 }
