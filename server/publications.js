@@ -24,7 +24,7 @@ Meteor.publish('bookmarks', function(option, filter) {
         }, {
           $where: "this.description.indexOf(\"" + filter + "\") != -1"
         }]
-      }, options);
+      }, option);
     }
   }
 });
