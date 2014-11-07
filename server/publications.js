@@ -1,5 +1,5 @@
-Meteor.publish('bookmarks', function(options) {
-  return Bookmarks.find({}, options);
+Meteor.publish('bookmarks', function() {
+  return Bookmarks.find({});
 });
 Meteor.publish('tags', function() {
     return Tags.find();
