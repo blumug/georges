@@ -36,18 +36,35 @@ Template.bookmarkPage.events({
             DisplayErrorSubmit("You need to be connected.");
         }
     },
-    'click #btnDelete': function() {
-        Bookmarks.remove(this._id);
-        Router.go('/');
+    'click .btnDelete': function() {
+        Session.set("id-delete", this._id);
+        bootbox.dialog({
+            message: "Do you want delete this bookmark",
+            title: "Warning",
+            buttons: {
+                main: {
+                    label: "Cancel",
+                    className: "btn-primary"
+                },
+                danger: {
+                    label: "Delete",
+                    className: "btn-danger",
+                    callback: function() {
+                        Meteor.call("removeBookmark", Session.get("id-delete"));
+                        Router.go('/');
+                    }
+                }
+            }
+        });
     }
 });
 Handlebars.registerHelper("prettifyDate", function(timestamp) {
     return new Date(timestamp).toLocaleDateString();
 });
 Handlebars.registerHelper("prettifyTags", function(tags) {
-  var tagString = '';
-    _.each(tags, function (tag) {
-      tagString = '#' + tag + ' ';
+    var tagString = '';
+    _.each(tags, function(tag) {
+        tagString = '#' + tag + ' ';
     })
     return tagString;
 });
