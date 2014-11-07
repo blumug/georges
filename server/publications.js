@@ -18,11 +18,7 @@ Meteor.publish('bookmarks', function(option, filter) {
     } else {
       return Bookmarks.find({
         $or: [{
-          $where: "this.url.indexOf(\"" + filter + "\") != -1"
-        }, {
-          $where: "this.title.indexOf(\"" + filter + "\") != -1"
-        }, {
-          $where: "this.description.indexOf(\"" + filter + "\") != -1"
+          url: { $regex: "" + filter + "*", $options: "si" }
         }]
       }, option);
     }
