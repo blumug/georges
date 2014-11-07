@@ -7,6 +7,7 @@ Meteor.publish('bookmarks', function(option, filter) {
         if (filter.indexOf("#") != -1) {
             var parsedTags = ParsedTags(filter);
             return Bookmarks.find({
+                userId: this.userId,
                 tags: {
                     $in: parsedTags
                 }
