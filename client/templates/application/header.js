@@ -1,6 +1,15 @@
 Template.header.events({
     'keyup #tagSearch': function(events) {
-        Session.set("searchBar", $("#tagSearch").val());
+        var setFilter = function () {
+            var filter = $("#tagSearch").val();
+            Router.go('bookmarksList', {}, {query: {filter: filter}});
+        }
+        if ($("#tagSearch").val() == '') {
+            setFilter();
+            return;
+        }
+        var debounced = _.debounce(setFilter, 1000);
+        debounced();
     }
 });
 Template.header.helpers({
