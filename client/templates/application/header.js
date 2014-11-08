@@ -10,6 +10,13 @@ Template.header.events({
         }
         var debounced = _.debounce(setFilter, 600);
         debounced();
+    },
+
+    'keydown #tagSearch': function (e) {
+        if(e.keyCode == 13) {
+          e.preventDefault();
+          return false;
+        }
     }
 });
 Template.header.helpers({
