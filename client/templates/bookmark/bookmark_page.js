@@ -63,7 +63,7 @@ Handlebars.registerHelper("prettifyDate", function(timestamp) {
 Handlebars.registerHelper("prettifyTags", function(tags) {
     var tagString = '';
     _.each(tags, function(tag) {
-        tagString = '#' + tag + ' ';
+        tagString = '#' + tag + ' ' + tagString;
     })
-    return tagString;
+    return tagString.trim();
 });
