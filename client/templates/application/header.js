@@ -8,7 +8,7 @@ Template.header.events({
             setFilter();
             return;
         }
-        var debounced = _.debounce(setFilter, 600);
+        var debounced = _.debounce(setFilter, 1200);
         debounced();
     },
 
