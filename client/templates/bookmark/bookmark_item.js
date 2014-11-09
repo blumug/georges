@@ -41,8 +41,7 @@ Template.tag.events({
         if (bar == undefined || bar == '' || bar.indexOf(tag) == -1) {
             bar = tag + " " + bar;
         }
-        var filter = bar;
-        console.log('calling go')
+        var filter = bar.trim();
         Router.go('bookmarksList', {}, {query: {filter: filter}});
     }
 });
