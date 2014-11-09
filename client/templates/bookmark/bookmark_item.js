@@ -29,8 +29,9 @@ Template.bookmarkItem.events({
     }
 });
 Template.tag.events({
-    'click a': function() {
-        var bar = Session.get("searchBar");
+    'click a': function(e) {
+        e.preventDefault();
+        var bar = $("#tagSearch").val();
         var tag = this.toString();
         if (!tag) return;
 
@@ -38,8 +39,10 @@ Template.tag.events({
             tag = '#' + tag;
         }
         if (bar == undefined || bar == '' || bar.indexOf(tag) == -1) {
-            bar = bar + " " + tag;
-            Session.set("searchBar", bar);
+            bar = tag + " " + bar;
         }
+        var filter = bar;
+        console.log('calling go')
+        Router.go('bookmarksList', {}, {query: {filter: filter}});
     }
 });

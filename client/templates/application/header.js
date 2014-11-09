@@ -2,6 +2,7 @@ Template.header.events({
     'keyup #tagSearch': function(events) {
         var setFilter = function () {
             var filter = $("#tagSearch").val();
+            console.log(filter)
             Router.go('bookmarksList', {}, {query: {filter: filter}});
         }
         if ($("#tagSearch").val() == '') {
