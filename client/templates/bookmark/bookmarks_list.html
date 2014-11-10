@@ -4,7 +4,9 @@
       {{> bookmarkItem}}
     {{/each}}
     {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
+      <div class="load-more">
+      <a href="{{nextPath}}">Load more</a>
+      </div>
     {{/if}}
   </div>
 </template>
