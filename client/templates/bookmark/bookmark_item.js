@@ -7,7 +7,7 @@ Template.bookmarkItem.events({
     'click #btnDelete': function() {
         Bookmarks.remove(this._id);
     },
-    'click .btnPreviewDelete': function(event, tmp) {
+    'click .btnPreviewDelete': function(event) {
         var idDelete = this._id;
         bootbox.dialog({
             message: "Do you want delete this bookmark",
@@ -28,6 +28,16 @@ Template.bookmarkItem.events({
         });
     }
 });
+
+Template.titleItem.events({
+    'click a': function(e) {
+      e.preventDefault();
+      Bookmarks.update({_id: this._id}, {$inc: { counterClick: 1} });
+      var link = $(e.target).attr('href');
+      window.open(link, '_blank');
+    }
+});
+
 Template.tag.events({
     'click a': function(e) {
         e.preventDefault();

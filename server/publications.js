@@ -12,11 +12,7 @@ Meteor.publish('bookmarks', function(option, filter) {
                 tags: {
                     $in: parsedTags
                 }
-            }, {
-                sort: {
-                    dateCreated: -1
-                }
-            })
+            }, option)
         } else {
             return Bookmarks.find({
                 userId: this.userId,
