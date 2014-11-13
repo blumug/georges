@@ -40,6 +40,9 @@ Meteor.publish('bookmark', function(id) {
     check(id, String);
     return Bookmarks.find(id);
 });
+Meteor.publish('allBookmarks', function() {
+    return Bookmarks.find({ userId: this.userId});
+});
 Meteor.publish('tags', function() {
     return Tags.find();
 });
