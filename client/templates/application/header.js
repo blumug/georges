@@ -27,6 +27,12 @@ Template.header.events({
     'click #cleanSearch': function(e) {
         e.preventDefault();
         document.getElementById("tagSearch").value = "";
+        var filter = document.getElementById("tagSearch").value;
+            Router.go('bookmarksList', {}, {
+                query: {
+                    filter: filter
+                }
+            });
     }
 });
 Template.header.helpers({
