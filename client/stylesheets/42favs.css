@@ -6,6 +6,11 @@ body {
   margin-bottom: 60px;
 }
 
+.unvisible
+{
+  visibility: hidden;
+}
+
 .textLayer div {
     padding-top:5px;
     -o-transition:.5s;

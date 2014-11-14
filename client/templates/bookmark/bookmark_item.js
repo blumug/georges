@@ -1,6 +1,13 @@
 Template.bookmarkItem.helpers({
     tags: function() {
         return (this.tags);
+    },
+    status: function()
+    {
+        if (this.summary.status !== "empty")
+            return "";
+        else
+            return "unvisible";
     }
 });
 Template.bookmarkItem.events({
