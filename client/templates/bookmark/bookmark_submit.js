@@ -15,8 +15,8 @@ Template.bookmarkSubmit.events({
             CreatedTags(tags);
             Meteor.call('bookmarkInsert', bookmark, function(error, result) {
                 if (error) return alert(error.reason);
-                if (result.bookmarkExists) {
-                    DisplayErrorSubmit("This url does already exist in your list.");
+                if (!result.success) {
+                    DisplayErrorSubmit(result.message);
                     return;
                 }
                 Router.go('/');
