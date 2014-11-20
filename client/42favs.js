@@ -1,4 +1,5 @@
 Meteor.subscribe('tags');
+Meteor.subscribe('favorites');
 if (Meteor.isClient) {
   Deps.autorun(function() {
     if(Accounts.loginServicesConfigured() && Meteor.userId()) {

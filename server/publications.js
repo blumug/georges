@@ -1,5 +1,5 @@
 Meteor.publish('bookmarks', function(option, filter) {
-    console.log('bookmarks with filter: ' + filter) 
+    console.log('bookmarks with filter: ' + filter)
     if (!filter || filter === '') {
         return (Bookmarks.find({
             userId: this.userId
@@ -41,8 +41,13 @@ Meteor.publish('bookmark', function(id) {
     return Bookmarks.find(id);
 });
 Meteor.publish('allBookmarks', function() {
-    return Bookmarks.find({ userId: this.userId});
+    return Bookmarks.find({
+        userId: this.userId
+    });
 });
 Meteor.publish('tags', function() {
     return Tags.find();
+});
+Meteor.publish('favorites', function() {
+    return Favorites.find();
 });

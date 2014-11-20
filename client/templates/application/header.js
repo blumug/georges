@@ -21,6 +21,7 @@ Template.header.events({
     'keydown #tagSearch': function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
+            $("#favorite").removeClass("myUnvisibility");
             return false;
         }
     },
@@ -38,5 +39,9 @@ Template.header.events({
 Template.header.helpers({
     'searchBar': function() {
         return Session.get("searchBar");
+    },
+    'listFavorite': function()
+    {
+        return Favorites.find({userId: Meteor.userId()});
     }
 })
