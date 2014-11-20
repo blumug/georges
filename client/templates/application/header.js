@@ -2,7 +2,6 @@ var delayed;
 Template.header.events({
     'keyup #tagSearch': function(events) {
         Session.set("searchBar", $("#tagSearch").val());
-        $("#favorite").removeClass("myUnvisibility");
         if (delayed) {
             clearTimeout(delayed);
         }

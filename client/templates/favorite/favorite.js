@@ -24,5 +24,12 @@ Template.favorite.helpers({
     'search': function()
     {
     	return Session.get("searchBar"); 	
+    },
+    'myUnvisibility': function()
+    {
+        if (Session.get("searchBar") === "")
+            return "myUnvisibility";
+        else
+            return "";
     }
 });
