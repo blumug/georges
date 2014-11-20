@@ -1,6 +1,8 @@
 var delayed;
 Template.header.events({
     'keyup #tagSearch': function(events) {
+        Session.set("searchBar", $("#tagSearch").val());
+        $("#favorite").removeClass("myUnvisibility");
         if (delayed) {
             clearTimeout(delayed);
         }
@@ -21,7 +23,6 @@ Template.header.events({
     'keydown #tagSearch': function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
-            $("#favorite").removeClass("myUnvisibility");
             return false;
         }
     },

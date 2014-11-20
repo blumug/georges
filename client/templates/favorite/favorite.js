@@ -23,6 +23,6 @@ Template.favorite.helpers({
     },
     'search': function()
     {
-    	return $("#tagSearch").val(); 	
+    	return Session.get("searchBar"); 	
     }
 });
