@@ -4,7 +4,7 @@ Texapi.analyzeText = function(url) {
     var response = Meteor.http.post("http://texapi.jbl2024.com/api/v1/text/analyze/", {
         timeout: 5000,
         params: {
-            "url": "url",
+            "url": url,
         },
         headers: {
             'Authorization': 'Token ' + Meteor.settings.texapi
