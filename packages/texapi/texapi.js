@@ -7,7 +7,7 @@ Texapi.analyzeText = function(url) {
             "url": "url",
         },
         headers: {
-            'Authorization': 'Token ' + Meteor.settings.Texapi
+            'Authorization': 'Token ' + Meteor.settings.texapi
         }
     });
     if (response.statusCode === 200) {

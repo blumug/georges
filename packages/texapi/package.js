@@ -1,6 +1,6 @@
 Package.describe({
   name: 'texapi',
-  summary: "texapi package",
+  summary: "Texapi package",
   version: '1.0.0'
 });
 
