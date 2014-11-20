@@ -27,7 +27,7 @@ Template.favorite.helpers({
     },
     'myUnvisibility': function()
     {
-        if (Session.get("searchBar") === "")
+        if (Session.get("searchBar") === undefined || Session.get("searchBar") === "")
             return "myUnvisibility";
         else
             return "";
