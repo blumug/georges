@@ -4,10 +4,10 @@ Template.bookmarkItem.helpers({
     },
     status: function()
     {
-        if (this.summary.status !== "empty")
-            return "";
-        else
+        if (this.summary.text == "")
             return "unvisible";
+        else
+            return "";
     }
 });
 Template.bookmarkItem.events({
