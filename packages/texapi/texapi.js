@@ -30,6 +30,7 @@ Texapi.getText = function(id) {
             id: response.data.id,
             status: response.data.status,
             text: response.data.summary,
+            readable: response.data.readable,
         };
     } else {
         throw new Meteor.Error(500, "Texapi call failed with error: " + response.status_txt);

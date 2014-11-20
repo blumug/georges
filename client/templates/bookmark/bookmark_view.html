@@ -1,5 +1,15 @@
 <template name="bookmarkView">
-	<div class="view" id="view">
-		{{summary}}
-	</div>
+<div class="resume" id="resume">
+    {{#if title}}
+    <h4>{{title}}</h4>
+    {{ else }}
+    <h4>{{url}}</h4>
+    {{/if}}
+</div>
+<div id="summary">
+    {{summary}}
+</div>
+<div class="view" id="view">
+    {{readable}}
+</div>
 </template>
