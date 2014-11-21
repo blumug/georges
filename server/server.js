@@ -1,5 +1,7 @@
 Meteor.startup(function() {
     console.log("startup");
+    Houston.add_collection(Meteor.users);
+    Houston.add_collection(Houston._admins);
     if (Meteor.users.find().count() === 0) {
         console.log("createUser");
         _.each(Meteor.settings.users, function(user) {
@@ -14,6 +16,7 @@ Meteor.startup(function() {
             if (user.roles.length > 0) {
                 Roles.addUsersToRoles(id, user.roles);
             }
+            Houston._admins.insert({"user_id": id});
         });
     }
 });
