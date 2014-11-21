@@ -7,7 +7,7 @@
         "roles": ["admin"]
     }, {
         "name": "admin",
-        "email": "admin@gmail.com",
+        "email": "admin@jbl42.com",
         "password": "admin",
         "roles": ["admin"]
     }]
