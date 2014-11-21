@@ -1,10 +1,17 @@
 <template name="bookmarkView">
 <div class="resume" id="resume">
-    {{#if title}}
-    <h4>{{title}}</h4>
-    {{ else }}
-    <h4>{{url}}</h4>
-    {{/if}}
+    <div class="titleView">
+        {{#if title}}
+        <h4>{{title}}</h4>
+        {{ else }}
+        <h4>{{url}}</h4>
+        {{/if}}
+    </div>
+    <div class="refresh">
+        <button class="btn refreshView">
+        	<i id="nuage" class="fa fa-3x fa-cloud-download"></i>
+        </button>
+    </div>
 </div>
 <div id="summary">
     {{{summary}}}

@@ -12,10 +12,9 @@ Template.bookmarkPage.events({
         tags: tags,
         dateCreated: this.dateCreated,
         dateModified: new Date(),
-        counterView: $(events.target).find('[name=counterView]').val(),
-        counterClick: $(events.target).find('[name=counterClick]').val(),
-        summary: $(events.target).find('[name=summary]').val(),
-        versionText: $(events.target).find('[name=versionText]').val(),
+        counterView: this.counterView,
+        counterClick: this.counterView,
+        summary: this.summary,
         userId: user._id
       };
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
