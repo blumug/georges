@@ -3,10 +3,12 @@
     "users": [{
         "name": "flavien",
         "email": "flavien.pensato@gmail.com",
+        "password": "flavien",
         "roles": ["admin"]
     }, {
         "name": "admin",
         "email": "admin@gmail.com",
+        "password": "admin",
         "roles": ["admin"]
     }]
 }
