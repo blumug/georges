@@ -2,6 +2,7 @@
     "texapi": "TOKEN_TEXAPI",
     "users": [{
         "name": "toto",
+        "password": "toto",
         "email": "toto@toto-world.com",
         "roles": ["toto"]
     }]
