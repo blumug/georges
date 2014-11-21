@@ -251,3 +251,10 @@ transition: .2s;
 .bg-green {
     background-color: #00a65a !important;
 }
+.json {
+    height: 10px;
+}
+.extrait {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
