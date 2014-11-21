@@ -216,3 +216,38 @@ transition: .2s;
     float: right;
     margin-top: 8px;
 }
+.small-box {
+    color: rgba(0, 0, 0, 0.15);
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    float: left;
+}
+.small-box h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    color: white;
+    padding: 0;
+    border-bottom-width: 0px;
+}
+.small-box p {
+    font-size: 15px;
+    color: white;
+}
+.icon {
+    position: absolute;
+    top: auto;
+    bottom: -2px;
+    right: 5px;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15);
+}
+.bg-aqua {
+    background-color: #00c0ef !important;
+}
+.bg-green {
+    background-color: #00a65a !important;
+}
