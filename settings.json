@@ -1,3 +1,12 @@
 {
-  "texapi": "267cd991b46e724f69dad4f12359ffdf96732255"
+    "texapi": "267cd991b46e724f69dad4f12359ffdf96732255",
+    "users": [{
+        "name": "flavien",
+        "email": "flavien.pensato@gmail.com",
+        "roles": ["admin"]
+    }, {
+        "name": "admin",
+        "email": "admin@gmail.com",
+        "roles": ["admin"]
+    }]
 }
