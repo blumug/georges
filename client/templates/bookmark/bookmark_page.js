@@ -38,7 +38,8 @@ Template.bookmarkPage.events({
             DisplayErrorSubmit("You need to be connected.");
         }
     },
-    'click .btnDelete': function() {
+    'click .btnDelete': function(e) {
+        e.preventDefault();
         var idDelete = this._id;
         bootbox.dialog({
             message: "Do you want delete this bookmark",
@@ -59,7 +60,8 @@ Template.bookmarkPage.events({
             }
         });
     },
-    'click .refreshView': function() {
+    'click .refreshView': function(e) {
+        e.preventDefault();
         $("#nuage").css("color", "rgb(65, 65, 178)");
         var inc = 0;
         var new_bookmark = this;
