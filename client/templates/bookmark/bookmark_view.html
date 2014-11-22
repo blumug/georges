@@ -13,20 +13,18 @@
 <div class="row">
 <div class="col-md-12">
 <div class="resume" id="resume">
+    <button class="btn btn-default refreshView pull-right">
+    <i id="nuage" class="fa fa-newspaper-o"> Regenerate</i>
+    </button>
     <div class="titleView">
         {{#if title}}
-        <h4>{{title}}</h4>
+        <h1><a href='{{url}}' target='_blank'>{{title}}</a></h1>
         {{ else }}
-        <h4>{{url}}</h4>
+        <h1><a href='{{url}}' target='_blank'>{{url}}</a></h1>
         {{/if}}
     </div>
-    <div class="refresh">
-        <button class="btn refreshView">
-        	<i id="nuage" class="fa fa-3x fa-cloud-download"></i>
-        </button>
-    </div>
 </div>
-<div id="summary">
+<div id="summary" class="summary">
     {{{summary}}}
 </div>
 <div class="view" id="view">
