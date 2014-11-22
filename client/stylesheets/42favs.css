@@ -219,7 +219,7 @@ transition: .2s;
 }
 .small-box {
     color: rgba(0, 0, 0, 0.15);
-    width: 300px;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -236,14 +236,13 @@ transition: .2s;
     font-size: 15px;
     color: white;
 }
-.icon {
-    position: absolute;
-    top: auto;
-    bottom: -2px;
-    right: 5px;
+.small-box .icon {
+    float:right;
+    margin-top:-4px;
     z-index: 0;
-    font-size: 90px;
+    font-size: 74px;
     color: rgba(0, 0, 0, 0.15);
+    clear: both;
 }
 .bg-aqua {
     background-color: #00c0ef !important;

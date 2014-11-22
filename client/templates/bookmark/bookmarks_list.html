@@ -1,5 +1,7 @@
 <template name="bookmarksList">
-  <div class="bookmarks">
+<div class="row">
+
+  <div class="bookmarks col-md-12">
     {{> favorite}}
     {{#each bookmarks}}
       {{> bookmarkItem}}
@@ -10,4 +12,6 @@
       </div>
     {{/if}}
   </div>
+
+</div>
 </template>

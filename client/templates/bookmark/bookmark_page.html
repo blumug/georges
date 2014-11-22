@@ -1,6 +1,16 @@
 <template name="bookmarkPage">
 
-<div class="col-md-10">
+<div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li class="active">{{ url }}</li>
+    </ol>  
+  </div>
+</div>
+
+<div class="row">
+<div class="col-md-9">
 
   <form class="main form well" >
       <div class="form-group" id="alertConnexion">
@@ -51,24 +61,25 @@
   </form>
 </div>
 
-<div class="col-md-2">
-        <div class="small-box bg-aqua col-lg-2">
+<div class="col-md-3">
+        <div class="small-box bg-aqua">
+            <div class="icon">
+                <i class="fa fa-bar-chart"></i>
+            </div>
             <div class="inner">
                 <h3>{{counterView}}</h3>
                 <p>Views</p>
             </div>
-            <div class="icon">
-                <i class="fa fa-bar-chart"></i>
-            </div>
         </div>
-        <div class="small-box bg-green col-lg-10">
+        <div class="small-box bg-green">
+            <div class="icon">
+                <i class="fa fa-hand-o-up"></i>
+            </div>
             <div class="inner">
                 <h3>{{counterClick}}</h3>
                 <p>Clicks</p>
             </div>
-            <div class="icon">
-                <i class="fa fa-hand-o-up"></i>
-            </div>
         </div>
+</div>
 </div>
 </template>
