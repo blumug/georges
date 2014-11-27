@@ -2,18 +2,12 @@ Template.bookmarkItem.helpers({
     tags: function() {
         return (this.tags);
     },
-    status: function()
-    {
-        if (this.summary.text == "")
-            return "unvisible";
-        else
-            return "";
+    status: function() {
+        if (this.summary.text == "") return "unvisible";
+        else return "";
     }
 });
 Template.bookmarkItem.events({
-    'click #btnDelete': function() {
-        Bookmarks.remove(this._id);
-    },
     'click .btnPreviewDelete': function(event) {
         var idDelete = this._id;
         bootbox.dialog({
@@ -35,23 +29,26 @@ Template.bookmarkItem.events({
         });
     }
 });
-
 Template.titleItem.events({
     'click a': function(e) {
-      e.preventDefault();
-      Bookmarks.update({_id: this._id}, {$inc: { counterClick: 1} });
-      var link = $(e.target).attr('href');
-      window.open(link, '_blank');
+        e.preventDefault();
+        Bookmarks.update({
+            _id: this._id
+        }, {
+            $inc: {
+                counterClick: 1
+            }
+        });
+        var link = $(e.target).attr('href');
+        window.open(link, '_blank');
     }
 });
-
 Template.tag.events({
     'click a': function(e) {
         e.preventDefault();
         var bar = $("#tagSearch").val();
         var tag = this.toString();
         if (!tag) return;
-
         if (tag[0] != '#') {
             tag = '#' + tag;
         }
@@ -59,6 +56,10 @@ Template.tag.events({
             bar = tag + " " + bar;
         }
         var filter = bar.trim();
-        Router.go('bookmarksList', {}, {query: {filter: filter}});
+        Router.go('bookmarksList', {}, {
+            query: {
+                filter: filter
+            }
+        });
     }
 });
