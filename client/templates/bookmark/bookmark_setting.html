@@ -1,9 +1,14 @@
 <template name="bookmarkSetting">
-<input type="button" id="import" class="import" name="import" value="Import Favorites" />
-<div class="extrait">
-    <code>
-    {{rendu}}
-    </code>
+<div class="form-group">
+    <label class="control-label" for="url">Import</label>
+    <div class="controls">
+        <input type="file" id="import" class="import" name="import" value="Import Favorites" multiple/>
+    </div>
 </div>
-<a href="{{pathFor 'export'}}" target="_blank">Export</a>
+<div class="form-group">
+    <label class="control-label" for="tags">Export</label>
+    <div class="controls">
+        <a href="{{pathFor 'export'}}" target="_blank">Export</a>
+    </div>
+</div>
 </template>
