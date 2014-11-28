@@ -61,7 +61,7 @@ Template.bookmarkPage.events({
       }
     });
   },
-  
+
   'click .refreshView': function(e) {
     e.preventDefault();
     $("#nuage").css("color", "rgb(65, 65, 178)");
