@@ -5,6 +5,14 @@ Template.bookmarkItem.helpers({
   status: function() {
     if (this.summary.text == "") return "unvisible";
     else return "";
+  },
+  favicon: function () {
+    var url = this.url;
+    pathArray = url.split( '/' );
+    var protocol = pathArray[0];
+    var host = pathArray[2];
+    var domain = protocol + '//' + host; 
+    return domain + "/favicon.ico";
   }
 });
 Template.bookmarkItem.events({

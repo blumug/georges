@@ -73,7 +73,37 @@ html body {
     -o-transition: background-color 500ms linear;
     -ms-transition: background-color 500ms linear;
     transition: background-color 500ms linear;
+
+    div.bookmark-content {
+        min-height: 44px;
+
+        div.actions {
+            float: right;
+            margin-top: 12px;
+        
+        }
+
+        div.url {
+            font-size: 16px;
+            margin-bottom: 0;
+            font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        }
+        div.tags {
+            margin-top: 6px;
+            margin-bottom: 4px;
+        }
+        div.tags a {
+            font-size: 12px;
+        }
+
+        .favicon {
+            float:left;
+            margin-right:9px;
+            padding-top:2px;
+        }
+    }    
 }
+
 .bookmark:hover {
     background: #eee;
     -webkit-transition: background-color 500ms linear;
@@ -109,25 +139,8 @@ html body {
 
 /* ######  ##### */
 
-div.bookmark-content {
-    min-height: 44px;
-}
-div.url {
-    font-size: 16px;
-    margin-bottom: 0;
-    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-}
-div.tags {
-    margin-top: 6px;
-    margin-bottom: 4px;
-}
-div.tags a {
-    font-size: 12px;
-}
-div.actions {
-    float: right;
-    margin-top: 12px;
-}
+
+
 h4.modal-title {
     border-bottom: none;
 }
