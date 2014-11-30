@@ -1,6 +1,7 @@
 var delayed;
 Template.header.events({
   'input #tagSearch': function(e) {
+    console.log('input #tagSearch')
     Session.set("searchBar", $("#tagSearch").val());
     if (delayed) {
       clearTimeout(delayed);
@@ -35,5 +36,13 @@ Template.header.helpers({
   },
   'listFavorite': function() {
     return Favorites.find();
+  }
+})
+
+Template.optionDropdown.helpers({
+  'query': function() {
+    var query = this.favorite;
+    query = query.replace('#', '%23');
+    return query;
   }
 })
