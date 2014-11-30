@@ -42,7 +42,7 @@ Template.header.helpers({
 Template.optionDropdown.helpers({
   'query': function() {
     var query = this.favorite;
-    query = query.replace('#', '%23');
+    query = query.replace(/#/g, '%23');
     return query;
   }
 })
