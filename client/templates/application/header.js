@@ -34,8 +34,6 @@ Template.header.helpers({
     return Session.get("searchBar");
   },
   'listFavorite': function() {
-    return Favorites.find({
-      userId: Meteor.userId()
-    });
+    return Favorites.find();
   }
 })

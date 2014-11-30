@@ -49,5 +49,7 @@ Meteor.publish('tags', function() {
     return Tags.find();
 });
 Meteor.publish('favorites', function() {
-    return Favorites.find();
+    return Favorites.find({
+        userId: this.userId
+    });
 });
