@@ -12,10 +12,14 @@
 
 <div class="row">
 <div class="col-md-12">
+
+
 <div class="resume" id="resume">
+
     <button class="btn btn-default refreshView pull-right">
     <i id="nuage" class="fa fa-newspaper-o"> Regenerate</i>
     </button>
+    <a class="btn btn-default pull-right" href="{{pathFor 'bookmarkPage'}}"><i class="fa fa-gear"></i> Edit</a>
     <div class="titleView">
         {{#if title}}
         <h1><a href='{{url}}' target='_blank'>{{title}}</a></h1>
