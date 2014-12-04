@@ -1,0 +1,8 @@
+<template name="landing">
+{{#if currentUser}}
+<a type="button" class="btn btn-primary logout">se deconnecter</a>
+{{else}}
+<a type="button" href="{{pathFor 'register'}}" class="btn btn-primary">s'inscrire</a>
+<a type="button" href="{{pathFor 'login'}}" class="btn btn-primary">ou se connecter</a>
+{{/if}}
+</template>
