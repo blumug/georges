@@ -32,11 +32,6 @@ Meteor.publish('bookmarks', function(option, filter) {
                         $regex: filter,
                         $options: "si"
                     }
-                }, {
-                    tags: {
-                        $regex: filter,
-                        $options: "si"
-                    }
                 }]
             }, option);
         }
