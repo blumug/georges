@@ -16,14 +16,14 @@
             <div class="navbar-form navbar-left">
                 <input type="search" class="form-control col-lg-8" name="tagSearch" id="tagSearch" placeholder="Search..." value="{{searchBar}}">
                 <span class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                     {{#each listFavorite}}
                     {{> optionDropdown }}
                     {{/each}}
-                  </ul>
+                </ul>
                 </span>
                 <button class="form-control" name="cleanSearch" id="cleanSearch"><i class="fa fa-times"></i></button>
             </div>
@@ -31,7 +31,7 @@
                 {{> loginButtons}}
                 <li>
                     <a href="{{pathFor 'bookmarkSetting'}}">
-                        <i class="fa fa-cog"> Settings</i>
+                    <i class="fa fa-cog"> Settings</i>
                     </a>
                 </li>
             </ul>
@@ -41,8 +41,6 @@
     </div>
 </div>
 </template>
-
 <template name="optionDropdown">
-  <li role="presentation"><a role="menuitem" tabindex="-1" href="{{pathFor 'bookmarksList'}}?filter={{ query }}">{{ this.favorite }}</a></li>
-
+<li role="presentation"><a role="menuitem" tabindex="-1" href="{{pathFor 'bookmarksList'}}?filter={{ query }}">{{ this.favorite }}</a></li>
 </template>
