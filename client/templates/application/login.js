@@ -26,10 +26,10 @@ Meteor.autorun(function() {
 if (Accounts._resetPasswordToken) {
     Session.set('resetPassword', Accounts._resetPasswordToken);
 }
-var trimInput = function(val) {
+trimInput = function(val) {
     return val.replace(/^\s*|\s*$/g, "");
 }
-var isValidPassword = function(val, field) {
+isValidPassword = function(val, field) {
     if (val.length >= 6) {
         return true;
     } else {
