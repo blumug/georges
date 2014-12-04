@@ -1,5 +1,6 @@
 Meteor.publish('bookmarks', function(option, filter) {
-    console.log('bookmarks with filter: ' + filter)
+    console.log('bookmarks with filter: ' + filter);
+    console.log(option);
     if (!filter || filter === '') {
         return (Bookmarks.find({
             userId: this.userId
