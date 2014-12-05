@@ -19,7 +19,7 @@ Template.bookmarkSubmit.events({
                     DisplayErrorSubmit(result.message);
                     return;
                 }
-                Router.go('/');
+                Router.go('/home');
             });
         } else DisplayErrorSubmit("You need to be connected.");
     }

@@ -1,9 +1,9 @@
 <template name="sort">
 <div class="btn-group btn-group-justified">
-    <a href="#" class="btn btn-default url">Url <i class="fa fa-sort-asc"></i></a>
-    <a href="#" class="btn btn-default title">Title <i class="fa fa-sort-asc"></i></a>
-    <a href="#" class="btn btn-default modified">Date modified <i class="fa fa-sort-asc"></i></a>
-    <a href="#" class="btn btn-default view">View <i class="fa fa-sort-asc"></i></a>
-    <a href="#" class="btn btn-default click">Click <i class="fa fa-sort-asc"></i></a>
+    <a href="#" class="btn btn-default url">Url <i class="fa {{ url }}"></i></a>
+    <a href="#" class="btn btn-default title">Title <i class="fa {{ title }}"></i></a>
+    <a href="#" class="btn btn-default modified">Date modified <i class="fa {{ dateModified }}"></i></a>
+    <a href="#" class="btn btn-default view">View <i class="fa {{ counterView }}"></i></a>
+    <a href="#" class="btn btn-default click">Click <i class="fa {{ counterClick }}"></i></a>
 </div>
 </template>

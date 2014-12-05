@@ -40,3 +40,88 @@ Template.sort.events({
     }
   }
 });
+
+
+Template.sort.helpers({
+  'url': function() {
+    if (Meteor.isClient) {
+      var name = Session.get("sortName")
+      var value = Session.get("sortValue")
+
+      if (name == "url") {
+        $(".url").css("color", "cornflowerblue");
+        if (value == 1) {
+          return "fa-sort-asc";
+        }
+        return "fa-sort-desc";
+      }
+      $(".url").css("color", "");
+      return "fa-sort-desc";
+    }
+  },
+  'title': function() {
+    if (Meteor.isClient) {
+      var name = Session.get("sortName")
+      var value = Session.get("sortValue")
+
+      if (name == "title") {
+        $(".title").css("color", "cornflowerblue");
+        if (value == 1) {
+          return "fa-sort-asc";
+        }
+        return "fa-sort-desc";
+
+      }
+      $(".title").css("color", "");
+      return "fa-sort-desc";
+    }
+  },
+  'dateModified': function() {
+    if (Meteor.isClient) {
+      var name = Session.get("sortName")
+      var value = Session.get("sortValue")
+
+      if (name == "dateModified") {
+        $(".modified").css("color", "cornflowerblue");
+        if (value == 1) {
+          return "fa-sort-asc";
+        }
+        return "fa-sort-desc";
+      }
+      $(".modified").css("color", "");
+      return "fa-sort-desc";
+    }
+  },
+  'counterView': function() {
+    if (Meteor.isClient) {
+      var name = Session.get("sortName")
+      var value = Session.get("sortValue")
+
+      if (name == "counterView") {
+        $(".view").css("color", "cornflowerblue");
+        if (value == 1) {
+          return "fa-sort-asc";
+        }
+        return "fa-sort-desc";
+      }
+      $(".view").css("color", "");
+      return "fa-sort-desc";
+    }
+  },
+  'counterClick': function() {
+    if (Meteor.isClient) {
+      var name = Session.get("sortName")
+      var value = Session.get("sortValue")
+
+      if (name == "counterClick") {
+        $(".click").css("color", "cornflowerblue");
+        if (value == 1) {
+          return "fa-sort-asc";
+        }
+        return "fa-sort-desc";
+      }
+      $(".click").css("color", "");
+      return "fa-sort-desc";
+    }
+  }
+});

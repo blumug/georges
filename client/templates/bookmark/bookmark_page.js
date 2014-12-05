@@ -29,7 +29,7 @@ Template.bookmarkPage.events({
             DisplayErrorSubmit(result.message);
             return;
           }
-          Router.go('/');
+          Router.go('/home');
         });
       } else {
         DisplayErrorSubmit("Url already use.");
@@ -55,7 +55,7 @@ Template.bookmarkPage.events({
           className: "btn-danger",
           callback: function() {
             Meteor.call("removeBookmark", idDelete);
-            Router.go('/');
+            Router.go('/home');
           }
         }
       }
