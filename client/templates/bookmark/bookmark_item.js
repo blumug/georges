@@ -37,6 +37,7 @@ Template.bookmarkItem.events({
     });
   }
 });
+
 Template.titleItem.events({
   'click a': function(e) {
     e.preventDefault();

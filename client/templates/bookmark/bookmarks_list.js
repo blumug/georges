@@ -1,0 +1,2 @@
+Template.bookmarksList.rendered = function () {
+}
