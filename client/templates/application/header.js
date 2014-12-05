@@ -1,5 +1,6 @@
 var delayed;
 Template.header.events({
+
   'input #tagSearch': function(e) {
     console.log('input #tagSearch')
     Session.set("searchBar", $("#tagSearch").val());
@@ -20,6 +21,12 @@ Template.header.events({
     }
     delayed = _.delay(setFilter, 800);
   },
+
+  'click .search': function (e) {
+    e.preventDefault();
+    $('#tagSearch').focus();
+  },
+
   'click #cleanSearch': function(e) {
     document.getElementById("tagSearch").value = "";
     var filter = document.getElementById("tagSearch").value;
@@ -29,7 +36,9 @@ Template.header.events({
       }
     });
   }
+
 });
+
 Template.header.helpers({
   'searchBar': function() {
     return Session.get("searchBar");

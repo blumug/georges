@@ -1,11 +1,12 @@
 /* CSS declarations go here */
 
 body {
-    padding-top: 60px;
+    padding-top: 137px;
     /* Margin bottom by footer height */
-
-margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+
 .page {
     /*font-family: 'Roboto Slab', serif;*/
 
@@ -40,20 +41,183 @@ transition: .2s;
 .document-item {} .search-bar {
     margin-top: 20px;
 }
+
+/* header */
+
 .navbar-jbl42 {
-    background-color: #2c3e50;
-}
-.navbar-jbl42 a {
-    color: white;
+    background-color: white;
+    border-bottom: 3px solid #e5e5e5;
+    min-height: 109px;
+
+    .navbar-collapse a.icon {
+        height:100px;
+        margin-left:20px;
+    }
+    .navbar-form {
+        margin-top: 32px;        
+    }
+
+    #login-dropdown-list a {
+        padding-top: 34px;        
+    }
+
+    #login-dropdown-list.open a.dropdown-toggle {
+        background: white;
+    }
+
+    a.navbar-brand {
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;    
+        font-weight: bold;
+        font-size: 35px;
+        color: black;
+        margin-top:26px;
+    }
+
+    .navbar-form {
+
+        input {
+            font-family: 'futura_ltlight';
+            outline-color: transparent;
+            outline-style: none;
+            -webkit-appearance: none;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            border-color: #f4f4f4;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            width:230px;
+            height: 40px;
+
+            &:focus {
+                outline:none;
+                outline-color: transparent;
+                outline-style: none;
+                box-shadow:none;
+            }
+        }
+
+        #dropdownMenu1 {
+            color: #bfbfbf;
+            background-color: #f4f4f4;
+            border-color: #f4f4f4;
+            height: 40px;
+        }
+
+        .dropdown {
+            margin-right:-4px;
+        }
+
+        #cleanSearch {
+            color: #bfbfbf;
+            background-color: #f4f4f4;
+            border-color: #f4f4f4;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            height: 40px;
+
+            &:focus {
+                outline:none;
+                outline-color: transparent;
+                outline-style: none;
+                box-shadow:none;
+            }            
+        }
+
+
+    }
+
+    .nav > li > a {
+        border-top: 6px solid white;
+        background-color: white;
+
+        -webkit-transition : border 500ms ease;
+        -moz-transition : border 500ms ease;
+        -o-transition : border 500ms ease;
+        transition : border 500ms ease;        
+
+        &:hover {
+            text-decoration: none;
+            border-top: 6px solid black;
+        }
+
+        &:focus {
+            text-decoration: none;
+            border-top: 6px solid black;
+        }
+    }
+
+    .add-bookmark {
+        width: 60px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -215px -16px;
+            width:28px;
+            height:28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
+    .list {
+        width: 60px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -19px -16px;
+            width: 29px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
+    .search {
+        width: 60px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -270px -16px;
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
+    .user {
+        width: 60px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -95px -16px;
+            width: 22px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
+    .settings {
+        width: 60px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -162px -16px;
+            width: 26px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
 }
 
-.navbar-jbl42 .nav > li > a:hover, .navbar-jbl42 .nav > li > a:focus {
-    text-decoration: none;
-    background-color: #34495e;
-}
+
 .panel-collapse {
-    background-color: #f5f5f5;
+    background-color: white;
 }
+
 /*
 html body {
     background-color: #eee;
@@ -86,7 +250,6 @@ html body {
         div.url {
             font-size: 16px;
             margin-bottom: 0;
-            font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
         }
         div.tags {
             margin-top: 6px;
@@ -164,7 +327,7 @@ html {
     /* Set the fixed height of the footer here */
 
 height: 60px;
-    background-color: #f5f5f5;
+    background-color: white;
 }
 body > .container {
     padding: 8px 15px 0;
