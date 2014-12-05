@@ -6,23 +6,21 @@ Template.favorite.events({
     })) {
       Meteor.call("removeToFavorites", $("#tagSearch").val());
     } else {
-      Meteor.call("addToFavorites", $("#tagSearch").val());
+      var sortName = "";
+      var sortValue = 0;
+      if (Meteor.isClient) {
+        sortName = Session.get("sortName");
+        sortValue = Session.get("sortValue");
+      }
+      Meteor.call("addToFavorites", $("#tagSearch").val(), sortName, sortValue);
     }
   }
 });
 Template.favorite.helpers({
   'btnFavorite': function() {
-    var sortName = "";
-    var sortValue = 0;
-    if (Meteor.isClient) {
-      sortName = Session.get("sortName");
-      sortValue = Session.get("sortValue");
-    }
     if (Favorites.find({
       userId: Meteor.userId(),
-      favorite: $("#tagSearch").val(),
-      sortName: sortName,
-      sortValue: sortValue
+      favorite: $("#tagSearch").val()
     }).count() > 0) {
       return "Delete";
     } else {
@@ -30,6 +28,16 @@ Template.favorite.helpers({
     }
   },
   'search': function() {
+    var search = Session.get("searchBar");
+    var fav = Favorites.findOne({
+      userId: Meteor.userId(),
+      favorite: search
+    });
+
+    if (fav) {
+      Session.set("sortValue", fav.sortValue);
+      Session.set("sortName", fav.sortName);
+    }
     return Session.get("searchBar");
   },
   'myUnvisibility': function() {
