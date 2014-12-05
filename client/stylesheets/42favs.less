@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 
 body {
-    padding-top: 137px;
+    padding-top: 106px;
     /* Margin bottom by footer height */
     margin-bottom: 60px;
 }
@@ -46,6 +46,7 @@ transition: .2s;
 
 .navbar-jbl42 {
     background-color: white;
+    margin-bottom:0;
     border-bottom: 3px solid #e5e5e5;
     min-height: 109px;
 
@@ -324,6 +325,7 @@ html {
     position: absolute;
     bottom: 0;
     width: 100%;
+    font-size:15px;
     /* Set the fixed height of the footer here */
 
 height: 60px;
@@ -496,4 +498,151 @@ transition: .2s;
     text-align: center;
     max-width:1000px;
   }
+}
+
+/* landing page */
+.landing-background-top {
+    background: url('/images/landing-background-top.png') repeat-x center center;
+    height: 536px;
+    position:relative;
+    top:-8px;
+
+    .inner {
+        margin-top:75px;
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .text {
+            text-align: center;
+            margin-top:60px;
+            h1 {
+                font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;    
+                font-weight: bold;
+                font-size: 38px;
+                color: black;
+                margin-bottom:30px;
+            }
+            h2 {
+                font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;    
+                font-weight: normal;
+                font-size: 20px;
+                color: black;
+                margin-bottom:30px;
+            }
+
+            .register {
+                font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;    
+                font-weight: bold;
+                font-size: 24px;
+                color: white;
+                background-color: #4ea5ff;
+                border-radius:4px;
+                display: inline-block;
+                height:50px;
+                line-height: 50px;
+                padding-left:62px;
+                padding-right:62px;
+                text-decoration: none;
+                margin-bottom:30px;
+
+                -o-transition: .5s;
+                -ms-transition: .5s;
+                -moz-transition: .5s;
+                -webkit-transition: .5s;
+
+                &:hover {
+                   background-color: #3c81c8;
+                }
+            }
+
+            .login {
+                font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;    
+                font-weight: normal;
+                font-size: 20px;
+                color: #4ea5ff;
+                display: block;                
+            }
+        }
+    }
+
+}
+
+.landing-bottom {
+    margin-top:25px;
+    margin-bottom:25px;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .text {
+        text-align: center;
+        h2 {
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;    
+            font-weight: bold;
+            font-size: 24px;
+            color: black;
+            margin-bottom:40px;
+        }
+        ul {
+            list-style-type: none;
+            margin:0;
+            text-align: left;
+            li {
+                font-family: 'futura_ltbook';
+                font-size:15px;
+                padding:0;
+                margin:0;
+                margin-bottom:28px;
+            }
+        }
+
+        .add {
+            i {
+                background: url('/images/sprites.png') no-repeat -215px -16px;
+                width:28px;
+                height:28px;
+                display:inline-block;
+                margin-right:20px;
+                position:relative;
+                top:8px;
+            }
+        }
+
+        .list {
+            i {
+                background: url('/images/sprites.png') no-repeat -19px -16px;
+                width: 29px;
+                height: 28px;
+                display:inline-block;
+                margin-right:20px;
+                position:relative;
+                top:8px;
+            }
+        }
+
+        .search {
+            display: block;
+            i {
+                background: url('/images/sprites.png') no-repeat -270px -16px;
+                width: 28px;
+                height: 28px;
+                display:inline-block;
+                margin-right:20px;
+                position:relative;
+                top:8px;
+            }
+        }        
+    }
+}
+
+.landing-header {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:37px;
+    }
 }
