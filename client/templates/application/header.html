@@ -7,11 +7,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{pathFor 'bookmarksList'}}">42favs</a>
+            <a class="navbar-brand" href="{{pathFor 'landing'}}">42favs</a>
         </div>
         <div class="navbar-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{pathFor 'bookmarkSubmit'}}" class='add-bookmark'></a></li>
+                <li><a href="{{pathFor 'bookmarksList'}}" class='list'><i></i></a></li>
+                <li><a href="{{pathFor 'bookmarkSubmit'}}" class='add-bookmark'><i></i></a></li>
+                <li><a href="#" class='search'><i></i></a></li>
             </ul>
             <div class="navbar-form navbar-left">
                 <input type="search" class="form-control col-lg-8" name="tagSearch" id="tagSearch" placeholder="Search..." value="{{searchBar}}">
@@ -30,9 +32,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {{> loginButtons}}
                 <li>
-                    <a href="{{pathFor 'bookmarkSetting'}}">
-                    <i class="fa fa-cog"> Settings</i>
-                    </a>
+                    <a href="{{pathFor 'bookmarkSetting'}}" class="settings"><i></i></a>
                 </li>
             </ul>
         </div>

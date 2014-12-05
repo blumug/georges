@@ -66,20 +66,19 @@ transition: .2s;
             outline-style: none;
             -webkit-appearance: none;
             font-size: 14px;
-            color: #bfbfbf;
             background-color: #f4f4f4;
             border-color: #f4f4f4;
             border-top-left-radius: 2px;
             border-bottom-left-radius: 2px;
             width:230px;
             height: 40px;
-        }
 
-        input:focus {
-            outline:none;
-            outline-color: transparent;
-            outline-style: none;
-            box-shadow:none;
+            &:focus {
+                outline:none;
+                outline-color: transparent;
+                outline-style: none;
+                box-shadow:none;
+            }
         }
 
         #dropdownMenu1 {
@@ -100,7 +99,16 @@ transition: .2s;
             border-top-right-radius: 2px;
             border-bottom-right-radius: 2px;
             height: 40px;
+
+            &:focus {
+                outline:none;
+                outline-color: transparent;
+                outline-style: none;
+                box-shadow:none;
+            }            
         }
+
+
     }
 
     .nav > li > a {
@@ -127,10 +135,80 @@ transition: .2s;
         width: 60px;
         height: 100px;
         display: block;
-        background-image: url('/images/icon-add.png');
-        background-repeat: no-repeat;
-        background-position: center center;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -215px -16px;
+            width:28px;
+            height:28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
     }
+
+    .list {
+        width: 60px;
+        height: 100px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -19px -16px;
+            width: 29px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
+    .search {
+        width: 60px;
+        height: 100px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -270px -16px;
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
+    #login-dropdown-list a {
+        padding-top: 34px;        
+    }
+
+    #login-dropdown-list.open a.dropdown-toggle {
+        background: white;
+    }
+
+    .user {
+        width: 60px;
+        height: 100px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -95px -16px;
+            width: 22px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
+    .settings {
+        width: 60px;
+        height: 100px;
+        display: block;
+        i {
+            display:block;
+            background: url('/images/sprites.png') no-repeat -162px -16px;
+            width: 26px;
+            height: 28px;
+            position: absolute;
+            top: calc(50% - 15px);
+        }
+    }
+
 }
 
 
