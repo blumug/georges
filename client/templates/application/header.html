@@ -11,9 +11,9 @@
         </div>
         <div class="navbar-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{pathFor 'bookmarksList'}}" class='list'><i></i></a></li>
-                <li><a href="{{pathFor 'bookmarkSubmit'}}" class='add-bookmark'><i></i></a></li>
-                <li><a href="#" class='search'><i></i></a></li>
+                <li><a href="{{pathFor 'bookmarksList'}}" class='icon list'><i></i></a></li>
+                <li><a href="{{pathFor 'bookmarkSubmit'}}" class='icon add-bookmark'><i></i></a></li>
+                <li><a href="#" class='icon search'><i></i></a></li>
             </ul>
             <div class="navbar-form navbar-left">
                 <input type="search" class="form-control col-lg-8" name="tagSearch" id="tagSearch" placeholder="Search..." value="{{searchBar}}">
@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {{> loginButtons}}
                 <li>
-                    <a href="{{pathFor 'bookmarkSetting'}}" class="settings"><i></i></a>
+                    <a href="{{pathFor 'bookmarkSetting'}}" class="icon settings"><i></i></a>
                 </li>
             </ul>
         </div>
@@ -41,6 +41,7 @@
     </div>
 </div>
 </template>
+
 <template name="optionDropdown">
 <li role="presentation"><a role="menuitem" tabindex="-1" href="{{pathFor 'bookmarksList'}}?filter={{ query }}">{{ this.favorite }}</a></li>
 </template>
