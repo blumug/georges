@@ -24,7 +24,7 @@ Template.favorite.helpers({
     }).count() > 0) {
       return "Delete";
     } else {
-      return "Save query";
+      return "Save";
     }
   },
   'search': function() {
