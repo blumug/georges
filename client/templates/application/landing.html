@@ -1,8 +1,41 @@
 <template name="landing">
-{{#if currentUser}}
-<a type="button" class="btn btn-primary logout">se deconnecter</a>
-{{else}}
-<a type="button" href="{{pathFor 'register'}}" class="btn btn-primary">s'inscrire</a>
-<a type="button" href="{{pathFor 'login'}}" class="btn btn-primary">ou se connecter</a>
-{{/if}}
+
+<div class="landing-background-top">
+  <div class="container">
+    <div class="row">
+      <div class="inner">
+        <div class="col-md-4">
+        <img src='/images/mascotte.png'  width="369px" height="368px">
+        </div>
+        <div class="col-md-8">
+          <div class="text">
+            <h1>Bookmarks. Revisited.</h1>
+            <h2>No account yet?</h2>
+            <a href="{{pathFor 'register'}}" class="register">register</a>
+            <a href="{{pathFor 'login'}}" class="login">or login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row landing-bottom">
+    <div class="col-md-4">
+      <div class="text">
+        <h2>Save / Find / View</h2>
+        <ul>
+          <li class="list"><i></i>Saved search</li>
+          <li class="add"><i></i>Fast insert</li>
+          <li class="search"><i></i>Search by tag(s) or title</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <img src='/images/landing-computer.png' width="543px" height="281px">
+    </div>
+  </div>
+</div>
+
 </template>
