@@ -225,20 +225,23 @@ html body {
 }
 */
 .bookmarks {
-    clear: both;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;    
 }
 
 .bookmark {
-    margin-right:20px;
-    width:25%;
-    float:left;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+
     background-color: white;
     border:1px solid #dedede;
     border-bottom:2px solid #dedede;
     border-radius: 4px;
-    margin-bottom: 3px;
-    margin-top:20px;
-    margin-bottom: 10px;
 
     -webkit-transition: background-color 500ms linear;
     -moz-transition: background-color 500ms linear;
