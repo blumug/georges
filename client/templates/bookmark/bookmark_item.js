@@ -1,4 +1,11 @@
 Template.bookmarkItem.helpers({
+  domain: function () {
+    var url = this.url;
+    var matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+    var domain = matches && matches[1];
+    return domain;
+  },
+  
   tags: function() {
     return (this.tags);
   },

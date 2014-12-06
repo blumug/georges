@@ -2,11 +2,11 @@
   <div class="bookmark">
     <div class="bookmark-header">
       <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
-      domain.com
+      <a href="{{ url }}" target="_blank">{{ domain }}</a>
       <div class="actions">
-          <a href="{{pathFor 'bookmarkView'}}" class="{{ status }}"><i class="fa fa-eye"></i></a>
-          <a href="{{pathFor 'bookmarkPage'}}" class=""><i class="fa fa-cog"></i></a>
-          <a href="" class="btnPreviewDelete"><i class="fa fa-times"></i></a>
+          <a href="{{pathFor 'bookmarkView'}}" class="{{ status }}"><i class="icon-view"></i></a>
+          <a href="{{pathFor 'bookmarkPage'}}" class=""><i class="icon-settings"></i></a>
+          <a href="" class="btnPreviewDelete"><i class="icon-delete"></i></a>
       </div>
 
     </div>
