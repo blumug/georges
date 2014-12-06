@@ -465,6 +465,19 @@ transition: .2s;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
     font-size: 24px;
+    height: 95px;
+    line-height: 95px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
 
     h2 {
         margin:0;
@@ -484,7 +497,6 @@ transition: .2s;
 
     .toolbar {
         float:right;
-        margin-right: 20px;
         button {
             color: white;
             background-color: #ffb83c;
@@ -498,6 +510,7 @@ transition: .2s;
 
             padding-left:62px;
             padding-right:62px;
+            margin-right: 18px;
             text-decoration: none;
 
             -o-transition: .5s;
@@ -517,24 +530,35 @@ transition: .2s;
             outline-color: transparent;
             outline-style: none;
             box-shadow:none;
+        }
 
+        .menu-down {
+            background-color: transparent;
+            width: 86px;
+            display: inline-block;
+            margin-left:0;
+            margin-right:0;
+            padding:0;
+            border-left: 1px solid #eeeeee;
+            height: 95px;
+            &:hover {
+               background-color: transparent;
+            }
+            &:focus {
+                border: none;
+                border-left: 1px solid #eeeeee;
+            }            
+
+            i {
+                display: inline-block;
+                background: url('/images/sprites.png') no-repeat -220px -87px;
+                width: 18px;
+                height: 12px;
+            }
         }
     }
-
-    height: 95px;
-    line-height: 95px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #d3d3d3;
-    border-radius: 2px;
-    margin-bottom: 8px;
-    -webkit-transition: background-color 500ms linear;
-    -moz-transition: background-color 500ms linear;
-    -o-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
 }
+
 .myUnvisibility {
     visibility: hidden;
     position: absolute;
