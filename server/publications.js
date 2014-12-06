@@ -57,3 +57,12 @@ Meteor.publish('favorites', function() {
     userId: this.userId
   });
 });
+Meteor.publish('groups', function() {
+  return Groups.find({
+    creator: this.userId
+  });
+});
+Meteor.publish('groupPage', function(id) {
+  check(id, String);
+  return Groups.find(id);
+});
