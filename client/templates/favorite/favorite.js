@@ -38,7 +38,7 @@ Template.favorite.helpers({
       favorite: search
     });
 
-    if (fav) {
+    if (fav && fav.sortValue && fav.sortName) {
       Session.set("sortValue", fav.sortValue);
       Session.set("sortName", fav.sortName);
     }
