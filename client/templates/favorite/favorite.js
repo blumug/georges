@@ -14,6 +14,10 @@ Template.favorite.events({
       }
       Meteor.call("addToFavorites", $("#tagSearch").val(), sortName, sortValue);
     }
+  },
+
+  'click .menu-down': function (e) {
+    $('.sort').slideToggle();
   }
 });
 Template.favorite.helpers({
