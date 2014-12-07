@@ -13,6 +13,14 @@
     <div class="bookmark-body">
       {{> titleItem}}
     </div>
+
+    {{#if hasDescription }}
+    <div class="bookmark-description">
+      {{ description }}
+    </div>
+    {{/if}}
+
+    {{#if hasTags }}
     <div class="bookmark-footer">
           <div class="tags">
           {{#each tags}}
@@ -20,6 +28,7 @@
           {{/each}}
           </div>
     </div>
+    {{/if}}
   </div>
 </template>
 

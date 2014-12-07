@@ -7,8 +7,17 @@ Template.bookmarkItem.helpers({
   },
   
   tags: function() {
-    return (this.tags);
+    return this.tags;
   },
+
+  hasTags: function () {
+    return this.tags && this.tags.length > 0;
+  },
+
+  hasDescription: function () {
+    return this.description && this.description.length > 0;
+  },
+
   status: function() {
     if (this.summary.text == "") return "unvisible";
     else return "";

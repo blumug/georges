@@ -318,7 +318,6 @@ html body {
         -moz-hyphens: auto;
         hyphens: auto;
 
-        border-bottom: 1px solid #d9d9d9;
         padding-left:10px;
         padding-right: 10px;
         h3 {
@@ -339,11 +338,32 @@ html body {
         }
     }
 
-    .bookmark-footer {
-        border-top: 1px solid #f9f9f9;
+    .bookmark-description {
+        border-top: 1px solid #d9d9d9;
         padding-top:20px;
-        margin-left:12px;
-        margin-right: 12px;
+        padding-left:12px;
+        padding-right: 12px;
+        margin-bottom: 20px;
+
+        -ms-word-break: break-all;
+
+        /* Be VERY careful with this, breaks normal words wh_erever */
+        word-break: break-all;
+
+        /* Non standard for webkit */
+        word-break: break-word;
+
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;    
+        color: #7d7d7d;
+    }
+
+    .bookmark-footer {
+        border-top: 1px solid #d9d9d9;
+        padding-top:20px;
+        padding-left:12px;
+        padding-right: 12px;
         margin-bottom: 20px;
         a.tag {
             font-size: 15px;
