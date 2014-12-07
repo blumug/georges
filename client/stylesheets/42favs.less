@@ -43,23 +43,36 @@ transition: .2s;
 }
 
 /* header */
+.transition(@duration) {
+    -o-transition: @duration;
+    -ms-transition: @duration;
+    -moz-transition: @duration;
+    -webkit-transition: @duration;
+    transition: @duration;
+}
 
 .navbar-jbl42 {
+
+    .transition(.5s);
+
     background-color: white;
     margin-bottom:0;
     border-bottom: 3px solid #e5e5e5;
-    min-height: 109px;
+    height:109px;
 
     .navbar-collapse a.icon {
         height:100px;
         margin-left:20px;
+        .transition(.5s);
     }
     .navbar-form {
         margin-top: 32px;
+        .transition(.5s);
     }
 
     #login-dropdown-list a {
         padding-top: 34px;
+        .transition(.5s);
     }
 
     #login-dropdown-list.open a.dropdown-toggle {
@@ -72,6 +85,7 @@ transition: .2s;
         font-size: 35px;
         color: black;
         margin-top:26px;
+        .transition(.5s);
     }
 
     .navbar-form {
@@ -210,6 +224,35 @@ transition: .2s;
             position: absolute;
             top: calc(50% - 15px);
         }
+    }
+
+}
+
+.navbar-jbl42.smaller {
+    height:64px;
+
+    .navbar-collapse a.icon {
+        height:32px;
+        margin-left:20px;
+    }
+    .navbar-form {
+        margin-top: 12px;
+    }
+
+    #login-dropdown-list a {
+        padding-top: 12px;
+    }
+
+    #login-dropdown-list.open a.dropdown-toggle {
+        background: white;
+    }
+
+    a.navbar-brand {
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        color: black;
+        margin-top:4px;
     }
 
 }

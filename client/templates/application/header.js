@@ -22,7 +22,7 @@ Template.header.events({
     delayed = _.delay(setFilter, 800);
   },
 
-  'click .search': function (e) {
+  'click .search': function(e) {
     e.preventDefault();
     $('#tagSearch').focus();
   },
@@ -47,6 +47,24 @@ Template.header.helpers({
     return Favorites.find();
   }
 })
+
+Template.header.rendered = function() {
+  var header = $('.navbar-jbl42');
+
+  window.addEventListener('scroll', function(e) {
+    var distanceY = window.pageYOffset || document.documentElement.scrollTop;
+    var shrinkOn = 300;
+
+    if (distanceY > shrinkOn) {
+      header.addClass('smaller');
+      console.log(distanceY)
+    } else {
+      if (header.hasClass('smaller')) {
+        header.removeClass('smaller');
+      }
+    }
+  });
+}
 
 Template.optionDropdown.helpers({
   'query': function() {
