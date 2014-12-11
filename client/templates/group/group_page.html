@@ -1,11 +1,14 @@
 <template name="groupPage">
 <form class="main form">
-    <h3 class="nameGroup">{{name}}</h3>
+    <h3>{{ name }}</h3>
     <div class="navbar-form navbar-left">
         <input type="search" class="form-control col-lg-8 email" placeholder="Search..." value="">
         <button class="form-control" name="cleanSearch" id="cleanSearch"><i class="fa fa-times"></i></button>
     </div>
-
+    <div class="form-group">
+        {{#each listMembers}}
+        <h4>{{ this }}<input type="button" class="btn-delete-member" style="float: right" value="remove"></h4>
+        {{/each}}
+    </div>
 </form>
-
 </template>
