@@ -17,7 +17,9 @@ Meteor.startup(function() {
             if (user.roles.length > 0) {
                 Roles.addUsersToRoles(id, user.roles);
             }
-            Houston._admins.insert({"user_id": id});
+            Houston._admins.insert({
+                "user_id": id
+            });
         });
     }
 });
