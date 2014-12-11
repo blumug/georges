@@ -117,6 +117,12 @@ Handlebars.registerHelper("prettifyTags", function(tags) {
   return tagString.trim();
 });
 
+Template.bookmarkPage.helpers({
+  'allGroups': function() {
+    return Groups.find();
+  }
+});
+
 Template.bookmarkPage.rendered = function() {
 
   $('#groups').selectize({
@@ -124,23 +130,6 @@ Template.bookmarkPage.rendered = function() {
     valueField: 'id',
     labelField: 'title',
     searchField: 'title',
-    options: function() {
-      var allGroup = Groups.find({
-        creator: Meteor.userId()
-      }).fetch();
-      var tab = [];
-      var item = {
-        id: 0,
-        title: '',
-        url: ''
-      }
-      for (var x = 1; x < allGroup.length; x++) {
-        item.id = x;
-        item.title = allGroup[x].name;
-        tab.push(item);
-      }
-      return tab;
-    },
     create: false
   });
 };
