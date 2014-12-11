@@ -1,3 +1,18 @@
 <template name="groupPage">
-	{{ name }}
+<form class="main form">
+    <h3>{{ name }}</h3>
+    <div class="form-group">
+        <div class="controls">
+            <input type="text" id="nameGroup" class="nameGroup" name="nameGroup" placeholder="name of Group"/>
+        </div>
+    </div>
+    <input type="submit" class="btn btn-primary createGroup" name="createGroup" value="create Group"/>
+</form>
+{{#each listMember}}
+{{#if name}}
+{{ name }}
+{{else}}
+{{ adress}}
+{{/if}}
+{{/each}}
 </template>
