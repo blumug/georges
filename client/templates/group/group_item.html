@@ -1,3 +1,12 @@
 <template name="groupItem">
-	<h4><a href="{{ pathFor 'groupPage' }}">{{ name }}</a><input class="deleteGroup btn btn-warning" style="float: right" value="Delete"/></h4>
+<h4>
+<a href="{{ pathFor 'groupPage' }}">{{ name }}</a>
+{{> members}}
+<input class="deleteGroup btn btn-warning" style="float: right" value="Delete"/>
+</h4>
+</template>
+<template name="members">
+{{#each allMembers}}
+<div style="font-size: 15px">{{ this }}</div>
+{{/each}}
 </template>

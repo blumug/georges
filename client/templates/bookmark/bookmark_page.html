@@ -1,69 +1,69 @@
 <template name="bookmarkPage">
-
 <div class="row">
-  <div class="col-md-12">
-    <ol class="breadcrumb">
-      <li><a href="/">Home</a></li>
-      <li class="active">{{ url }}</li>
-    </ol>  
-  </div>
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">{{ url }}</li>
+        </ol>
+    </div>
 </div>
-
 <div class="row">
-<div class="col-md-9">
+    <div class="col-md-9">
+        <a class="btn btn-default" href="{{pathFor 'bookmarkView'}}"><i class="fa fa-eye"></i> Read</a>
+        <form class="main form well" >
+            <div class="form-group" id="alertConnexion">
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="url">* URL</label>
+                <div class="controls">
+                    <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="tags">Tags</label>
+                <div class="controls">
+                    <input name="tags" id="tags" type="text" value="{{prettifyTags tags}}" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="groups">Groups</label>
+                <div class="controls">
+                    <input name="groups" id="groups" autocomplete="off" tabindex type="text" value="" placeholder="@42favs @friends @family"/>
+                </div>
+            </div>
 
-  <a class="btn btn-default" href="{{pathFor 'bookmarkView'}}"><i class="fa fa-eye"></i> Read</a>
-
-  <form class="main form well" >
-      <div class="form-group" id="alertConnexion">
-      </div>
-      <div class="form-group">
-          <label class="control-label" for="url">* URL</label>
-          <div class="controls">
-              <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control" required/>
-          </div>
-      </div>
-      <div class="form-group">
-          <label class="control-label" for="tags">Tags</label>
-          <div class="controls">
-              <input name="tags" id="tags" type="text" value="{{prettifyTags tags}}" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
-          </div>
-      </div>
-      <div class="form-group">
-          <label class="control-label" for="title">Title</label>
-          <div class="controls">
-              <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your Bookmark" class="form-control"/>
-          </div>
-      </div>
-      <div class="form-group">
-          <label class="control-label" for="resume">Description</label>
-          <div class="controls">
-              <input name="description" id="description" type="text" value="{{description}}" placeholder="Write your description" class="form-control"/>
-          </div>
-      </div>
-      <div class="form-group">
-          <label class="control-label" for="resume">Created date</label>
-          <div class="controls">
-              <input name="createdDate" id="createdDate" type="text" value="{{prettifyDate dateCreated}}" class="form-control" disabled/>
-          </div>
-      </div>
-      <div class="form-group">
-          <label class="control-label" for="resume">Modified date</label>
-          <div class="controls">
-              <input name="modifiedDate" id="modifiedDate" type="text" value="{{prettifyDate dateModified}}" class="form-control" disabled/>
-          </div>
-      </div>
-      <button class="btn btn-primary"><i  class="fa fa-save"> Save</i></button>
-      <button class="btn btn-danger btnDelete"><i  class="fa fa-remove"> Delete</i></button>
-
-
-      <button class="btn btn-default refreshView pull-right">
-      <i id="nuage" class="fa fa-newspaper-o"> Generate readable version</i>
-      </button>
-  </form>
-</div>
-
-<div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label" for="title">Title</label>
+                <div class="controls">
+                    <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your Bookmark" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="resume">Description</label>
+                <div class="controls">
+                    <input name="description" id="description" type="text" value="{{description}}" placeholder="Write your description" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="resume">Created date</label>
+                <div class="controls">
+                    <input name="createdDate" id="createdDate" type="text" value="{{prettifyDate dateCreated}}" class="form-control" disabled/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="resume">Modified date</label>
+                <div class="controls">
+                    <input name="modifiedDate" id="modifiedDate" type="text" value="{{prettifyDate dateModified}}" class="form-control" disabled/>
+                </div>
+            </div>
+            <button class="btn btn-primary"><i  class="fa fa-save"> Save</i></button>
+            <button class="btn btn-danger btnDelete"><i  class="fa fa-remove"> Delete</i></button>
+            <button class="btn btn-default refreshView pull-right">
+            <i id="nuage" class="fa fa-newspaper-o"> Generate readable version</i>
+            </button>
+        </form>
+    </div>
+    <div class="col-md-3">
         <div class="small-box bg-aqua">
             <div class="icon">
                 <i class="fa fa-bar-chart"></i>
@@ -82,6 +82,6 @@
                 <p>Clicks</p>
             </div>
         </div>
-</div>
+    </div>
 </div>
 </template>

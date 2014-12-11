@@ -20,9 +20,9 @@ Template.bookmarkPage.events({
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
       CreatedTags(tags);
       if (this.url == bookmark.url || Bookmarks.find({
-          url: bookmark.url,
-          userId: bookmark.userId
-        }).count() == 0) {
+        url: bookmark.url,
+        userId: bookmark.userId
+      }).count() == 0) {
         Meteor.call('bookmarkUpdate', bookmark, this._id, function(error, result) {
           if (error) return alert(error.reason);
           if (!result.success) {
@@ -65,12 +65,12 @@ Template.bookmarkPage.events({
   'click .refreshView': function(e) {
     e.preventDefault();
     $("#nuage").css("color", "rgb(65, 65, 178)");
-    
+
     var retry = 0;
     var new_bookmark = this;
     var _id = new_bookmark._id;
     new_bookmark = _.omit(new_bookmark, '_id');
-    
+
     Meteor.call("analyzeText", new_bookmark.url, function(error, result) {
       var id = result;
 
@@ -116,3 +116,31 @@ Handlebars.registerHelper("prettifyTags", function(tags) {
   })
   return tagString.trim();
 });
+
+Template.bookmarkPage.rendered = function() {
+
+  $('#groups').selectize({
+    maxItems: null,
+    valueField: 'id',
+    labelField: 'title',
+    searchField: 'title',
+    options: function() {
+      var allGroup = Groups.find({
+        creator: Meteor.userId()
+      }).fetch();
+      var tab = [];
+      var item = {
+        id: 0,
+        title: '',
+        url: ''
+      }
+      for (var x = 1; x < allGroup.length; x++) {
+        item.id = x;
+        item.title = allGroup[x].name;
+        tab.push(item);
+      }
+      return tab;
+    },
+    create: false
+  });
+};

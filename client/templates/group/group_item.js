@@ -3,4 +3,11 @@ Template.groupItem.events({
 	{
 		Meteor.call("removeGroupById", this._id);
 	}
-})
+});
+
+Template.members.helpers({
+	'allMembers': function()
+	{
+		return this.members;
+	}
+});
