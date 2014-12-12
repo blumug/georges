@@ -15,12 +15,7 @@
     <div class="form-group">
         <label class="control-label" for="groups">Groups</label>
         <div class="controls">
-            <select name="groups" id="groups" placeholder="@42favs @friends @family">
-                <option value="">Select a group...</option>
-                {{#each allGroups}}
-                <option value="@{{name}}">@{{ name }}</option>
-                {{/each}}
-            </select>
+            <input name="groups" id="groups" placeholder="@42favs @friends @family"/>
         </div>
     </div>
     <div class="form-group">

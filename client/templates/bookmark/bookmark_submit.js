@@ -35,11 +35,26 @@ Template.bookmarkSubmit.helpers({
 
 Template.bookmarkSubmit.rendered = function() {
 
-    $('#groups').selectize({
+    var $select = $('#groups').selectize({
         maxItems: null,
         valueField: 'id',
         labelField: 'title',
         searchField: 'title',
+        options: [],
         create: false
     });
+
+    var control = $select[0].selectize;
+
+    var groups = Groups.find().fetch();
+
+    for (var x = 0; x < groups.length; x++) {
+        control.addOption({
+            id: x,
+            title: groups[x].name
+        });
+        if (this.data.groups.indexOf(groups[x]._id) != -1) {
+            control.addItem(x);
+        }
+    }
 };
