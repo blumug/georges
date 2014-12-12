@@ -1,10 +1,18 @@
+var $select;
+
 Template.bookmarkPage.events({
   'submit form': function(events) {
     events.preventDefault();
     var user = Meteor.user();
     if (user !== null) {
       var tags = ParsedTags($(events.target).find('[name=tags]').val());
-      var groups = ParsedGroups($(events.target).find('[name=groups]').val());
+      var tabGroup = [];
+      if ($select) {
+        for (var i = 0; i < $select[0].selectize.items.length; i++) {
+          tabGroup.push($select[0].selectize.getItem($select[0].selectize.items[i]).text());
+        };
+      }
+      var groups = ParsedGroups(tabGroup);
       var bookmark = {
         url: $(events.target).find('[name=url]').val(),
         title: $(events.target).find('[name=title]').val(),
@@ -121,7 +129,7 @@ Handlebars.registerHelper("prettifyTags", function(tags) {
 
 Template.bookmarkPage.rendered = function() {
 
-  var $select = $('#groups').selectize({
+  $select = $('#groups').selectize({
     maxItems: null,
     valueField: 'id',
     labelField: 'title',
@@ -137,7 +145,7 @@ Template.bookmarkPage.rendered = function() {
   for (var x = 0; x < groups.length; x++) {
     control.addOption({
       id: x,
-      title: groups[x].name
+      title: "@" + groups[x].name
     });
     if (this.data.groups.indexOf(groups[x]._id) != -1) {
       control.addItem(x);
