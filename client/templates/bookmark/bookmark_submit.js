@@ -4,12 +4,13 @@ Template.bookmarkSubmit.events({
         var user = Meteor.user();
         if (user !== null) {
             var tags = ParsedTags($(events.target).find('[name=tags]').val());
+            var groups = ParsedGroups($(events.target).find('[name=groups]').val());
             var bookmark = {
                 url: $(events.target).find('[name=url]').val(),
                 title: $(events.target).find('[name=title]').val(),
                 description: $(events.target).find('[name=description]').val(),
                 tags: tags,
-                groups: $(events.target).find('[name=groups]').val(),
+                groups: groups,
                 userId: user._id
             };
             if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;

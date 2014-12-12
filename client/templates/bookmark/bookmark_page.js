@@ -4,13 +4,14 @@ Template.bookmarkPage.events({
     var user = Meteor.user();
     if (user !== null) {
       var tags = ParsedTags($(events.target).find('[name=tags]').val());
+      var groups = ParsedGroups($(events.target).find('[name=groups]').val());
       var bookmark = {
         url: $(events.target).find('[name=url]').val(),
         title: $(events.target).find('[name=title]').val(),
         description: $(events.target).find('[name=description]').val(),
         thumbnail: $(events.target).find('[name=thumbnail]').val(),
         tags: tags,
-        groups: $(events.target).find('[name=groups]').val(),
+        groups: groups,
         dateCreated: this.dateCreated,
         dateModified: new Date(),
         counterView: this.counterView,
@@ -130,10 +131,13 @@ Template.bookmarkPage.helpers({
 Template.bookmarkPage.rendered = function() {
 
   $('#groups').selectize({
-    maxItems: null,
-    valueField: 'id',
-    labelField: 'title',
-    searchField: 'title',
-    create: false
+    delimiter: ',',
+    persist: false,
+    create: function(input) {
+      return {
+        value: input,
+        text: input
+      }
+    }
   });
 };
