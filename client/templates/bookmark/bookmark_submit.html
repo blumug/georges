@@ -13,6 +13,17 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="control-label" for="groups">Groups</label>
+        <div class="controls">
+            <select name="groups" id="groups" placeholder="@42favs @friends @family">
+                <option value="">Select a group...</option>
+                {{#each allGroups}}
+                <option value="@{{name}}">@{{ name }}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
         <label class="control-label" for="title">Title</label>
         <div class="controls">
             <input name="title" id="title" type="text" value="" placeholder="Name your Bookmark" class="form-control"/>

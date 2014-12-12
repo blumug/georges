@@ -9,6 +9,7 @@ Template.bookmarkSubmit.events({
                 title: $(events.target).find('[name=title]').val(),
                 description: $(events.target).find('[name=description]').val(),
                 tags: tags,
+                groups: $(events.target).find('[name=groups]').val(),
                 userId: user._id
             };
             if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
@@ -24,3 +25,20 @@ Template.bookmarkSubmit.events({
         } else DisplayErrorSubmit("You need to be connected.");
     }
 });
+
+Template.bookmarkSubmit.helpers({
+    'allGroups': function() {
+        return Groups.find();
+    }
+});
+
+Template.bookmarkSubmit.rendered = function() {
+
+    $('#groups').selectize({
+        maxItems: null,
+        valueField: 'id',
+        labelField: 'title',
+        searchField: 'title',
+        create: false
+    });
+};

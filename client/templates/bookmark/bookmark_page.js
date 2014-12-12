@@ -10,6 +10,7 @@ Template.bookmarkPage.events({
         description: $(events.target).find('[name=description]').val(),
         thumbnail: $(events.target).find('[name=thumbnail]').val(),
         tags: tags,
+        groups: $(events.target).find('[name=groups]').val(),
         dateCreated: this.dateCreated,
         dateModified: new Date(),
         counterView: this.counterView,
