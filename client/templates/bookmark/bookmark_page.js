@@ -121,6 +121,9 @@ Handlebars.registerHelper("prettifyTags", function(tags) {
 Template.bookmarkPage.helpers({
   'allGroups': function() {
     return Groups.find();
+  },
+  'allGroupsSelected': function() {
+    return this.groups;
   }
 });
 

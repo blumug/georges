@@ -30,9 +30,11 @@
                 <div class="controls">
                     <select name="groups" id="groups" placeholder="@42favs @friends @family">
                         <option value="">Select a group...</option>
-                        <option value="" selected>Select a group...</option>
+                        {{#each allGroupsSelected}}
+                        <option value="{{this}}" selected>{{ this }}</option>
+                        {{/each}}
                         {{#each allGroups}}
-                        <option value="@{{name}}" selected>@{{ name }}</option>
+                        <option value="@{{name}}">@{{ name }}</option>
                         {{/each}}
                     </select>
                 </div>
