@@ -119,25 +119,28 @@ Handlebars.registerHelper("prettifyTags", function(tags) {
   return tagString.trim();
 });
 
-Template.bookmarkPage.helpers({
-  'allGroups': function() {
-    return Groups.find();
-  },
-  'allGroupsSelected': function() {
-    return this.groups;
-  }
-});
-
 Template.bookmarkPage.rendered = function() {
 
-  $('#groups').selectize({
-    delimiter: ',',
-    persist: false,
-    create: function(input) {
-      return {
-        value: input,
-        text: input
-      }
-    }
+  var $select = $('#groups').selectize({
+    maxItems: null,
+    valueField: 'id',
+    labelField: 'title',
+    searchField: 'title',
+    options: [],
+    create: false
   });
+
+  var control = $select[0].selectize;
+
+  var groups = Groups.find().fetch();
+
+  for (var x = 0; x < groups.length; x++) {
+    control.addOption({
+      id: x,
+      title: groups[x].name
+    });
+    if (this.data.groups.indexOf(groups[x]._id) != -1) {
+      control.addItem(x);
+    }
+  }
 };
