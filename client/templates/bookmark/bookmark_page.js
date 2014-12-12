@@ -147,7 +147,16 @@ Template.bookmarkPage.rendered = function() {
       id: x,
       title: "@" + groups[x].name
     });
-    if (this.data.groups.indexOf(groups[x]._id) != -1) {
+    var searchTerm = groups[x]._id,
+      index = -1;
+    for (var i = 0, len = this.data.groups.length; i < len; i++) {
+      if (this.data.groups[i]._id === searchTerm) {
+        index = i;
+        break;
+      }
+    }
+
+    if (index != -1) {
       control.addItem(x);
     }
   }

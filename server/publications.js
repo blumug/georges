@@ -12,6 +12,18 @@ Meteor.publish('bookmarks', function(option, filter) {
           $in: parsedTags
         }
       }, option)
+    } else if (filter.indexOf("@") != -1) {
+      var parsedGroups = ParsedGroupsToTable(filter);
+      return Bookmarks.find({
+        userId: this.userId,
+        groups: {
+          $elemMatch: {
+            name: {
+              $in: parsedGroups
+            }
+          }
+        }
+      }, option)
     } else {
       return Bookmarks.find({
         userId: this.userId,
@@ -34,6 +46,15 @@ Meteor.publish('bookmarks', function(option, filter) {
           tags: {
             $regex: filter,
             $options: "si"
+          }
+        }, {
+          groups: {
+            $elemMatch: {
+              name: {
+                $regex: filter,
+                $options: "si"
+              }
+            }
           }
         }]
       }, option);
