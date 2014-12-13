@@ -1,15 +1,15 @@
 <template name="bookmarkSubmit">
-<form class="main form well">
+<form class="form add-bookmark-page">
     <div class="form-group">
         <label class="control-label" for="url">* URL</label>
         <div class="controls">
-            <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control" required/>
+            <input name="url" id="url" type="text" value="" placeholder="http://" class="form-control" required/>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label" for="tags">Tags</label>
         <div class="controls">
-            <input name="tags" id="tags" type="text" value="" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
+            <input name="tags" id="tags" type="text" value="" placeholder="#cool #later #awesome" class="form-control"/>
         </div>
     </div>
     <div class="form-group">
@@ -21,15 +21,17 @@
     <div class="form-group">
         <label class="control-label" for="title">Title</label>
         <div class="controls">
-            <input name="title" id="title" type="text" value="" placeholder="Name your Bookmark" class="form-control"/>
+            <input name="title" id="title" type="text" value="" placeholder="Enter a title (optional)" class="form-control"/>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label" for="resume">Description</label>
         <div class="controls">
-            <input name="description" id="description" type="text" value="" placeholder="Write your description" class="form-control"/>
+            <input name="description" id="description" type="text" value="" placeholder="Enter a description (optional)" class="form-control"/>
         </div>
     </div>
-    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <div class="toolbar">
+      <input type="submit" value="Submit"/>
+    </div>
 </form>
 </template>
