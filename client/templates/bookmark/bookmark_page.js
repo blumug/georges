@@ -115,6 +115,23 @@ Template.bookmarkPage.events({
   }
 });
 
+Template.bookmarkPage.helpers({
+  domain: function () {
+    var url = this.url;
+    var matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+    var domain = matches && matches[1];
+    return domain;
+  },
+  favicon: function () {
+    var url = this.url;
+    pathArray = url.split( '/' );
+    var protocol = pathArray[0];
+    var host = pathArray[2];
+    var domain = protocol + '//' + host; 
+    return domain + "/favicon.ico";
+  }  
+})
+
 Handlebars.registerHelper("prettifyDate", function(timestamp) {
   return new Date(timestamp).toLocaleDateString();
 });
