@@ -96,3 +96,8 @@ Meteor.publish('allUser', function() {
   };
   return Meteor.users.find({}, options);
 });
+Meteor.publish('notifications', function() {
+  return Notifications.find({
+    read: false
+  });
+});

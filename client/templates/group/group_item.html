@@ -1,12 +1,12 @@
 <template name="groupItem">
 <h4>
 <a href="{{ pathFor 'groupPage' }}">{{ name }}</a>
-{{> members}}
+{{#each allMembers}}
+{{> member}}
+{{/each}}
 <input class="deleteGroup btn btn-warning" style="float: right" value="Delete"/>
 </h4>
 </template>
-<template name="members">
-{{#each allMembers}}
-{{ this }}
-{{/each}}
+<template name="member">
+{{ name }}
 </template>

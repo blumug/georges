@@ -5,7 +5,7 @@ Template.groupItem.events({
 	}
 });
 
-Template.members.helpers({
+Template.groupItem.helpers({
 	'allMembers': function()
 	{
 		return this.members;
