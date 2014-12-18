@@ -61,10 +61,7 @@ Meteor.publish('bookmarks', function(option, filter) {
     }
   }
 });
-Meteor.publish('bookmark', function(id) {
-  check(id, String);
-  return Bookmarks.find(id);
-});
+
 Meteor.publish('bookmarksGroups', function() {
   var tab = [];
   var groups = Groups.find().fetch();
@@ -79,19 +76,14 @@ Meteor.publish('bookmarksGroups', function() {
         $elemMatch: {
           id: this.userId
         },
-        accepted: true
+        $elemMatch: {
+          accepted: true
+        }
       }
     }]
   });
 });
-Meteor.publish('tags', function() {
-  return Tags.find();
-});
-Meteor.publish('favorites', function() {
-  return Favorites.find({
-    userId: this.userId
-  });
-});
+
 Meteor.publish('groups', function() {
   return Groups.find({
     $or: [{
@@ -99,17 +91,19 @@ Meteor.publish('groups', function() {
     }, {
       members: {
         $elemMatch: {
-          id: this.userId
-        },
-        accepted: true
+          id: this.userId,
+          accepted: true
+        }
       }
     }]
   });
 });
+
 Meteor.publish('groupPage', function(id) {
   check(id, String);
   return Groups.find(id);
 });
+
 Meteor.publish('allUser', function() {
   var options = {
     fields: {
@@ -129,4 +123,19 @@ Meteor.publish('notifications', function() {
       }
     }
   });
+});
+
+Meteor.publish('tags', function() {
+  return Tags.find();
+});
+
+Meteor.publish('favorites', function() {
+  return Favorites.find({
+    userId: this.userId
+  });
+});
+
+Meteor.publish('bookmark', function(id) {
+  check(id, String);
+  return Bookmarks.find(id);
 });
