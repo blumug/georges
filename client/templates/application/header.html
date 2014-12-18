@@ -26,11 +26,13 @@
                     {{> optionDropdown }}
                     {{/each}}
                 </ul>
-                
                 </span>
                 <button class="form-control" name="cleanSearch" id="cleanSearch"><i class="fa fa-times"></i></button>
             </div>
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    {{> notifications}}
+                </li>
                 {{> loginButtons}}
                 <li>
                     <a href="{{pathFor 'bookmarkSetting'}}" class="icon settings"><i></i></a>
@@ -42,11 +44,9 @@
     </div>
 </div>
 </template>
-
 <template name="optionDropdown">
 <li role="presentation"><a role="menuitem" tabindex="-1" href="{{pathFor 'bookmarksList'}}?filter={{ query }}">{{ this.favorite }}</a></li>
 </template>
-
 <template name="headerLanding">
 <div class="navbar navbar-jbl42 navbar-fixed-top" role="navigation">
     <div class="container landing-header">

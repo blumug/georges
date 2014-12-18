@@ -96,8 +96,15 @@ Meteor.publish('allUser', function() {
   };
   return Meteor.users.find({}, options);
 });
+
 Meteor.publish('notifications', function() {
+  var user = Meteor.users.findOne(this.userId);
   return Notifications.find({
-    read: false
+    read: false,
+    members: {
+      $elemMatch: {
+        name: user.emails[0].address
+      }
+    }
   });
 });
