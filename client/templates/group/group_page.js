@@ -28,7 +28,7 @@ Template.groupPage.events({
 				creator: Meteor.userId(),
 				name: $(".nameGroup").val()
 			});
-			Meteor.call("addMember", this._id, user.emails[0].address);
+			Meteor.call("addMember", this._id, user._id, user.emails[0].address);
 		} else {}
 	},
 	'click .btn-delete-member': function() {

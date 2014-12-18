@@ -65,9 +65,23 @@ Meteor.publish('bookmark', function(id) {
   check(id, String);
   return Bookmarks.find(id);
 });
-Meteor.publish('allBookmarks', function() {
+Meteor.publish('bookmarksGroups', function() {
+  var tab = [];
+  var groups = Groups.find().fetch();
+  for (var i = 0; i < groups.length; i++) {
+    tab.push(groups[i]._id);
+  };
   return Bookmarks.find({
-    userId: this.userId
+    $or: [{
+      userId: this.userId
+    }, {
+      members: {
+        $elemMatch: {
+          id: this.userId
+        },
+        accepted: true
+      }
+    }]
   });
 });
 Meteor.publish('tags', function() {
@@ -80,7 +94,16 @@ Meteor.publish('favorites', function() {
 });
 Meteor.publish('groups', function() {
   return Groups.find({
-    creator: this.userId
+    $or: [{
+      creator: this.userId
+    }, {
+      members: {
+        $elemMatch: {
+          id: this.userId
+        },
+        accepted: true
+      }
+    }]
   });
 });
 Meteor.publish('groupPage', function(id) {
@@ -98,12 +121,11 @@ Meteor.publish('allUser', function() {
 });
 
 Meteor.publish('notifications', function() {
-  var user = Meteor.users.findOne(this.userId);
   return Notifications.find({
     read: false,
     members: {
       $elemMatch: {
-        name: user.emails[0].address
+        id: this.userId
       }
     }
   });
