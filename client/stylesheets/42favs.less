@@ -1,4 +1,22 @@
 /* CSS declarations go here */
+.font-century(@size, @weight) {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-weight: @weight;
+    font-size: @size;
+}
+
+.font-futura-light(@size, @weight) {
+    font-family: 'futura_ltlight';
+    font-weight: @weight;
+    font-size: @size;
+}
+
+.font-futura-book(@size, @weight) {
+    font-family: 'futura_ltbook';
+    font-weight: @weight;
+    font-size: @size;
+}
+
 
 body {
     padding-top: 106px;
@@ -954,7 +972,6 @@ div.view {
     input[type='submit'] {
         font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
         font-weight: 500;
-        height: 50px;
         width: 228px;
         margin-top: 20px;
         font-size: 24px;
@@ -987,4 +1004,106 @@ div.view {
         display: inline-block;
         margin-bottom:50px;
     }
+}
+
+/* add bookmark page */
+
+.add-bookmark-page {
+    .font-century(18px, bold);
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    input {
+        .font-futura-light(15px, normal);
+        height: 40px;
+    }
+    .toolbar {
+        text-align: center;
+        margin-top: 50px;
+        input[type="submit"] {
+            text-align: center;
+            .font-century(24px, normal);
+            border-radius: 4px;
+            border-color: transparent;
+            color: white;
+            padding-left:62px;
+            padding-right:62px;
+            background-color: #bf3a5a;
+            display: inline-block;
+            height: 50px;
+            .transition(0.5s);
+            &:hover {
+               background-color: #82293e;
+            }
+
+        }
+    }
+}
+
+.edit-bookmark-page {
+
+    .edit-header {
+        margin-bottom:20px;
+        background-color: #fafafa;
+        overflow:visible;
+        height: 48px;
+        line-height: 48px;
+        .back {        
+            height: 48px;
+            line-height: 48px;
+            a {
+                i {
+                    background: url('/images/sprites.png') no-repeat -284px -83px;
+                    width: 12px;
+                    height: 19px;
+                    position: relative;
+                    top:6px;
+                    display:inline-block;        
+
+                }
+
+            }
+        }
+        .title {
+            text-align: center;
+            .favicon {
+                width: 16px;
+                height: 16px;
+                display:inline-block;
+                margin-right:10px;
+                position: relative;
+                top: -1px;
+            }        
+        }  
+
+        .edit-toolbar {
+            text-align: right;
+            a {
+                display:inline-block;
+                margin-left: 50px;
+                margin-right:10px;
+            }
+
+            .read {
+                i {
+                    background: url('/images/sprites.png') no-repeat -162px -87px;
+                    width: 22px;
+                    height: 13px;
+                    display:inline-block;        
+                }
+            }
+
+            .delete {
+                i {
+                    background: url('/images/sprites.png') no-repeat -95px -85px;
+                    width: 15px;
+                    height: 15px;
+                    display:inline-block;        
+                }
+            }
+
+        }  
+    }
+
 }
