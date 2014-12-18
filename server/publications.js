@@ -1,13 +1,50 @@
 Meteor.publish('bookmarks', function(option, filter) {
+  var tab = [];
+  var groups = Groups.find({
+    $or: [{
+      creator: this.userId
+    }, {
+      members: {
+        $elemMatch: {
+          id: this.userId,
+          accepted: true
+        }
+      }
+    }]
+  }).fetch();
+  for (var i = 0; i < groups.length; i++) {
+    tab.push(groups[i]._id);
+  };
+
   if (!filter || filter === '') {
     return (Bookmarks.find({
-      userId: this.userId
+      $or: [{
+        userId: this.userId
+      }, {
+        groups: {
+          $elemMatch: {
+            _id: {
+              $all: tab
+            }
+          }
+        }
+      }]
     }, option));
   } else {
     if (filter.indexOf("#") != -1) {
       var parsedTags = ParsedTags(filter);
       return Bookmarks.find({
-        userId: this.userId,
+        $or: [{
+          userId: this.userId
+        }, {
+          groups: {
+            $elemMatch: {
+              _id: {
+                $all: tab
+              }
+            }
+          }
+        }],
         tags: {
           $in: parsedTags
         }
@@ -15,7 +52,17 @@ Meteor.publish('bookmarks', function(option, filter) {
     } else if (filter.indexOf("@") != -1) {
       var parsedGroups = ParsedGroupsToTable(filter);
       return Bookmarks.find({
-        userId: this.userId,
+        $or: [{
+          userId: this.userId
+        }, {
+          groups: {
+            $elemMatch: {
+              _id: {
+                $all: tab
+              }
+            }
+          }
+        }],
         groups: {
           $elemMatch: {
             name: {
@@ -26,7 +73,17 @@ Meteor.publish('bookmarks', function(option, filter) {
       }, option)
     } else {
       return Bookmarks.find({
-        userId: this.userId,
+        $or: [{
+          userId: this.userId
+        }, {
+          groups: {
+            $elemMatch: {
+              _id: {
+                $all: tab
+              }
+            }
+          }
+        }],
         $or: [{
           url: {
             $regex: filter,
@@ -60,28 +117,6 @@ Meteor.publish('bookmarks', function(option, filter) {
       }, option);
     }
   }
-});
-
-Meteor.publish('bookmarksGroups', function() {
-  var tab = [];
-  var groups = Groups.find().fetch();
-  for (var i = 0; i < groups.length; i++) {
-    tab.push(groups[i]._id);
-  };
-  return Bookmarks.find({
-    $or: [{
-      userId: this.userId
-    }, {
-      members: {
-        $elemMatch: {
-          id: this.userId
-        },
-        $elemMatch: {
-          accepted: true
-        }
-      }
-    }]
-  });
 });
 
 Meteor.publish('groups', function() {
