@@ -1,6 +1,6 @@
 <template name="groupItem">
 <h4>
-<a href="{{ pathFor 'groupPage' }}">{{ name }}</a>
+<a>{{ name }}</a>
 <small>created by, </small><strong>{{ nameCreator }}</strong>
 {{#if isCreator}}
 <input class="deleteGroup btn btn-warning" style="float: right" value="Delete"/>

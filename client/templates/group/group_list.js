@@ -1,5 +1,6 @@
 Template.groupList.helpers({
 	'groupList': function() {
+		throwError("coucou");
 		return Groups.find();
 	}
 });
