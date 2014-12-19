@@ -69,5 +69,19 @@ Template.groupItem.helpers({
 		} else {
 			return false;
 		}
+	},
+	'nameCreator': function() {
+		var user = Meteor.users.findOne({
+			_id: this.creator
+		});
+		if (user) {
+			if (user.profile) {
+				return user.profile.name;
+			} else {
+				return user.emails[0].address;
+			}
+		} else {
+			return "author undefined";
+		}
 	}
 });
