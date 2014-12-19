@@ -40,12 +40,27 @@ Template.groupItem.events({
 			return false;
 		}
 	},
-	'click .btn-delete-member': function() {
+	'click .btn-delete-member': function(e) {
+		e.preventDefault();
+		var name = this.name;
 		var group = Groups.findOne(Session.get("idGroup"));
-		if (Meteor.userId() == group.creator) {
-
-			Meteor.call("removeMember", Session.get("idGroup"), this.name);
-		}
+		bootbox.dialog({
+			message: "Do you want delete this member",
+			title: "Warning",
+			buttons: {
+				main: {
+					label: "Cancel",
+					className: "btn-primary"
+				},
+				danger: {
+					label: "Delete",
+					className: "btn-danger",
+					callback: function() {
+						Meteor.call("removeMember", Session.get("idGroup"), name);
+					}
+				}
+			}
+		});
 	}
 });
 
