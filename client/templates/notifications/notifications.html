@@ -1,5 +1,5 @@
 <template name="notifications">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-top: 34px;">
+<a href="#" class="dropdown-toggle btn-notifications" data-toggle="dropdown" style="padding-top: 34px;">
 Notifications
 {{#if notificationCount}}
 <span class="badge badge-inverse">{{notificationCount}}</span>
@@ -9,7 +9,9 @@ Notifications
 <ul class="notification dropdown-menu">
     {{#if notificationCount}}
     {{#each notifications}}
-    {{> notificationItem}}
+    <li>
+        {{> notificationItem}}
+    </li>
     {{/each}}
     {{else}}
     <li><span>No Notifications</span></li>
@@ -17,9 +19,11 @@ Notifications
 </ul>
 </template>
 <template name="notificationItem">
-<li>
-  <p>{{ message }}</p>
-  <input type="button" class="btn accept" value="Yes">
-  <input type="button" class="btn refuse" value="No">
-</li>
+{{#if isInvitation}}
+<p>{{ message }}</p>
+<input type="button" class="btn accept" value="Yes">
+<input type="button" class="btn refuse" value="No">
+{{else}}
+{{ message }}
+{{/if}}
 </template>

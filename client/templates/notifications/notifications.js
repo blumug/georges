@@ -7,11 +7,25 @@ Template.notifications.helpers({
 	}
 });
 
+Template.notifications.events({
+	'blur .btn-notifications': function() {
+		var notifications = Notifications.find().fetch();
+		for (var x = 0; x < notifications.length; x++) {
+			Notifications.update(notifications[x]._id, {
+				$set: {
+					read: true
+				}
+			});
+		}
+	}
+});
+
 Template.notificationItem.helpers({
-	'message': function() {
+	'isInvitation': function() {
 		if (this.type == "invitation") {
-			var user = Meteor.users.findOne(this.groupCreator);
-			return user.emails[0].address + " souhaite vous inviter dans son groupe ";
+			return true;
+		} else {
+			return false;
 		}
 	}
 });

@@ -44,6 +44,13 @@ Template.groupItem.events({
 		e.preventDefault();
 		var name = this.name;
 		var group = Groups.findOne(Session.get("idGroup"));
+		var message = "";
+		var id = this.id;
+		if (Meteor.userId() == this.id) {
+			message = "Vous avez quitté le groupe " + group.name + ".";
+		} else {
+			message = "On vous a exclue du groupe " + group.name + ".";
+		}
 		bootbox.dialog({
 			message: "Do you want delete this member",
 			title: "Warning",
@@ -56,6 +63,7 @@ Template.groupItem.events({
 					label: "Delete",
 					className: "btn-danger",
 					callback: function() {
+						Meteor.call("createDesinscriptionNotification", id, group, message);
 						Meteor.call("removeMember", Session.get("idGroup"), name);
 					}
 				}
@@ -76,15 +84,6 @@ Template.groupItem.helpers({
 			return false;
 		}
 	},
-	'isMember': function() {
-		var group = Groups.findOne(Session.get("idGroup"));
-		var userId = Meteor.userId();
-		if (userId == group.creator || userId == this.id) {
-			return true;
-		} else {
-			return false;
-		}
-	},
 	'nameCreator': function() {
 		var user = Meteor.users.findOne({
 			_id: this.creator
@@ -100,3 +99,15 @@ Template.groupItem.helpers({
 		}
 	}
 });
+
+Template.member.helpers({
+	'isMember': function() {
+		var group = Groups.findOne(Session.get("idGroup"));
+		var userId = Meteor.userId();
+		if (userId == group.creator || userId == this.id) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+})

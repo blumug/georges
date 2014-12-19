@@ -9,16 +9,19 @@
 <small>
 <ul id="navlist">
     {{#each allMembers}}
-    <li>
-        {{ name }}
-        {{#if isMember}}
-        <a href=""><i class="fa fa-times btn-delete-member"></i></a>
-        {{/if}}
-    </li>
+        {{> member}}
     {{/each}}
     {{#if isCreator}}
     <li><input type="text" class="addMember email" placeholder="Search..." value=""></li>
     {{/if}}
 </ul>
 </small>
+</template>
+<template name="member">
+<li>
+    {{ name }}
+    {{#if isMember}}
+    <a href=""><i class="fa fa-times btn-delete-member"></i></a>
+    {{/if}}
+</li>
 </template>
