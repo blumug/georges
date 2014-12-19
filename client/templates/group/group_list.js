@@ -1,6 +1,13 @@
 Template.groupList.helpers({
-	'groupList': function()
-	{
+	'groupList': function() {
 		return Groups.find();
+	}
+});
+
+Template.groupItem.helpers({
+	'nameCreator': function() {
+		return Meteor.users.findOne({
+			_id: this.creator
+		}).profile.name;
 	}
 });

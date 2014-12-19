@@ -1,12 +1,24 @@
 <template name="groupItem">
 <h4>
 <a href="{{ pathFor 'groupPage' }}">{{ name }}</a>
-{{#each allMembers}}
-{{> member}}
-{{/each}}
+<small>created by, </small><strong>{{ nameCreator }}</strong>
+{{#if isCreator}}
 <input class="deleteGroup btn btn-warning" style="float: right" value="Delete"/>
+{{/if}}
 </h4>
-</template>
-<template name="member">
-{{ name }}
+<small>
+<ul id="navlist">
+    {{#each allMembers}}
+    <li>
+        {{ name }}
+        {{#if isMember}}
+        <a href=""><i class="fa fa-times btn-delete-member"></i></a>
+        {{/if}}
+    </li>
+    {{/each}}
+    {{#if isCreator}}
+    <li><input type="text" class="addMember email" placeholder="Search..." value=""></li>
+    {{/if}}
+</ul>
+</small>
 </template>
