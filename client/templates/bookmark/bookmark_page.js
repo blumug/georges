@@ -130,7 +130,7 @@ Template.bookmarkPage.helpers({
     var domain = protocol + '//' + host; 
     return domain + "/favicon.ico";
   }  
-})
+});
 
 Handlebars.registerHelper("prettifyDate", function(timestamp) {
   return new Date(timestamp).toLocaleDateString();

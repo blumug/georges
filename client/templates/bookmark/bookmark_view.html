@@ -1,39 +1,43 @@
 <template name="bookmarkView">
-
-<div class="row">
-  <div class="col-md-12">
-    <ol class="breadcrumb">
-      <li><a href="/">Home</a></li>
-      <li class="active">{{ url }}</li>
-    </ol>  
-  </div>
-</div>
-
-
-<div class="row">
-<div class="col-md-12">
-
-
-<div class="resume" id="resume">
-
-    <button class="btn btn-default refreshView pull-right">
-    <i id="nuage" class="fa fa-newspaper-o"> Regenerate</i>
-    </button>
-    <a class="btn btn-default pull-right" href="{{pathFor 'bookmarkPage'}}"><i class="fa fa-gear"></i> Edit</a>
-    <div class="titleView">
-        {{#if title}}
-        <h1><a href='{{url}}' target='_blank'>{{title}}</a></h1>
-        {{ else }}
-        <h1><a href='{{url}}' target='_blank'>{{url}}</a></h1>
-        {{/if}}
+<div class="view-bookmark-page">
+    <div class="edit-header-background">
     </div>
-</div>
-<div id="summary" class="summary">
-    {{{summary}}}
-</div>
-<div class="view" id="view">
-    {{{readable}}}
-</div>
-</div>
+    <div class="row edit-header">
+        <div class="col-md-1 back">
+            <a href="/"><i></i></a>
+        </div>
+        <div class="col-md-9 title">
+            <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
+            <a href="{{ url }}" target="_blank">{{ domain }}</a>
+        </div>
+        <div class="col-md-2 edit-toolbar">
+            <a class="edit" href="{{pathFor 'bookmarkPage'}}"><i></i></a>
+            <a href='#' class="delete btnDelete"><i></i></a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="resume" id="resume">
+                <button class="btn btn-default refreshView pull-right">
+                <i id="nuage" class="fa fa-newspaper-o"> Regenerate</i>
+                </button>
+                <a class="btn btn-default pull-right" href="{{pathFor 'bookmarkPage'}}"><i class="fa fa-gear"></i> Edit</a>
+                <div class="titleView">
+                    {{#if title}}
+                    <h1><a href='{{url}}' target='_blank'>{{title}}</a></h1>
+                    {{ else }}
+                    <h1><a href='{{url}}' target='_blank'>{{url}}</a></h1>
+                    {{/if}}
+                </div>
+            </div>
+            <div id="summary" class="summary">
+                {{{summary}}}
+            </div>
+            <div class="view" id="view">
+                {{{readable}}}
+            </div>
+        </div>
+    </div>
 </div>
 </template>
