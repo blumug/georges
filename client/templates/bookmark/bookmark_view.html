@@ -1,12 +1,11 @@
 <template name="bookmarkView">
 <div class="view-bookmark-page">
-    <div class="edit-header-background">
-    </div>
+    <div class="edit-header-background"></div>
     <div class="row edit-header">
-        <div class="col-md-1 back">
+        <div class="col-md-2 back">
             <a href="/"><i></i></a>
         </div>
-        <div class="col-md-9 title">
+        <div class="col-md-8 title">
             <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
             <a href="{{ url }}" target="_blank">{{ domain }}</a>
         </div>
@@ -15,25 +14,25 @@
             <a href='#' class="delete btnDelete"><i></i></a>
         </div>
     </div>
-    
+    <div class="row">
+        <div class="col-md-12 title">
+            {{#if title}}
+            <h1><a href='{{url}}' target='_blank'>{{title}}</a></h1>
+            <h2><a href='{{url}}' target='_blank'>{{url}}</a></h2>
+            {{ else }}
+            <h2><a href='{{url}}' target='_blank'>{{url}}</a></h2>
+            {{/if}}
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-12">
-            <div class="resume" id="resume">
-                <button class="btn btn-default refreshView pull-right">
-                <i id="nuage" class="fa fa-newspaper-o"> Regenerate</i>
-                </button>
-                <a class="btn btn-default pull-right" href="{{pathFor 'bookmarkPage'}}"><i class="fa fa-gear"></i> Edit</a>
-                <div class="titleView">
-                    {{#if title}}
-                    <h1><a href='{{url}}' target='_blank'>{{title}}</a></h1>
-                    {{ else }}
-                    <h1><a href='{{url}}' target='_blank'>{{url}}</a></h1>
-                    {{/if}}
-                </div>
-            </div>
             <div id="summary" class="summary">
                 {{{summary}}}
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="view" id="view">
                 {{{readable}}}
             </div>
