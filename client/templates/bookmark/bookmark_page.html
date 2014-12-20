@@ -65,29 +65,53 @@
                     </div>
                 </div>
                   <div class='toolbar'>
-                    <button type='submit'><i class="fa fa-save"> Save</i></button>
+                    <button type='submit'>Save</button>
                   </div>
             </form>
         </div>
-        <div class="col-md-3">
-            <div class="small-box bg-aqua">
-                <div class="icon">
-                    <i class="fa fa-bar-chart"></i>
-                </div>
-                <div class="inner">
-                    <h3>{{counterView}}</h3>
-                    <p>Views</p>
-                </div>
+        <div class="col-md-3">  
+            <h2>Details</h2>
+
+            <div class="stat first">
+              <div class="value">
+                {{counterView}}
+              </div>
+              <div class="legend">
+                <div class="icon"><i class="stat-view"></i></div>
+                <span>View</span>
+              </div>
             </div>
-            <div class="small-box bg-green">
-                <div class="icon">
-                    <i class="fa fa-hand-o-up"></i>
-                </div>
-                <div class="inner">
-                    <h3>{{counterClick}}</h3>
-                    <p>Clicks</p>
-                </div>
+
+            <div class="stat">
+              <div class="value">
+                {{counterClick}}
+              </div>
+              <div class="legend">
+                <div class="icon"><i class="stat-click"></i></div>
+                <span>Clicks</span>
+              </div>
             </div>
+
+            <div class="stat">
+              <div class="value">
+                {{prettifyDate dateCreated}}
+              </div>
+              <div class="legend">
+                <div class="icon"><i class="stat-date"></i></div>
+                <span>Created</span>
+              </div>
+            </div>
+
+            <div class="stat">
+              <div class="value">
+                {{prettifyDate dateModified}}
+              </div>
+              <div class="legend">
+                <div class="icon"><i class="stat-date"></i></div>
+                <span>Updated</span>
+              </div>
+            </div>
+
         </div>
     </div>
 </div>
