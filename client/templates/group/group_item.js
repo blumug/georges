@@ -43,7 +43,7 @@ Template.groupItem.events({
 	'click .btn-delete-member': function(e) {
 		e.preventDefault();
 		var name = this.name;
-		var group = Groups.findOne(Session.get("idGroup"));
+		var group = Groups.findOne(this.idGroup);
 		var message = "";
 		var id = this.id;
 		if (Meteor.userId() == this.id) {
@@ -74,7 +74,6 @@ Template.groupItem.events({
 
 Template.groupItem.helpers({
 	'allMembers': function() {
-		Session.set("idGroup", this._id);
 		return this.members;
 	},
 	'isCreator': function() {
@@ -102,7 +101,7 @@ Template.groupItem.helpers({
 
 Template.member.helpers({
 	'isMember': function() {
-		var group = Groups.findOne(Session.get("idGroup"));
+		var group = Groups.findOne(this.idGroup);
 		var userId = Meteor.userId();
 		if (userId == group.creator || userId == this.id) {
 			return true;
