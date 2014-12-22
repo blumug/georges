@@ -6,7 +6,9 @@
       <div class="actions">
           <a href="{{pathFor 'bookmarkView'}}" class="{{ status }}"><i class="icon-view"></i></a>
           <a href="{{pathFor 'bookmarkPage'}}" class=""><i class="icon-settings"></i></a>
+          {{#if ownBookmark}}
           <a href="" class="btnPreviewDelete"><i class="icon-delete"></i></a>
+          {{/if}}
       </div>
 
     </div>

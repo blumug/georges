@@ -1,20 +1,20 @@
 Template.bookmarkItem.helpers({
-  domain: function () {
+  domain: function() {
     var url = this.url;
     var matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
     var domain = matches && matches[1];
     return domain;
   },
-  
+
   tags: function() {
     return this.tags;
   },
 
-  hasTags: function () {
+  hasTags: function() {
     return this.tags && this.tags.length > 0;
   },
 
-  hasDescription: function () {
+  hasDescription: function() {
     return this.description && this.description.length > 0;
   },
 
@@ -22,13 +22,16 @@ Template.bookmarkItem.helpers({
     if (this.summary.text == "") return "unvisible";
     else return "";
   },
-  favicon: function () {
+  favicon: function() {
     var url = this.url;
-    pathArray = url.split( '/' );
+    pathArray = url.split('/');
     var protocol = pathArray[0];
     var host = pathArray[2];
-    var domain = protocol + '//' + host; 
+    var domain = protocol + '//' + host;
     return domain + "/favicon.ico";
+  },
+  ownBookmark: function() {
+    return this.userId === Meteor.userId();
   }
 });
 Template.bookmarkItem.events({

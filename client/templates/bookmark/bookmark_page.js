@@ -116,20 +116,23 @@ Template.bookmarkPage.events({
 });
 
 Template.bookmarkPage.helpers({
-  domain: function () {
+  domain: function() {
     var url = this.url;
     var matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
     var domain = matches && matches[1];
     return domain;
   },
-  favicon: function () {
+  favicon: function() {
     var url = this.url;
-    pathArray = url.split( '/' );
+    pathArray = url.split('/');
     var protocol = pathArray[0];
     var host = pathArray[2];
-    var domain = protocol + '//' + host; 
+    var domain = protocol + '//' + host;
     return domain + "/favicon.ico";
-  }  
+  },
+  ownBookmark: function() {
+    return this.userId === Meteor.userId();
+  }
 });
 
 Handlebars.registerHelper("prettifyDate", function(timestamp) {
