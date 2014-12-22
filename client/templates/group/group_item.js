@@ -11,7 +11,7 @@ Template.groupItem.events({
 				}
 			}
 		});
-		if (user) {
+		if (user && filtre != user.emails[0].address) {
 			$(".email").css("border-color", "greenyellow");
 		} else {
 			$(".email").css("border-color", "");
@@ -28,7 +28,7 @@ Template.groupItem.events({
 						}
 					}
 				});
-				if (user) {
+				if (user && filtre != user.emails[0].address) {
 					var group = Groups.findOne({
 						creator: Meteor.userId(),
 						name: $(".nameGroup").val()
