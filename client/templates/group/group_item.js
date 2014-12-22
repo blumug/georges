@@ -89,7 +89,7 @@ Template.groupItem.helpers({
 			_id: this.creator
 		});
 		if (user) {
-			if (user.profile) {
+			if (user.profile && user.profile.name) {
 				return user.profile.name;
 			} else {
 				return user.emails[0].address;

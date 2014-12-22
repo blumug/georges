@@ -1,7 +1,7 @@
 <template name="groupItem">
 <h4>
 <a>{{ name }}</a>
-<small>created by, </small><strong>{{ nameCreator }}</strong>
+<small>created by {{ nameCreator }}</small>
 {{#if isCreator}}
 <input class="deleteGroup btn btn-warning" style="float: right" value="Delete"/>
 {{/if}}

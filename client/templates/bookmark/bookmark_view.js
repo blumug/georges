@@ -4,8 +4,24 @@ Template.bookmarkView.helpers({
     },
     'readable': function() {
         return this.summary.readable;
-    }
+    },
+  domain: function () {
+    var url = this.url;
+    var matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+    var domain = matches && matches[1];
+    return domain;
+  },
+  favicon: function () {
+    var url = this.url;
+    pathArray = url.split( '/' );
+    var protocol = pathArray[0];
+    var host = pathArray[2];
+    var domain = protocol + '//' + host; 
+    return domain + "/favicon.ico";
+  }  
+
 });
+
 Template.bookmarkView.events({
     'click .refreshView': function() {
         $("#nuage").css("color", "rgb(65, 65, 178)");
