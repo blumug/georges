@@ -25,7 +25,7 @@ Template.bookmarkPage.events({
         counterView: this.counterView,
         counterClick: this.counterView,
         summary: this.summary,
-        userId: user._id
+        userId: this.userId
       };
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
       CreatedTags(tags);

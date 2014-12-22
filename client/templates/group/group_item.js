@@ -14,7 +14,7 @@ Template.groupItem.events({
 		if (user) {
 			$(".email").css("border-color", "greenyellow");
 		} else {
-
+			$(".email").css("border-color", "");
 		}
 	},
 	'keypress .addMember': function(event) {
@@ -46,6 +46,7 @@ Template.groupItem.events({
 		var group = Groups.findOne(this.idGroup);
 		var message = "";
 		var id = this.id;
+		var idGroup = this.idGroup;
 		if (Meteor.userId() == this.id) {
 			message = "Vous avez quitté le groupe " + group.name + ".";
 		} else {
@@ -64,7 +65,7 @@ Template.groupItem.events({
 					className: "btn-danger",
 					callback: function() {
 						Meteor.call("createDesinscriptionNotification", id, group, message);
-						Meteor.call("removeMember", Session.get("idGroup"), name);
+						Meteor.call("removeMember", idGroup, name);
 					}
 				}
 			}
