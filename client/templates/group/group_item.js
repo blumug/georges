@@ -53,9 +53,9 @@ Template.groupItem.events({
     var id = this.id;
     var idGroup = this.idGroup;
     if (Meteor.userId() == this.id) {
-      message = "Vous avez quitté le groupe " + group.name + ".";
+      message = "You are no longer a member of " + group.name + ".";
     } else {
-      message = "On vous a exclue du groupe " + group.name + ".";
+      message = "You have been kicked out of " + group.name + ".";
     }
     bootbox.dialog({
       message: "Do you want delete this member",

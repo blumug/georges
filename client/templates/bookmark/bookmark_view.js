@@ -23,7 +23,8 @@ Template.bookmarkView.helpers({
 });
 
 Template.bookmarkView.events({
-    'click .refreshView': function() {
+    'click .refreshView': function(e) {
+        e.preventDefault()
         $("#nuage").css("color", "rgb(65, 65, 178)");
         var inc = 0;
         var new_bookmark = this;
