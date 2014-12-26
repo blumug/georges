@@ -30,9 +30,9 @@ Template.bookmarkPage.events({
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
       CreatedTags(tags);
       if (this.url == bookmark.url || Bookmarks.find({
-        url: bookmark.url,
-        userId: bookmark.userId
-      }).count() == 0) {
+          url: bookmark.url,
+          userId: bookmark.userId
+        }).count() == 0) {
         Meteor.call('bookmarkUpdate', bookmark, this._id, function(error, result) {
           if (error) return alert(error.reason);
           if (!result.success) {
@@ -169,15 +169,18 @@ Template.bookmarkPage.rendered = function() {
     });
     var searchTerm = groups[x]._id,
       index = -1;
-    for (var i = 0, len = this.data.groups.length; i < len; i++) {
-      if (this.data.groups[i]._id === searchTerm) {
-        index = i;
-        break;
-      }
-    }
 
-    if (index != -1) {
-      control.addItem(x);
+    if (this.data.groups) {
+      for (var i = 0, len = this.data.groups.length; i < len; i++) {
+        if (this.data.groups[i]._id === searchTerm) {
+          index = i;
+          break;
+        }
+      }
+
+      if (index != -1) {
+        control.addItem(x);
+      }
     }
   }
 };
