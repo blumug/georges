@@ -2,17 +2,17 @@
 <div class="view-bookmark-page">
     <div class="edit-header-background"></div>
     <div class="row edit-header">
-        <div class="col-md-2 back">
+        <div class="col-md-3 back">
             <a href="/"><i></i></a>
         </div>
-        <div class="col-md-8 title">
+        <div class="col-md-6 title">
             <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
             <a href="{{ url }}" target="_blank">{{ domain }}</a>
         </div>
-        <div class="col-md-2 edit-toolbar">
+        <div class="col-md-3 edit-toolbar">
+            <a href='#' class="refreshView refresh-view"><i></i></a>
             <a class="edit" href="{{pathFor 'bookmarkPage'}}"><i></i></a>
             <a href='#' class="delete btnDelete"><i></i></a>
-            <a href='#' class="refreshView"><i></i>Refresh</a>
         </div>
     </div>
     <div class="row">
