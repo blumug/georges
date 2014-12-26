@@ -57,7 +57,6 @@ Template.header.rendered = function() {
 
     if (distanceY > shrinkOn) {
       header.addClass('smaller');
-      console.log(distanceY)
     } else {
       if (header.hasClass('smaller')) {
         header.removeClass('smaller');
