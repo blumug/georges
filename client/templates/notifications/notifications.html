@@ -6,10 +6,10 @@ Notifications
 {{/if}}
 <b class="caret"></b>
 </a>
-<ul class="notification dropdown-menu">
+<ul class="notifications dropdown-menu">
     {{#if notificationCount}}
     {{#each notifications}}
-    <li>
+    <li class="notification">
         {{> notificationItem}}
     </li>
     {{/each}}
@@ -18,12 +18,13 @@ Notifications
     {{/if}}
 </ul>
 </template>
+
 <template name="notificationItem">
-{{#if isInvitation}}
-<p>{{ message }}</p>
-<input type="button" class="btn accept" value="Yes">
-<input type="button" class="btn refuse" value="No">
-{{else}}
-{{ message }}
-{{/if}}
+  {{#if isInvitation}}
+  <p>{{ message }}</p>
+  <input type="button" class="btn accept" value="Accept">
+  <input type="button" class="btn refuse" value="Decline">
+  {{else}}
+  {{ message }}
+  {{/if}}
 </template>

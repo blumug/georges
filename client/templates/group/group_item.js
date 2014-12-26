@@ -2,39 +2,44 @@ Template.groupItem.events({
   'click .deleteGroup': function() {
     Meteor.call("removeGroupById", this._id);
   },
-  'input .email': function() {
-    var filtre = $(".email").val();
+  'input .email': function(event, template) {
+    var filter = $(event.target).val();
     var user = Meteor.users.findOne({
       emails: {
         $elemMatch: {
-          address: filtre
+          address: filter
         }
       }
     });
-    if (user && filtre != user.emails[0].address) {
-      $(".email").css("border-color", "greenyellow");
+
+    var existingMember = _.find(template.data.members, function(member){ return member.name == filter; });
+    if (existingMember) return;
+
+    if (user && user._id != Meteor.userId()) {
+      $(event.target).css("border-color", "greenyellow");
     } else {
-      $(".email").css("border-color", "");
+      $(event.target).css("border-color", "");
     }
   },
-  'keypress .addMember': function(event) {
+
+  'keypress .addMember': function(event, template) {
     if (event.charCode == 13) {
       if (Meteor.userId() == this.creator) {
-        var filtre = $(".email").val();
+        var filter = $(event.target).val();
+
+        var existingMember = _.find(template.data.members, function(member){ return member.name == filter; });
+        if (existingMember) return;
+
         var user = Meteor.users.findOne({
           emails: {
             $elemMatch: {
-              address: filtre
+              address: filter
             }
           }
         });
-        if (user && filtre != user.emails[0].address) {
-          var group = Groups.findOne({
-            creator: Meteor.userId(),
-            name: $(".nameGroup").val()
-          });
+        if (user && user._id != Meteor.userId()) {
           Meteor.call("addMember", this._id, user._id, user.emails[0].address);
-        } else {}
+        }
       }
       event.stopPropagation();
       return false;
