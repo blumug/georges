@@ -54,11 +54,8 @@ Template.bookmarkItem.events({
         }
       }
     });
-  }
-});
-
-Template.titleItem.events({
-  'click a': function(e) {
+  },
+  'click a.target': function(e, template) {
     e.preventDefault();
     Bookmarks.update({
       _id: this._id
@@ -71,6 +68,7 @@ Template.titleItem.events({
     window.open(link, '_blank');
   }
 });
+
 Template.tag.events({
   'click a': function(e) {
     e.preventDefault();
