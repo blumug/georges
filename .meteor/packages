@@ -25,3 +25,4 @@ accounts-password
 jeremy:selectize
 reactive-var
 djedi:sanitize-html
+chrismbeckett:toastr
