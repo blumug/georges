@@ -1,3 +1,9 @@
+@bookmark-columns: 3;
+@bookmark-columns-tablet: 2;
+@bookmark-columns-phone: 1;
+
+
+
 /* CSS declarations go here */
 .font-century(@size, @weight) {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -289,19 +295,37 @@ transition: .2s;
     background-color: white;
 }
 
-/*
-html body {
-    background-color: #eee;
-}
-*/
-.bookmarks {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
+/**
+ * Bookmark list
+ */
+
+.column-layout(@columns) {
+    -moz-column-count: @columns;
+    -webkit-column-count: @columns;
+    column-count: @bookmark-columns;
+
     -moz-column-gap: 1em;
     -webkit-column-gap: 1em;
     column-gap: 1em;
 }
+
+.bookmarks {
+    .column-layout(@bookmark-columns);
+    @media (max-width: 599px) {
+        .column-layout(@bookmark-columns-phone);
+    }
+    @media (min-width: 600px) and (max-width: 767px) {
+        .column-layout(@bookmark-columns-tablet);
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+        .column-layout(@bookmark-columns-tablet);
+    }
+}
+
+
+
+
+
 
 .bookmark {
     display: inline-block;
