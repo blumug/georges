@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
-source /home/42favs/vars.sh
-cd /var/www/42favs/root/deploy
+source /home/georges/vars.sh
+cd /var/www/georges.io/root/deploy
 exec node bundle/main.js
