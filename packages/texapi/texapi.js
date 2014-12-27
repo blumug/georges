@@ -46,6 +46,8 @@ Texapi.getText = function(id) {
             id: response.data.id,
             status: response.data.status,
             text: response.data.summary,
+            tags: response.data.tags,
+            title: response.data.title,
             readable: sanitizeHtml(response.data.readable, options),
         };
     } else {
