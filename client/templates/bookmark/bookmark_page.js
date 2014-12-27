@@ -1,6 +1,32 @@
 var $select;
 
 Template.bookmarkPage.events({
+  'click .suggest-tags': function(events, template) {
+    event.preventDefault();
+    if (template.data.summary) {
+      if (template.data.summary.tags) {
+        $('#tags').val(template.data.summary.tags);
+      } else {
+        DisplayErrorSubmit("No suggestion found");
+      }
+    } else {
+      DisplayErrorSubmit("URL not processed yet");
+    }
+  },
+
+  'click .suggest-title': function(events, template) {
+    event.preventDefault();
+    if (template.data.summary) {
+      if (template.data.summary.title) {
+        $('#title').val(template.data.summary.title);
+      } else {
+        DisplayErrorSubmit("No suggestion found");
+      }
+    } else {
+      DisplayErrorSubmit("URL not processed yet");
+    }
+  },
+
   'submit form': function(events) {
     events.preventDefault();
     var user = Meteor.user();

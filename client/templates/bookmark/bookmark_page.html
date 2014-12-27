@@ -27,21 +27,27 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="control-label" for="title">Title</label>
+                    <div class="controls">
+                        <div class="input-group">
+                          <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your Bookmark" class="form-control"/>
+                          <span class="input-group-btn"><button class="btn btn-default suggest-title">Suggest</button></span>
+                        </div>
+                    </div>
+                </div>                
+                <div class="form-group">
                     <label class="control-label" for="tags">Tags</label>
                     <div class="controls">
-                        <input name="tags" id="tags" type="text" value="{{prettifyTags tags}}" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
+                        <div class="input-group">
+                          <input name="tags" id="tags" type="text" value="{{prettifyTags tags}}" placeholder="#unpeu #beaucoup #alafolie" class="form-control"/>
+                          <span class="input-group-btn"><button class="btn btn-default suggest-tags">Suggest</button></span>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="groups">Groups</label>
                     <div class="controls">
                         <input name="groups" id="groups" placeholder="@42favs @friends @family"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="title">Title</label>
-                    <div class="controls">
-                        <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your Bookmark" class="form-control"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -95,7 +101,7 @@
             <div class="col-md-12">
                 <div class='toolbar'>
                     {{#if ownBookmark}}
-                    <button type='submit'>Save</button>
+                    <button class="save" type="submit">Save</button>
                     {{/if}}
                 </div>
             </div>
