@@ -2,7 +2,6 @@ var $select;
 
 Template.bookmarkPage.events({
   'click .suggest-tags': function(events, template) {
-    event.preventDefault();
     if (template.data.summary) {
       if (template.data.summary.tags) {
         $('#tags').val(template.data.summary.tags);
@@ -12,10 +11,10 @@ Template.bookmarkPage.events({
     } else {
       DisplayErrorSubmit("URL not processed yet");
     }
+    event.preventDefault();
   },
 
   'click .suggest-title': function(events, template) {
-    event.preventDefault();
     if (template.data.summary) {
       if (template.data.summary.title) {
         $('#title').val(template.data.summary.title);
@@ -25,6 +24,7 @@ Template.bookmarkPage.events({
     } else {
       DisplayErrorSubmit("URL not processed yet");
     }
+    event.preventDefault();
   },
 
   'submit form': function(events) {
