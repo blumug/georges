@@ -3,7 +3,6 @@
 @bookmark-columns-phone: 1;
 
 
-
 /* CSS declarations go here */
 .font-century(@size, @weight) {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -78,6 +77,12 @@ transition: .2s;
 .navbar-jbl42 {
 
     .transition(.3s);
+
+    .navbar-toggle {
+        .icon-bar {
+            background-color: #888;
+        }
+    }
 
     background-color: white;
     margin-bottom:0;
@@ -255,6 +260,16 @@ transition: .2s;
         }
     }
 
+    @media (max-width: 599px) {
+        .navbar_collapse();
+    }
+    @media (min-width: 600px) and (max-width: 767px) {
+        .navbar_collapse();
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+        .navbar_collapse();
+    }
+
 }
 
 .navbar-jbl42.smaller {
@@ -266,6 +281,38 @@ transition: .2s;
     }
     .navbar-form {
         margin-top: 12px;
+    }
+
+    #login-dropdown-list a {
+        padding-top: 12px;
+    }
+
+    #login-dropdown-list.open a.dropdown-toggle {
+        background: white;
+    }
+
+    #notifications {
+        padding-top: 12px;
+    }    
+
+    a.navbar-brand {
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        color: black;
+        margin-top:4px;
+    }
+}
+
+.navbar_collapse() {
+    height:67px;
+
+    .navbar-collapse a.icon {
+        width:100%;
+        margin-left:0;
+    }
+    .navbar-form {
+        margin-top: 0;
     }
 
     #login-dropdown-list a {
@@ -1074,6 +1121,23 @@ div.view {
 
         }
     }
+
+    @media (max-width: 599px) {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @media (min-width: 600px) and (max-width: 767px) {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
 }
 
 .edit-bookmark-page {
