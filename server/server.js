@@ -1,17 +1,16 @@
 Meteor.startup(function() {
-
-    Houston.add_collection(Meteor.users);
-    Houston.add_collection(Houston._admins);
-    Houston.add_collection(Notifications);
     try {
+      Houston.add_collection(Meteor.users);
+      Houston.add_collection(Houston._admins);
+      Houston.add_collection(Notifications);
       Houston.add_collection(Bookmarks);
+      Houston.add_collection(Groups);
+      Houston.add_collection(Tags);
+      Houston.add_collection(Favorites);
     }
     catch (err) {
       
     }
-    Houston.add_collection(Groups);
-    Houston.add_collection(Tags);
-    Houston.add_collection(Favorites);
 
     if (Meteor.users.find().count() === 0) {
         _.each(Meteor.settings.users, function(user) {
