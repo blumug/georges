@@ -285,7 +285,6 @@ transition: .2s;
 
     .navbar-collapse a.icon {
         height:32px;
-        margin-left:20px;
     }
     .navbar-form {
         margin-top: 12px;
@@ -882,13 +881,45 @@ div.view {
     height: 536px;
     position:relative;
     top:-8px;
+    @media (max-width: 599px) {
+        position:relative;
+        top: -48px;
+    }
+    @media (min-width: 600px) and (max-width: 767px) {
+        position:relative;
+        top: -48px;
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+        position:relative;
+        top: -48px;
+    }
+    @media (min-width: 980px) and (max-width: 1199px) {
+        position:relative;
+        top: -48px;
+    }
 
     .inner {
         margin-top:75px;
+
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
+
+            @media (max-width: 599px) {
+                width: 142px;
+                height: 142px;
+            }
+            @media (min-width: 600px) and (max-width: 767px) {
+                width: 142px;
+                height: 142px;
+            }
+            @media (min-width: 768px) and (max-width: 979px) {
+                width: 142px;
+                height: 142px;
+            }
+
+
         }
         .text {
             text-align: center;
@@ -1110,6 +1141,32 @@ div.view {
            background-color: #3c81c8;
         }
     }
+
+    @media (min-width: 000px) and (max-width: 767px) {
+        form {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 979px) {
+        form {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+        }
+    }
+    @media (min-width: 980px) and (max-width: 1199px) {
+        form {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+        }
+    }
+
 
     .password-lost {
         font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
