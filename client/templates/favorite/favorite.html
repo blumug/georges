@@ -1,10 +1,11 @@
 <template name="favorite">
-	<div id="favorite" name="favorite" class="favorite {{ myUnvisibility }}">
+  {{#if search }}
+	<div id="favorite" name="favorite" class="favorite">
     <div class='toolbar'>
       <button class="btn btn-primary registerFavorite">{{ btnFavorite }}</button>
       <button class="btn menu-down"><i></i></button>
     </div>
-		<h2>Query: <small>{{ search }}</small><small>
-</small></h2>
+		<h2>Query: <small>{{ search }}</small></h2>
 	</div>
+  {{/if}}
 </template>
