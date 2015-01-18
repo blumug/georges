@@ -68,5 +68,10 @@ Template.bookmarkView.events({
         check(id);
       }, 4000);
     });
+  },
+
+  'click .back a': function (e) {
+    e.preventDefault();
+    GotoHome();
   }
 });

@@ -98,6 +98,12 @@ Template.bookmarkPage.events({
     });
   },
 
+  'click .back a': function (e) {
+    e.preventDefault();
+    GotoHome();
+  },
+
+
   'click .refreshView': function(e) {
     e.preventDefault();
     $("#nuage").css("color", "rgb(65, 65, 178)");
