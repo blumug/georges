@@ -1,6 +1,19 @@
 <template name="groupList">
-  <input type="text" placeholder="Filter group" id="filter-groups">
-	{{#each groupList}}
-		{{> groupItem}}
-	{{/each}}
+<div class="group-list">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Groups <a href='' class='new-group'><i></i></a></h1>
+        </div>
+        <div class="col-md-4 text-right">
+            <input type="text" placeholder="Filter group" id="filter-groups" class='filter-groups form-control'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{#each groupList}}
+            {{> groupItem}}
+            {{/each}}
+        </div>
+    </div>
+</div>
 </template>

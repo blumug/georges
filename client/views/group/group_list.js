@@ -22,5 +22,21 @@ Template.groupList.events({
     event.preventDefault();
     var val = $(event.target).val();
     template.filterGroups.set(val);
+  },
+  'click .new-group': function (e) {
+    e.preventDefault();
+    bootbox.prompt({
+      title: "Group name",
+      value: '',
+      callback: function(name) {
+        if (name) {
+          Meteor.call("createGroup", name, Meteor.userId(), function(error, result) {
+            if (result) {
+              Meteor.call("createInvitationNotification", Groups.findOne(result))
+            }
+          });          
+        }
+      }
+    });
   }
 });
