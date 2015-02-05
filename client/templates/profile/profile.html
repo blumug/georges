@@ -1,0 +1,41 @@
+<template name="profile">
+<form class="profile">
+    <div class="form-group">
+        <label class="control-label" for="name">Mail</label>
+        <div class="controls">
+            <input name="mail" id="mail" type="text" value="{{ mail }}" placeholder="Your Mail" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="name">Username</label>
+        <div class="controls">
+            <input name="username" id="username" type="text" value="{{ username }}" placeholder="Your Username" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="name">Firstname</label>
+        <div class="controls">
+            <input name="firstname" id="firstname" type="text" value="{{ firstname }}" placeholder="Your Firstname" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="name">Lastname</label>
+        <div class="controls">
+            <input name="lastname" id="lastname" type="text" value="{{ lastname }}" placeholder="Your Lastname" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+            <input name="password" id="password" type="text" value="" placeholder="Your Password" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="name">Confirm password</label>
+        <div class="controls">
+            <input name="confirmPassword" id="confirmPassword" type="text" value="" placeholder="Confirm Password" class="form-control"/>
+        </div>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>
+</template>

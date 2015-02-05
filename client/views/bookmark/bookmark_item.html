@@ -28,6 +28,9 @@
           {{#each tags}}
           {{> tag}}
           {{/each}}
+          {{#each groups}}
+          {{> group}}
+          {{/each}}
           </div>
     </div>
     {{/if}}
@@ -36,6 +39,9 @@
 
 <template name="tag">
 <a href="" class="tag">#{{this}}</a>
+</template>
+<template name="group">
+<a href="" class="group">@{{ name }}</a>
 </template>
 <template name="titleItem">
 {{#if title}}
