@@ -231,6 +231,7 @@ Template.bookmarkPage.rendered = function() {
       }
     }
   }
+  console.log(tags);
   for (var x = 0; x < tags.length; x++) {
     control.addOption({
       id: x,

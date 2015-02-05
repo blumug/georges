@@ -36,7 +36,7 @@ Meteor.publish('tags', function() {
   };
   return Tags.find({
     name: {
-      $all: tags
+      $in: tags
     }
   });
 });
