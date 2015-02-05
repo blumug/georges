@@ -1,6 +1,20 @@
 var $select;
+var $selectGroup;
 
 Template.bookmarkPage.events({
+  'click .suggest-tags': function(events, template) {
+    if (template.data.summary) {
+      if (template.data.summary.tags) {
+        $('#tags').val(template.data.summary.tags);
+      } else {
+        DisplayErrorSubmit("No suggestion found");
+      }
+    } else {
+      DisplayErrorSubmit("URL not processed yet");
+    }
+    event.preventDefault();
+  },
+
   'click .suggest-title': function(events, template) {
     if (template.data.summary) {
       if (template.data.summary.title) {
@@ -18,13 +32,19 @@ Template.bookmarkPage.events({
     events.preventDefault();
     var user = Meteor.user();
     if (user !== null) {
-      var tags = ParsedTags($(events.target).find('[name=tags]').val());
       var tabGroup = [];
-      if ($select) {
-        for (var i = 0; i < $select[0].selectize.items.length; i++) {
-          tabGroup.push($select[0].selectize.getItem($select[0].selectize.items[i]).text());
+      if ($selectGroup) {
+        for (var i = 0; i < $selectGroup[0].selectize.items.length; i++) {
+          tabGroup.push($selectGroup[0].selectize.getItem($selectGroup[0].selectize.items[i]).text());
         };
       }
+      var tabTags = [];
+      if ($select) {
+        for (var i = 0; i < $select[0].selectize.items.length; i++) {
+          tabTags.push($select[0].selectize.getItem($select[0].selectize.items[i]).text());
+        };
+      }
+      var tags = ParsedTags(tabTags);
       var groups = ParsedGroups(tabGroup);
       var bookmark = {
         url: $(events.target).find('[name=url]').val(),
@@ -168,7 +188,7 @@ Handlebars.registerHelper("prettifyTags", function(tags) {
 
 Template.bookmarkPage.rendered = function() {
 
-  $select = $('#groups').selectize({
+  $selectGroup = $('#groups').selectize({
     maxItems: null,
     valueField: 'id',
     labelField: 'title',
@@ -176,63 +196,58 @@ Template.bookmarkPage.rendered = function() {
     options: [],
     create: false
   });
-
-  var control = $select[0].selectize;
 
   $select = $('#tags').selectize({
     maxItems: null,
     valueField: 'id',
     labelField: 'title',
     searchField: 'title',
-    options: [],
-    create: false
+    create: true,
+    options: []
   });
 
-  var controlGroup = $select[0].selectize;
-
+  var control = $select[0].selectize;
+  var controlGroup = $selectGroup[0].selectize;
   var groups = Groups.find().fetch();
   var tags = Tags.find().fetch();
 
   for (var x = 0; x < groups.length; x++) {
-    control.addOption({
+    controlGroup.addOption({
       id: x,
       title: "@" + groups[x].name
     });
     var searchTerm = groups[x]._id,
       index = -1;
 
-    if (this.data.groups) {
+    if (this.data != null && this.data.groups) {
       for (var i = 0, len = this.data.groups.length; i < len; i++) {
         if (this.data.groups[i]._id === searchTerm) {
           index = i;
           break;
         }
       }
-
       if (index != -1) {
-        control.addItem(x);
+        controlGroup.addItem(x);
       }
     }
   }
-
   for (var x = 0; x < tags.length; x++) {
-    controlGroup.addOption({
+    control.addOption({
       id: x,
-      title: "@" + tags[x].name
+      title: "#" + tags[x].name
     });
-    var searchTerm = tags[x]._id,
+    var searchTerm = tags[x].name,
       index = -1;
 
-    if (this.data.tags) {
+    if (this.data != null && this.data.tags) {
       for (var i = 0, len = this.data.tags.length; i < len; i++) {
-        if (this.data.tags[i]._id === searchTerm) {
+        if (this.data.tags[i] === searchTerm) {
           index = i;
           break;
         }
       }
-
       if (index != -1) {
-        controlGroup.addItem(x);
+        control.addItem(x);
       }
     }
   }
