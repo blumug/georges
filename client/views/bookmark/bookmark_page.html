@@ -1,110 +1,112 @@
 <template name="bookmarkPage">
-<div class="edit-bookmark-page">
-    <div class="edit-header-background">
-    </div>
-    <div class="row edit-header">
-        <div class="col-md-3 back">
-            <a href="/"><i></i></a>
+    <div class="edit-bookmark-page">
+        <div class="edit-header-background">
         </div>
-        <div class="col-md-6 title">
-            <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
-            <a href="{{ url }}" target="_blank">{{ domain }}</a>
+        <div class="row edit-header">
+            <div class="col-md-3 back">
+                <a href="/"><i></i></a>
+            </div>
+            <div class="col-md-6 title">
+                <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
+                <a href="{{ url }}" target="_blank">{{ domain }}</a>
+            </div>
+            <div class="col-md-3 edit-toolbar">
+                <a class="read" href="{{pathFor 'bookmarkView'}}"><i></i></a>
+                <a href='#' class="delete btnDelete"><i></i></a>
+            </div>
         </div>
-        <div class="col-md-3 edit-toolbar">
-            <a class="read" href="{{pathFor 'bookmarkView'}}"><i></i></a>
-            <a href='#' class="delete btnDelete"><i></i></a>
-        </div>
-    </div>
-    <form class="main form new-bookmark" >
-        <div class="row">
-            <div class="col-md-8">
-                <div class="form-group" id="alertConnexion">
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="url">* URL</label>
-                    <div class="controls">
-                        <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control" required/>
+        <form class="main form new-bookmark">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group" id="alertConnexion">
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="title">Title</label>
-                    <div class="controls">
-                        <div class="input-group">
-                          <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your Bookmark" class="form-control"/>
-                          <span class="input-group-btn"><button type="button" class="btn btn-default suggest-title">Suggest</button></span>
+                    <div class="form-group">
+                        <label class="control-label" for="url">* URL</label>
+                        <div class="controls">
+                            <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control" required/>
                         </div>
                     </div>
-                </div>                
-                <div class="form-group">
-                    <label class="control-label" for="tags">Tags</label>
-                    <div class="controls">
-                        <div class="input-group">
-                          <input name="tags" id="tags" type="text" value="{{prettifyTags tags}}" placeholder="#unpeu #beaucoup #alafolie"/>
+                    <div class="form-group">
+                        <label class="control-label" for="title">Title</label>
+                        <div class="controls">
+                            <div class="input-group">
+                                <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your Bookmark" class="form-control" />
+                                <span class="input-group-btn"><button type="button" class="btn btn-default suggest-title">Suggest</button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="tags">Tags</label>
+                        <div class="controls">
+                            <input name="tags" id="tags" type="text" value="{{prettifyTags tags}}" placeholder="#unpeu #beaucoup #alafolie" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="groups">Groups</label>
+                        <div class="controls">
+                            <input name="groups" id="groups" placeholder="@42favs @friends @family" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="resume">Notes</label>
+                        <div class="controls">
+                            <input name="description" id="description" type="text" value="{{description}}" placeholder="Notes about this bookmark" class="form-control" />
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label" for="groups">Groups</label>
-                    <div class="controls">
-                        <input name="groups" id="groups" placeholder="@42favs @friends @family"/>
+                <div class="col-md-4">
+                    <h2>Details</h2>
+                    <div class="stat first">
+                        <div class="value">
+                            {{counterView}}
+                        </div>
+                        <div class="legend">
+                            <div class="icon"><i class="stat-view"></i>
+                            </div>
+                            <span>View</span>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="resume">Notes</label>
-                    <div class="controls">
-                        <input name="description" id="description" type="text" value="{{description}}" placeholder="Notes about this bookmark" class="form-control"/>
+                    <div class="stat">
+                        <div class="value">
+                            {{counterClick}}
+                        </div>
+                        <div class="legend">
+                            <div class="icon"><i class="stat-click"></i>
+                            </div>
+                            <span>Clicks</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h2>Details</h2>
-                <div class="stat first">
-                    <div class="value">
-                        {{counterView}}
+                    <div class="stat">
+                        <div class="value">
+                            {{prettifyDate dateCreated}}
+                        </div>
+                        <div class="legend">
+                            <div class="icon"><i class="stat-date"></i>
+                            </div>
+                            <span>Created</span>
+                        </div>
                     </div>
-                    <div class="legend">
-                        <div class="icon"><i class="stat-view"></i></div>
-                        <span>View</span>
-                    </div>
-                </div>
-                <div class="stat">
-                    <div class="value">
-                        {{counterClick}}
-                    </div>
-                    <div class="legend">
-                        <div class="icon"><i class="stat-click"></i></div>
-                        <span>Clicks</span>
-                    </div>
-                </div>
-                <div class="stat">
-                    <div class="value">
-                        {{prettifyDate dateCreated}}
-                    </div>
-                    <div class="legend">
-                        <div class="icon"><i class="stat-date"></i></div>
-                        <span>Created</span>
-                    </div>
-                </div>
-                <div class="stat">
-                    <div class="value">
-                        {{prettifyDate dateModified}}
-                    </div>
-                    <div class="legend">
-                        <div class="icon"><i class="stat-date"></i></div>
-                        <span>Updated</span>
+                    <div class="stat">
+                        <div class="value">
+                            {{prettifyDate dateModified}}
+                        </div>
+                        <div class="legend">
+                            <div class="icon"><i class="stat-date"></i>
+                            </div>
+                            <span>Updated</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class='toolbar'>
-                    {{#if ownBookmark}}
-                    <button class="save" type="submit">Save</button>
-                    {{/if}}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class='toolbar'>
+                        {{#if ownBookmark}}
+                        <button class="save" type="submit">Save</button>
+                        {{/if}}
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </template>
