@@ -29,7 +29,6 @@ Template.bookmarkSubmit.events({
         userId: user._id
       };
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
-      CreatedTags(tags);
       Meteor.call('bookmarkInsert', bookmark, function(error, result) {
         if (error) return alert(error.reason);
         if (!result.success) {

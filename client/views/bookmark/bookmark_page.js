@@ -61,8 +61,6 @@ Template.bookmarkPage.events({
         userId: this.userId
       };
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
-      EmptyTags(this);
-      CreatedTags(tags);
       if (this.url == bookmark.url || Bookmarks.find({
           url: bookmark.url,
           userId: bookmark.userId
