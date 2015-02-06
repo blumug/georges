@@ -7,17 +7,20 @@ Template.bookmarkSubmit.events({
     var user = Meteor.user();
     if (user !== null) {
       var tabGroup = [];
+      var tabTags = [];
+
       if ($select) {
         for (var i = 0; i < $select[0].selectize.items.length; i++) {
           tabGroup.push($select[0].selectize.getItem($select[0].selectize.items[i]).text());
         };
       }
-      var tabTags = [];
+
       if ($selectTags) {
         for (var i = 0; i < $selectTags[0].selectize.items.length; i++) {
           tabTags.push($selectTags[0].selectize.getItem($selectTags[0].selectize.items[i]).text());
         };
       }
+
       var tags = ParsedTags(tabTags);
       var groups = ParsedGroups(tabGroup);
       var bookmark = {
@@ -28,7 +31,9 @@ Template.bookmarkSubmit.events({
         groups: groups,
         userId: user._id
       };
+
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
+
       Meteor.call('bookmarkInsert', bookmark, function(error, result) {
         if (error) return alert(error.reason);
         if (!result.success) {

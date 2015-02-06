@@ -32,7 +32,7 @@ Meteor.publish('bookmarks', function(option, filter) {
     }, option));
   } else {
     if (filter.indexOf("#") != -1) {
-      var parsedTags = ParsedTags(filter.split(' '));
+      var parsedTags = ParsedTags(filter);
       return Bookmarks.find({
         $or: [{
           userId: this.userId
@@ -50,7 +50,7 @@ Meteor.publish('bookmarks', function(option, filter) {
         }
       }, option)
     } else if (filter.indexOf("@") != -1) {
-      var parsedGroups = ParsedGroupsToTable(filter.split(' '));
+      var parsedGroups = ParsedGroupsToTable(filter);
       return Bookmarks.find({
         $or: [{
           userId: this.userId

@@ -33,45 +33,7 @@ Meteor.startup(function() {
 
     Tags.remove();
     _.each(users, function(user) {
-      var tab = [];
-      var bookmarks;
-
-      var groups = Groups.find({
-        $or: [{
-          creator: user._id
-        }, {
-          members: {
-            $elemMatch: {
-              id: this.userId,
-              accepted: true
-            }
-          }
-        }]
-      }).fetch();
-      if (groups != undefined) {
-        for (var i = 0; i < groups.length; i++) {
-          tab.push(groups[i]._id);
-        };
-      }
-      bookmarks = Bookmarks.find({
-        $or: [{
-          userId: user._id
-        }, {
-          groups: {
-            $elemMatch: {
-              _id: {
-                $all: tab
-              }
-            }
-          }
-        }]
-      }).fetch();
-      var tags = [];
-
-      for (var i = bookmarks.length - 1; i >= 0; i--) {
-        tags = tags.concat(bookmarks[i].tags);
-      };
-
+      var tags = GetMyAllTags(user._id);
       CreatedTagsServer(tags, user._id);
     });
   }

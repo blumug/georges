@@ -33,17 +33,20 @@ Template.bookmarkPage.events({
     var user = Meteor.user();
     if (user !== null) {
       var tabGroup = [];
+      var tabTags = [];
+
       if ($selectGroup) {
         for (var i = 0; i < $selectGroup[0].selectize.items.length; i++) {
           tabGroup.push($selectGroup[0].selectize.getItem($selectGroup[0].selectize.items[i]).text());
         };
       }
-      var tabTags = [];
+
       if ($select) {
         for (var i = 0; i < $select[0].selectize.items.length; i++) {
           tabTags.push($select[0].selectize.getItem($select[0].selectize.items[i]).text());
         };
       }
+
       var tags = ParsedTags(tabTags);
       var groups = ParsedGroups(tabGroup);
       var bookmark = {
