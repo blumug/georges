@@ -61,6 +61,7 @@ Template.bookmarkPage.events({
         userId: this.userId
       };
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
+      EmptyTags(this);
       CreatedTags(tags);
       if (this.url == bookmark.url || Bookmarks.find({
           url: bookmark.url,
@@ -231,7 +232,6 @@ Template.bookmarkPage.rendered = function() {
       }
     }
   }
-  console.log(tags);
   for (var x = 0; x < tags.length; x++) {
     control.addOption({
       id: x,

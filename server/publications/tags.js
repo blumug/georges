@@ -34,9 +34,14 @@ Meteor.publish('tags', function() {
   for (var i = bookmarks.length - 1; i >= 0; i--) {
   	tags = tags.concat(bookmarks[i].tags);
   };
-  return Tags.find({
-    name: {
-      $in: tags
-    }
-  });
+  // return Tags.find({
+  //   name: {
+  //     $in: tags
+  //   }
+  // });
+  return Tags.find();
 });
+
+Meteor.publish('user-tags', function() {
+  return UserTags.find({userId: this.userId});
+})

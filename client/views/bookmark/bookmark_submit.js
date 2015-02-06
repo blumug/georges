@@ -73,7 +73,7 @@ Template.bookmarkSubmit.rendered = function() {
   var controlTags = $selectTags[0].selectize;
 
   var groups = Groups.find().fetch();
-  var tags = Tags.find().fetch();
+  var tags = UserTags.find({userId: Meteor.userId()}).fetch();
 
   for (var x = 0; x < groups.length; x++) {
     control.addOption({
