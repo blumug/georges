@@ -1,4 +1,8 @@
 Meteor.publish('tags', function() {
+  return Tags.find();
+});
+
+Meteor.publish('user-tags', function() {
   var tab = [];
   var bookmarks;
   var groups = Groups.find({
@@ -32,16 +36,11 @@ Meteor.publish('tags', function() {
   var tags = [];
 
   for (var i = bookmarks.length - 1; i >= 0; i--) {
-  	tags = tags.concat(bookmarks[i].tags);
+    tags = tags.concat(bookmarks[i].tags);
   };
-  // return Tags.find({
-  //   name: {
-  //     $in: tags
-  //   }
-  // });
-  return Tags.find();
-});
-
-Meteor.publish('user-tags', function() {
-  return UserTags.find({userId: this.userId});
+  return UserTags.find({
+    name: {
+      $in: tags
+    }
+  });
 })
