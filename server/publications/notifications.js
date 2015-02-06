@@ -17,3 +17,16 @@ Meteor.publish('notifications-desinscription', function() {
 		read: false
 	});
 });
+
+Meteor.publish('notifications-message', function() {
+	return Notifications.find({
+		type: "message",
+		members: {
+			$elemMatch: {
+				id: this.userId,
+				accepted: true
+			}
+		},
+		read: false
+	});
+});
