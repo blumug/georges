@@ -89,7 +89,7 @@ Template.bookmarkSubmit.rendered = function() {
       id: x,
       title: "#" + tags[x].name
     });
-    if (this.data.tags.indexOf(tags[x]._id) != -1) {
+    if (this.data != null && this.data.tags.indexOf(tags[x]._id) != -1) {
       controlTags.addItem(x);
     }
   }
