@@ -63,22 +63,12 @@ Template.bookmarkPage.events({
         summary: this.summary,
         userId: this.userId
       };
+
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
-      if (this.url == bookmark.url || Bookmarks.find({
-          url: bookmark.url,
-          userId: bookmark.userId
-        }).count() == 0) {
-        Meteor.call('bookmarkUpdate', bookmark, this._id, function(error, result) {
-          if (error) return alert(error.reason);
-          if (!result.success) {
-            DisplayErrorSubmit(result.message);
-            return;
-          }
-          Router.go('/home');
-        });
-      } else {
-        DisplayErrorSubmit("Url already use.");
-      }
+
+      Meteor.call('bookmarkUpdate', bookmark, this._id, function() {
+        Router.go('/home');
+      });
     } else {
       DisplayErrorSubmit("You need to be connected.");
     }
@@ -107,7 +97,7 @@ Template.bookmarkPage.events({
     });
   },
 
-  'click .back a': function (e) {
+  'click .back a': function(e) {
     e.preventDefault();
     GotoHome();
   },

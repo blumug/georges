@@ -6,9 +6,7 @@
       <div class="actions">
           <a href="{{pathFor 'bookmarkView'}}" class="{{ status }}"><i class="icon-view"></i></a>
           <a href="{{pathFor 'bookmarkPage'}}" class=""><i class="icon-settings"></i></a>
-          {{#if ownBookmark}}
           <a href="" class="btnPreviewDelete"><i class="icon-delete"></i></a>
-          {{/if}}
       </div>
 
     </div>
@@ -41,7 +39,7 @@
 <a href="" class="tag">#{{this}}</a>
 </template>
 <template name="group">
-<a href="" class="group">@{{this}}</a>
+<a href="" class="group">@{{name}}</a>
 </template>
 <template name="titleItem">
 {{#if title}}
