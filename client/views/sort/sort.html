@@ -1,11 +1,18 @@
 <template name="sort">
-<div class="sort">
-  <div class="toolbar">
-      <button class="btn btn-default url">Url <i class="fa {{ url }}"></i></button>
-      <button class="btn btn-default title">Title <i class="fa {{ title }}"></i></button>
-      <button class="btn btn-default modified">Date modified <i class="fa {{ dateModified }}"></i></button>
-      <button class="btn btn-default view">View <i class="fa {{ counterView }}"></i></button>
-      <button class="btn btn-default click">Click <i class="fa {{ counterClick }}"></i></button>
+  {{#if search}}
+  <div class="sort">
+    <div class="toolbar">
+      <button class="btn btn-default url">Url <i class="fa {{ url }}"></i>
+      </button>
+      <button class="btn btn-default title">Title <i class="fa {{ title }}"></i>
+      </button>
+      <button class="btn btn-default modified">Date modified <i class="fa {{ dateModified }}"></i>
+      </button>
+      <button class="btn btn-default view">View <i class="fa {{ counterView }}"></i>
+      </button>
+      <button class="btn btn-default click">Click <i class="fa {{ counterClick }}"></i>
+      </button>
+    </div>
   </div>
-</div>
+  {{/if}}
 </template>

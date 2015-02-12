@@ -43,6 +43,10 @@ Template.sort.events({
 
 
 Template.sort.helpers({
+  'search': function() {
+    return Session.get("searchBar");
+  },
+
   'url': function() {
     if (Meteor.isClient) {
       var name = Session.get("sortName")
