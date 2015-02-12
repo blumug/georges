@@ -1,6 +1,23 @@
 Template.groupItem.events({
   'click .deleteGroup': function() {
-    Meteor.call("removeGroupById", this._id);
+    var idDelete = this._id;
+    bootbox.dialog({
+      message: "Do you want delete this Group",
+      title: "Warning",
+      buttons: {
+        main: {
+          label: "Cancel",
+          className: "btn-primary"
+        },
+        danger: {
+          label: "Delete",
+          className: "btn-danger",
+          callback: function() {
+            Meteor.call("removeGroupById", idDelete);
+          }
+        }
+      }
+    });
   },
   'input .email': function(event, template) {
     var filter = $(event.target).val();
@@ -12,7 +29,9 @@ Template.groupItem.events({
       }
     });
 
-    var existingMember = _.find(template.data.members, function(member){ return member.name == filter; });
+    var existingMember = _.find(template.data.members, function(member) {
+      return member.name == filter;
+    });
     if (existingMember) return;
 
     if (user && user._id != Meteor.userId()) {
@@ -27,7 +46,9 @@ Template.groupItem.events({
       if (Meteor.userId() == this.creator) {
         var filter = $(event.target).val();
 
-        var existingMember = _.find(template.data.members, function(member){ return member.name == filter; });
+        var existingMember = _.find(template.data.members, function(member) {
+          return member.name == filter;
+        });
         if (existingMember) return;
 
         var user = Meteor.users.findOne({
