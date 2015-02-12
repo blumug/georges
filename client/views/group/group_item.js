@@ -19,6 +19,26 @@ Template.groupItem.events({
       }
     });
   },
+  'click .leaveGroup': function() {
+    var idDelete = this._id;
+    bootbox.dialog({
+      message: "Do you want leave this Group",
+      title: "Warning",
+      buttons: {
+        main: {
+          label: "Cancel",
+          className: "btn-primary"
+        },
+        danger: {
+          label: "Leave",
+          className: "btn-danger",
+          callback: function() {
+            Meteor.call("leaveGroupById", idDelete);
+          }
+        }
+      }
+    });
+  },
   'input .email': function(event, template) {
     var filter = $(event.target).val();
     var user = Meteor.users.findOne({
