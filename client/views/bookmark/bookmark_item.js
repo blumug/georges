@@ -66,7 +66,12 @@ Template.bookmarkItem.events({
     });
     var link = $(e.target).attr('href');
     window.open(link, '_blank');
+  },
+  'click .group': function(e) {
+    e.preventDefault();
+    Session.set("searchBar", $(".group").text());
   }
+
 });
 
 Template.tag.events({
