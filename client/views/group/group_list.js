@@ -1,20 +1,47 @@
-Template.groupList.created = function () {
+Template.groupList.created = function() {
   this.filterGroups = new ReactiveVar('');
 }
 
 Template.groupList.helpers({
-	'groupList': function() {
-    var filterGroups =  Template.instance().filterGroups.get();
+  'groupList': function() {
+    var filterGroups = Template.instance().filterGroups.get();
     if (filterGroups != '') {
       var query = {
-            $regex: filterGroups,
-            $options: "i"
+        $regex: filterGroups,
+        $options: "i"
       };
-		  return Groups.find({'name': query});
+      return Groups.find({
+        'name': query,
+        creator: {
+          $not: Meteor.userId()
+        }
+      });
     } else {
-      return Groups.find()
+      return Groups.find({
+        creator: {
+          $not: Meteor.userId()
+        }
+      })
     }
-	}
+  },
+
+  'ownGroupList': function() {
+    var filterGroups = Template.instance().filterGroups.get();
+    if (filterGroups != '') {
+      var query = {
+        $regex: filterGroups,
+        $options: "i"
+      };
+      return Groups.find({
+        'name': query,
+        creator: Meteor.userId()
+      });
+    } else {
+      return Groups.find({
+        creator: Meteor.userId()
+      });
+    }
+  }
 });
 
 Template.groupList.events({
@@ -23,7 +50,7 @@ Template.groupList.events({
     var val = $(event.target).val();
     template.filterGroups.set(val);
   },
-  'click .new-group': function (e) {
+  'click .new-group': function(e) {
     e.preventDefault();
     bootbox.prompt({
       title: "Group name",
@@ -34,7 +61,7 @@ Template.groupList.events({
             if (result) {
               Meteor.call("createInvitationNotification", Groups.findOne(result))
             }
-          });          
+          });
         }
       }
     });
