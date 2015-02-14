@@ -51,6 +51,7 @@ Meteor.publish('bookmarks', function(option, filter) {
       }, option)
     } else if (filter.indexOf("@") != -1) {
       var parsedGroups = ParsedGroupsToTable(filter);
+      console.log(parsedGroups);
       return Bookmarks.find({
         $or: [{
           userId: this.userId

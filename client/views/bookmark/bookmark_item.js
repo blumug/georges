@@ -66,12 +66,7 @@ Template.bookmarkItem.events({
     });
     var link = $(e.target).attr('href');
     window.open(link, '_blank');
-  },
-  'click .group': function(e) {
-    e.preventDefault();
-    Session.set("searchBar", $(".group").text());
   }
-
 });
 
 Template.tag.events({
@@ -82,6 +77,27 @@ Template.tag.events({
     if (!tag) return;
     if (tag[0] != '#') {
       tag = '#' + tag;
+    }
+    if (bar == undefined || bar == '' || bar.indexOf(tag) == -1) {
+      bar = tag + " " + bar;
+    }
+    var filter = bar.trim();
+    Router.go('bookmarksList', {}, {
+      query: {
+        filter: filter
+      }
+    });
+  }
+});
+
+Template.group.events({
+  'click a': function(e) {
+    e.preventDefault();
+    var bar = $("#tagSearch").val();
+    var tag = this.name;
+    if (!tag) return;
+    if (tag[0] != '@') {
+      tag = '@' + tag;
     }
     if (bar == undefined || bar == '' || bar.indexOf(tag) == -1) {
       bar = tag + " " + bar;
