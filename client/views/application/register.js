@@ -24,6 +24,8 @@ Template.register.events({
         password: password
       }, function(err) {
         if (err) {
+          console.log(err);
+          DisplayErrorSubmit(err.reason);
           // Inform the user that account creation failed
         } else {
           // Success. Account has been created and the user
