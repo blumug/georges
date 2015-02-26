@@ -90,14 +90,8 @@ Template.groupItem.events({
     e.preventDefault();
     var name = this.name;
     var group = Groups.findOne(this.idGroup);
-    var message = "";
     var id = this.id;
     var idGroup = this.idGroup;
-    if (Meteor.userId() == this.id) {
-      message = "You are no longer a member of " + group.name + ".";
-    } else {
-      message = "You have been kicked out of " + group.name + ".";
-    }
     bootbox.dialog({
       message: "Do you want delete this member",
       title: "Warning",
@@ -110,7 +104,7 @@ Template.groupItem.events({
           label: "Delete",
           className: "btn-danger",
           callback: function() {
-            Meteor.call("createDesinscriptionNotification", id, group, message);
+            Meteor.call("createUnsubscribingNotification", $(".addMember").val(), group);
             Meteor.call("removeMember", idGroup, name);
           }
         }

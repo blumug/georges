@@ -30,17 +30,17 @@ N<span>otifications</span>
 
 <template name="unsubscribingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>You have been kick by the creator</p>
+  <p>You have been kick by the creator:<br/>of group <a href="">{{ this.group.name }}</a></p>
 </template>
 
 <template name="leavingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>{{ name }} left the group</p>
+  <p>{{ name }} left the group:<br/><a href="">{{ this.group.name }}</a></p>
 </template>
 
 <template name="kickingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>The group have been delete</p>
+  <p>The group have been delete:<br/><a href="">{{ this.group.name }}</a></p>
 </template>
 
 <template name="addBookmarkNotification">
