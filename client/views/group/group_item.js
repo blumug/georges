@@ -110,6 +110,11 @@ Template.groupItem.events({
         }
       }
     });
+  },
+
+  'click .nameGroup': function(e) {
+    e.preventDefault();
+    Router.go('/home/?filter=' + $(".nameGroup").text());
   }
 });
 
