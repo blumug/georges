@@ -1,30 +1,65 @@
 <template name="notifications">
-<a id='notifications' href="#" class="dropdown-toggle btn-notifications" data-toggle="dropdown">
+  <a id='notifications' href="#" class="dropdown-toggle btn-notifications" data-toggle="dropdown">
 N<span>otifications</span>
 {{#if notificationCount}}
 <span class="badge badge-inverse">{{notificationCount}}</span>
 {{/if}}
 <b class="caret"></b>
 </a>
-<ul class="notifications dropdown-menu">
-    {{#if notificationCount}}
-    {{#each notifications}}
+  <ul class="notifications dropdown-menu">
+    {{#if notificationCount}} {{#each notifications}}
     <li class="notification">
-        {{> notificationItem}}
+      {{> notificationItem}}
     </li>
-    {{/each}}
-    {{else}}
-    <li><span>No notification</span></li>
+    {{/each}} {{else}}
+    <li><span>No notification</span>
+    </li>
     {{/if}}
-</ul>
+  </ul>
 </template>
 
 <template name="notificationItem">
-  {{#if isInvitation}}
-  <p>{{ message }}</p>
+  {{> displayNotification }}
+</template>
+
+<template name="subscribingNotification">
+  <p>{{ name }} hope adding you in his group</p>
   <input type="button" class="btn accept" value="Accept">
   <input type="button" class="btn refuse" value="Decline">
-  {{else}}
-  {{ message }}
-  {{/if}}
+</template>
+
+<template name="unsubscribingNotification">
+  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+  <p>You have been kick by the creator</p>
+</template>
+
+<template name="leavingNotification">
+  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+  <p>{{ name }} left the group</p>
+</template>
+
+<template name="kickingNotification">
+  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+  <p>The group have been delete</p>
+</template>
+
+<template name="addBookmarkNotification">
+  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+  <p>A new bookmark have been add:
+    <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
+  </p>
+</template>
+
+<template name="deleteBookmarkNotification">
+  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+  <p>A Bookmark have been delete:
+    <br/><a href="{{ bookmarkUrl }}">{{ bookmarkUrl }}</a>
+  </p>
+</template>
+
+<template name="editBookmarkNotification">
+  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+  <p>A Bookmark have been edit:
+    <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
+  </p>
 </template>
