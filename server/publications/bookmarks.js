@@ -24,7 +24,7 @@ Meteor.publish('bookmarks', function(option, filter) {
         groups: {
           $elemMatch: {
             _id: {
-              $all: tab
+              $in: tab
             }
           }
         }
@@ -40,7 +40,7 @@ Meteor.publish('bookmarks', function(option, filter) {
           groups: {
             $elemMatch: {
               _id: {
-                $all: tab
+                $in: tab
               }
             }
           }
@@ -58,7 +58,7 @@ Meteor.publish('bookmarks', function(option, filter) {
           groups: {
             $elemMatch: {
               _id: {
-                $all: tab
+                $in: tab
               }
             }
           }
@@ -79,7 +79,7 @@ Meteor.publish('bookmarks', function(option, filter) {
           groups: {
             $elemMatch: {
               _id: {
-                $all: tab
+                $in: tab
               }
             }
           }
