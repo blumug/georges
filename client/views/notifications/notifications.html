@@ -45,21 +45,21 @@ N<span>otifications</span>
 
 <template name="addBookmarkNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A new bookmark have been add:
+  <p>A new bookmark have been add in {{ this.group.name }}:
     <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
   </p>
 </template>
 
 <template name="deleteBookmarkNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A Bookmark have been delete:
+  <p>A Bookmark have been delete in {{ this.group.name }}:
     <br/><a href="{{ bookmarkUrl }}">{{ bookmarkUrl }}</a>
   </p>
 </template>
 
 <template name="editBookmarkNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A Bookmark have been edit:
+  <p>A Bookmark have been edit in {{ this.group.name }}:
     <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
   </p>
 </template>
