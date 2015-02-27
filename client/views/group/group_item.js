@@ -21,6 +21,7 @@ Template.groupItem.events({
   },
   'click .leaveGroup': function() {
     var idDelete = this._id;
+    var email = Meteor.user().emails[0]['address'];
     bootbox.dialog({
       message: "Do you want leave this Group",
       title: "Warning",
@@ -33,7 +34,7 @@ Template.groupItem.events({
           label: "Leave",
           className: "btn-danger",
           callback: function() {
-            Meteor.call("leaveGroupById", idDelete);
+            Meteor.call("leaveGroupById", email, idDelete);
           }
         }
       }
@@ -65,12 +66,6 @@ Template.groupItem.events({
     if (event.charCode == 13) {
       if (Meteor.userId() == this.creator) {
         var filter = $(event.target).val();
-
-        var existingMember = _.find(template.data.members, function(member) {
-          return member.name == filter;
-        });
-        if (existingMember) return;
-
         var user = Meteor.users.findOne({
           emails: {
             $elemMatch: {
@@ -78,8 +73,13 @@ Template.groupItem.events({
             }
           }
         });
-        if (user && user._id != Meteor.userId()) {
+        if (!Members.findOne({
+            groupId: this._id,
+            email: user.emails[0].address
+          })) {
           Meteor.call("addMember", this._id, user._id, user.emails[0].address);
+        } else {
+          DisplayErrorSubmit("Member already exist.");
         }
       }
       event.stopPropagation();
@@ -88,10 +88,8 @@ Template.groupItem.events({
   },
   'click .btn-delete-member': function(e) {
     e.preventDefault();
-    var name = this.name;
-    var group = Groups.findOne(this.idGroup);
-    var id = this.id;
-    var idGroup = this.idGroup;
+    var email = this.email;
+    var group = Groups.findOne(this.groupId);
     bootbox.dialog({
       message: "Do you want delete this member",
       title: "Warning",
@@ -104,8 +102,8 @@ Template.groupItem.events({
           label: "Delete",
           className: "btn-danger",
           callback: function() {
-            Meteor.call("createUnsubscribingNotification", $(".addMember").val(), group);
-            Meteor.call("removeMember", idGroup, name);
+            Meteor.call("createUnsubscribingNotification", email, group);
+            Meteor.call("removeMember", group._id, email);
           }
         }
       }
@@ -120,7 +118,11 @@ Template.groupItem.events({
 
 Template.groupItem.helpers({
   'allMembers': function() {
-    return this.members;
+    return Members.find({
+      _id: {
+        $in: this.members
+      }
+    });
   },
   'isCreator': function() {
     if (Meteor.userId() == this.creator) {
@@ -147,13 +149,19 @@ Template.groupItem.helpers({
 
 Template.member.helpers({
   'isMember': function() {
-    var group = Groups.findOne(this.idGroup);
-    if (!group) {
+    var group = Groups.findOne(this.groupId);
+    if (!group && Meteor.isClient) {
       return false;
     }
 
-    var userId = Meteor.userId();
-    if (userId == group.creator || userId == this.id) {
+    var user = Meteor.users.find({
+      emails: {
+        $elemMatch: {
+          address: this.email
+        }
+      }
+    });
+    if (Meteor.userId() == group.creator) {
       return true;
     } else {
       return false;

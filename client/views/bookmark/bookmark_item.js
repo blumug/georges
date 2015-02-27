@@ -10,8 +10,9 @@ Template.bookmarkItem.helpers({
     return this.tags;
   },
 
-  hasTags: function() {
-    return this.tags && this.tags.length > 0;
+  hasTagsOrGroups: function() {
+    return (this.tags && this.tags.length > 0) ||
+      (this.groups && this.groups.length > 0);
   },
 
   hasDescription: function() {

@@ -9,34 +9,16 @@ Template.notifications.helpers({
 
 Template.subscribingNotification.events({
   'click .accept': function() {
-    var members = this.group.members;
+    var email = Meteor.user().emails[0].address;
 
-    for (var x = 0; x < members.length; x++) {
-      if (Meteor.user() && members[x].name == Meteor.user().emails[0].address) {
-        members[x].accepted = true;
-      }
-    }
-    Groups.update(this.group._id, {
-      $set: {
-        members: members
-      }
-    });
+    Meteor.call("accepting", email, this.group.groupId);
     Notifications.remove(this._id);
   },
 
   'click .refuse': function() {
-    var members = this.group.members;
-
-    for (var x = 0; x < members.length; x++) {
-      if (Meteor.user() && members[x].name == Meteor.user().emails[0].address) {
-        members.splice(x, 1);
-      }
-    }
-    Groups.update(this.group._id, {
-      $set: {
-        members: members
-      }
-    });
+    var email = Meteor.user().emails[0].address;
+    
+    Meteor.call("deleteMember", email, this.group.groupId);
     Notifications.remove(this._id);
   }
 });

@@ -1,14 +1,21 @@
 Meteor.publish('bookmarks', function(option, filter) {
   var tab = [];
+  var user = Meteor.users.findOne(this.userId);
+  var membersId = [];
+  var members = Members.find({
+    email: user.emails[0].address,
+    accepted: true
+  }).fetch();
+
+  _.each(members, function(member) {
+    membersId.push(member._id);
+  });
   var groups = Groups.find({
     $or: [{
       creator: this.userId
     }, {
       members: {
-        $elemMatch: {
-          id: this.userId,
-          accepted: true
-        }
+        $in: membersId
       }
     }]
   }).fetch();
@@ -123,4 +130,10 @@ Meteor.publish('bookmarks', function(option, filter) {
 Meteor.publish('bookmark', function(id) {
   check(id, String);
   return Bookmarks.find(id);
+});
+
+Meteor.publish('myBookmark', function() {
+  return Bookmarks.find({
+    userId: this.userId
+  });
 });

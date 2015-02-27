@@ -23,7 +23,7 @@ N<span>otifications</span>
 </template>
 
 <template name="subscribingNotification">
-  <p>{{ name }} hope adding you in his group</p>
+  <p>{{ name }} hope adding you in his group {{ this.group.name }}</p>
   <input type="button" class="btn accept" value="Accept">
   <input type="button" class="btn refuse" value="Decline">
 </template>

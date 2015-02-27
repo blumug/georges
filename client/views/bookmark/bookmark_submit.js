@@ -34,11 +34,12 @@ Template.bookmarkSubmit.events({
 
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
 
-      Meteor.call('bookmarkInsert', bookmark, function(error, result) {
-        if (error) return alert(error.reason);
-        if (!result.success) {
-          DisplayErrorSubmit(result.message);
-          return;
+      Meteor.call('bookmarkInsert', bookmark, function(error, res) {
+        if (res) {
+          DisplayErrorSubmit("Bookmark already exist.");
+          return ;
+        } else {
+          DisplayErrorSubmit("Bookmark is create.");          
         }
         Router.go('/home');
       });
