@@ -40,20 +40,16 @@ Template.groupItem.events({
       }
     });
   },
+
   'input .email': function(event, template) {
     var filter = $(event.target).val();
-    var user = Meteor.users.findOne({
+    var user = Meteor.users.find({
       emails: {
         $elemMatch: {
           address: filter
         }
       }
     });
-
-    var existingMember = _.find(template.data.members, function(member) {
-      return member.name == filter;
-    });
-    if (existingMember) return;
 
     if (user && user._id != Meteor.userId()) {
       $(event.target).css("border-color", "greenyellow");
@@ -73,7 +69,9 @@ Template.groupItem.events({
             }
           }
         });
-        if (!Members.findOne({
+        if (!user) {
+          DisplayErrorSubmit("User unknown.");          
+        } else if (!Members.findOne({
             groupId: this._id,
             email: user.emails[0].address
           })) {
