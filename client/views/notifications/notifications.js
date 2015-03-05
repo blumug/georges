@@ -1,9 +1,13 @@
 Template.notifications.helpers({
   'notifications': function() {
-    return Notifications.find();
+    return Notifications.find({
+      history: false
+    });
   },
   'notificationCount': function() {
-    return Notifications.find().count();
+    return Notifications.find({
+      history: false
+    }).count();
   }
 });
 
@@ -12,28 +16,33 @@ Template.subscribingNotification.events({
     var email = Meteor.user().emails[0].address;
 
     Meteor.call("accepting", email, this.group.groupId);
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+//    Notifications.remove(this._id);
   },
 
   'click .refuse': function() {
     var email = Meteor.user().emails[0].address;
-    
+
     Meteor.call("deleteMember", email, this.group.groupId);
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+
+//    Notifications.remove(this._id);
   }
 });
 
 Template.unsubscribingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+//    Notifications.remove(this._id);
   }
 });
 
 Template.leavingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+//    Notifications.remove(this._id);
   }
 });
 
@@ -90,36 +99,42 @@ Template.editBookmarkNotification.helpers({
 Template.kickingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    Notifications.remove(this._id);
+//    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
   }
 });
 
 Template.addBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    Notifications.remove(this._id);
+//    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
   },
 
   'click .btn-bookmark': function() {
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+//    Notifications.remove(this._id);
   }
 });
 
 Template.deleteBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+//    Notifications.remove(this._id);
   }
 });
 
 Template.editBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+//    Notifications.remove(this._id);
   },
 
   'click .btn-bookmark': function() {
-    Notifications.remove(this._id);
+    Meteor.call("pushToHistory", this._id);
+//    Notifications.remove(this._id);
   }
 });
 
