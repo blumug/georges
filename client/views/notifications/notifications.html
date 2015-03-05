@@ -26,21 +26,25 @@ N<span>otifications</span>
   <p>{{ name }} hope adding you in his group {{ this.group.name }}</p>
   <input type="button" class="btn accept" value="Accept">
   <input type="button" class="btn refuse" value="Decline">
+  <small>{{ prettifyDate }}</small>
 </template>
 
 <template name="unsubscribingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
   <p>You have been kick by the creator:<br/>of group <a href="">{{ this.group.name }}</a></p>
+  <small>{{ prettifyDate }}</small>
 </template>
 
 <template name="leavingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
   <p>{{ name }} left the group:<br/><a href="">{{ this.group.name }}</a></p>
+  <small>{{ prettifyDate }}</small>
 </template>
 
 <template name="kickingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
   <p>The group have been delete:<br/><a href="">{{ this.group.name }}</a></p>
+  <small>{{ prettifyDate }}</small>
 </template>
 
 <template name="addBookmarkNotification">
@@ -48,6 +52,7 @@ N<span>otifications</span>
   <p>A new bookmark have been add in {{ this.group.name }}:
     <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
   </p>
+  <small>{{ prettifyDate }}</small>
 </template>
 
 <template name="deleteBookmarkNotification">
@@ -55,6 +60,7 @@ N<span>otifications</span>
   <p>A Bookmark have been delete in {{ this.group.name }}:
     <br/><a href="{{ bookmarkUrl }}">{{ bookmarkUrl }}</a>
   </p>
+  <small>{{ prettifyDate }}</small>
 </template>
 
 <template name="editBookmarkNotification">
@@ -62,4 +68,5 @@ N<span>otifications</span>
   <p>A Bookmark have been edit in {{ this.group.name }}:
     <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
   </p>
+  <small>{{ prettifyDate }}</small>
 </template>

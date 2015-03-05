@@ -17,7 +17,7 @@ Template.subscribingNotification.events({
 
     Meteor.call("accepting", email, this.group.groupId);
     Meteor.call("pushToHistory", this._id);
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   },
 
   'click .refuse': function() {
@@ -26,7 +26,7 @@ Template.subscribingNotification.events({
     Meteor.call("deleteMember", email, this.group.groupId);
     Meteor.call("pushToHistory", this._id);
 
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   }
 });
 
@@ -34,7 +34,7 @@ Template.unsubscribingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   }
 });
 
@@ -42,7 +42,7 @@ Template.leavingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   }
 });
 
@@ -54,6 +54,16 @@ Template.leavingNotification.helpers({
       return user.emails[0].address;
     } else {
       return user;
+    }
+  },
+
+  'prettifyDate': function() {
+    var today = new Date();
+
+    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
+      return this.date.toLocaleTimeString();
+    } else {
+      return this.date.toLocaleDateString();
     }
   }
 });
@@ -67,6 +77,16 @@ Template.subscribingNotification.helpers({
     } else {
       return user;
     }
+  },
+
+  'prettifyDate': function() {
+    var today = new Date();
+
+    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
+      return this.date.toLocaleTimeString();
+    } else {
+      return this.date.toLocaleDateString();
+    }
   }
 });
 
@@ -77,12 +97,32 @@ Template.addBookmarkNotification.helpers({
 
   'bookmarkUrl': function() {
     return this.bookmark.url;
+  },
+
+  'prettifyDate': function() {
+    var today = new Date();
+
+    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
+      return this.date.toLocaleTimeString();
+    } else {
+      return this.date.toLocaleDateString();
+    }
   }
 });
 
 Template.deleteBookmarkNotification.helpers({
   'bookmarkUrl': function() {
     return this.bookmark.url;
+  },
+
+  'prettifyDate': function() {
+    var today = new Date();
+
+    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
+      return this.date.toLocaleTimeString();
+    } else {
+      return this.date.toLocaleDateString();
+    }
   }
 });
 
@@ -93,13 +133,23 @@ Template.editBookmarkNotification.helpers({
 
   'bookmarkUrl': function() {
     return this.bookmark.url;
+  },
+
+  'prettifyDate': function() {
+    var today = new Date();
+
+    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
+      return this.date.toLocaleTimeString();
+    } else {
+      return this.date.toLocaleDateString();
+    }
   }
 });
 
 Template.kickingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
     Meteor.call("pushToHistory", this._id);
   }
 });
@@ -107,13 +157,13 @@ Template.kickingNotification.events({
 Template.addBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
     Meteor.call("pushToHistory", this._id);
   },
 
   'click .btn-bookmark': function() {
     Meteor.call("pushToHistory", this._id);
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   }
 });
 
@@ -121,7 +171,7 @@ Template.deleteBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   }
 });
 
@@ -129,12 +179,12 @@ Template.editBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   },
 
   'click .btn-bookmark': function() {
     Meteor.call("pushToHistory", this._id);
-//    Notifications.remove(this._id);
+    //    Notifications.remove(this._id);
   }
 });
 
