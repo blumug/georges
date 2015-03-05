@@ -7,7 +7,8 @@ N<span>otifications</span>
 <b class="caret"></b>
 </a>
   <ul class="notifications dropdown-menu">
-    {{#if notificationCount}} {{#each notifications}}
+    {{#if notificationCount}} 
+    {{#each notifications}}
     <li class="notification">
       {{> notificationItem}}
     </li>
@@ -23,10 +24,14 @@ N<span>otifications</span>
 </template>
 
 <template name="subscribingNotification">
-  <p>{{ name }} hope adding you in his group {{ this.group.name }}</p>
+  {{# if isHistory}}
+  <p>{{ name }} is inviting you in the group {{ this.group.name }}</p>
   <input type="button" class="btn accept" value="Accept">
   <input type="button" class="btn refuse" value="Decline">
   <small>{{ prettifyDate }}</small>
+  {{else}}
+  <p>You have been inviting by {{ name }} of the group {{ this.group.name }}</p>
+  {{/if}}
 </template>
 
 <template name="unsubscribingNotification">

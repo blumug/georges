@@ -33,6 +33,8 @@
       </div>
       <div role="tabpanel" class="tab-pane" id="historical">
         <div class="notifications">
+          {{# if notificationCount}}
+          <input type="button" class="btn-clean" value="Clean">
           <ul>
             {{#each listNotifications}}
             <li class="notification">
@@ -40,6 +42,8 @@
             </li>
             {{/each}}
           </ul>
+          {{else}}
+          <span>No notification</span> {{/if}}
         </div>
       </div>
     </div>

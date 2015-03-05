@@ -24,6 +24,10 @@ Template.bookmarkSetting.events({
       }
       $("#progressBar").attr("value", files.length);
     }
+  },
+
+  'click .btn-clean': function() {
+    Meteor.call("deleteNotifications", Meteor.userId());
   }
 });
 
@@ -36,5 +40,11 @@ Template.bookmarkSetting.helpers({
         date: -1
       }
     });
+  },
+
+  'notificationCount': function() {
+    return Notifications.find({
+      history: true
+    }).count();
   }
 });

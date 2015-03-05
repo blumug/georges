@@ -2,6 +2,8 @@ Template.notifications.helpers({
   'notifications': function() {
     return Notifications.find({
       history: false
+    }, {
+      limit: 10
     });
   },
   'notificationCount': function() {
@@ -17,7 +19,6 @@ Template.subscribingNotification.events({
 
     Meteor.call("accepting", email, this.group.groupId);
     Meteor.call("pushToHistory", this._id);
-    //    Notifications.remove(this._id);
   },
 
   'click .refuse': function() {
@@ -25,8 +26,6 @@ Template.subscribingNotification.events({
 
     Meteor.call("deleteMember", email, this.group.groupId);
     Meteor.call("pushToHistory", this._id);
-
-    //    Notifications.remove(this._id);
   }
 });
 
@@ -34,7 +33,6 @@ Template.unsubscribingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-    //    Notifications.remove(this._id);
   }
 });
 
@@ -42,7 +40,6 @@ Template.leavingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-    //    Notifications.remove(this._id);
   }
 });
 
@@ -76,6 +73,14 @@ Template.subscribingNotification.helpers({
       return user.emails[0].address;
     } else {
       return user;
+    }
+  },
+
+  'isHistory': function() {
+    if (this.history == true) {
+      return false;
+    } else {
+      return true;
     }
   },
 
@@ -149,7 +154,6 @@ Template.editBookmarkNotification.helpers({
 Template.kickingNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    //    Notifications.remove(this._id);
     Meteor.call("pushToHistory", this._id);
   }
 });
@@ -157,13 +161,11 @@ Template.kickingNotification.events({
 Template.addBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
-    //    Notifications.remove(this._id);
     Meteor.call("pushToHistory", this._id);
   },
 
   'click .btn-bookmark': function() {
     Meteor.call("pushToHistory", this._id);
-    //    Notifications.remove(this._id);
   }
 });
 
@@ -171,7 +173,6 @@ Template.deleteBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-    //    Notifications.remove(this._id);
   }
 });
 
@@ -179,12 +180,10 @@ Template.editBookmarkNotification.events({
   'click .btn-remove-notification': function(e) {
     e.preventDefault();
     Meteor.call("pushToHistory", this._id);
-    //    Notifications.remove(this._id);
   },
 
   'click .btn-bookmark': function() {
     Meteor.call("pushToHistory", this._id);
-    //    Notifications.remove(this._id);
   }
 });
 
