@@ -1,4 +1,7 @@
 Meteor.publish('bookmarks', function(option, filter) {
+  if (!this.userId) {
+    return;
+  }
   var tab = [];
   var user = Meteor.users.findOne(this.userId);
   var membersId = [];

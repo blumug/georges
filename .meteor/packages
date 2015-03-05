@@ -27,3 +27,6 @@ reactive-var
 djedi:sanitize-html
 chrismbeckett:toastr
 fongandrew:find-and-modify
+mike:mocha
+sanjo:jasmine
+velocity:html-reporter

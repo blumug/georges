@@ -2,13 +2,8 @@ Meteor.startup(function() {
   try {
     Houston.add_collection(Meteor.users);
     Houston.add_collection(Houston._admins);
-    Houston.add_collection(Notifications);
-    Houston.add_collection(Bookmarks);
-    Houston.add_collection(Groups);
-    Houston.add_collection(Tags);
-    Houston.add_collection(Favorites);
   } catch (err) {
-
+    console.log(err);
   }
 
   if (Meteor.users.find().count() === 0) {
