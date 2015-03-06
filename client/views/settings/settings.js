@@ -13,7 +13,7 @@ Template.bookmarkSetting.events({
           if (data) {
             _.each(data.bookmarks, function(bookmark) {
               bookmark.userId = Meteor.userId();
-              Meteor.call("bookmarkUpdate", bookmark, "");
+              Meteor.call("bookmarkImport", bookmark);
             });
             _.each(data.favorites, function(favorite) {
               Meteor.call("addToFavorites", favorite.favorite);

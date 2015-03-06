@@ -201,7 +201,7 @@ Template.bookmarkPage.rendered = function() {
   var control = $select[0].selectize;
   var controlGroup = $selectGroup[0].selectize;
   var groups = Groups.find().fetch();
-  var tags = Tags.find().fetch();
+  var tags = UserTags.find().fetch();
 
   for (var x = 0; x < groups.length; x++) {
     controlGroup.addOption({

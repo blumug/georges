@@ -4,8 +4,6 @@ Meteor.publish('tags', function() {
 
 Meteor.publish('user-tags', function() {
   return UserTags.find({
-    name: {
-      $in: GetMyAllTags(this.userId)
-    }
+    userId: this.userId
   });
-})
+});
