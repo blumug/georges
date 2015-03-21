@@ -7,7 +7,7 @@ Template.login.events({
       if (err) {
         DisplayErrorSubmit("Bad email or password");
       } else {
-        DisplaySuccessSubmit("Login success");
+        DisplaySuccessSubmit("Welcome back " + Meteor.user().emails[0].address);
         Router.go('/home');
       }
     });
