@@ -13,7 +13,7 @@ Template.bookmarkView.helpers({
   },
   favicon: function() {
     var url = this.url;
-    pathArray = url.split('/');
+    var pathArray = url.split('/');
     var protocol = pathArray[0];
     var host = pathArray[2];
     var domain = protocol + '//' + host;
@@ -35,7 +35,6 @@ Template.bookmarkView.rendered = function(template) {
 Template.bookmarkView.events({
   'click .refreshView': function(e) {
     e.preventDefault()
-    $("#nuage").css("color", "rgb(65, 65, 178)");
     var inc = 0;
     var new_bookmark = this;
     var _id = new_bookmark._id;
@@ -49,12 +48,9 @@ Template.bookmarkView.events({
           inc++;
           if (inc >= 10) {
             console.log("analyzeText Failed");
-            $("#nuage").css("color", "rgb(188, 0, 0)");
           } else if (resultat.status == "finished") {
             new_bookmark.summary = resultat;
             Meteor.call("bookmarkUpdate", new_bookmark, _id, function(error, resultat) {
-              if (error != undefined) $("#nuage").css("color", "rgb(188, 0, 0)");
-              else $("#nuage").css("color", "");
               console.log(error);
             });
           } else {
