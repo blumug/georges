@@ -25,10 +25,10 @@ N<span>otifications</span>
 
 <template name="subscribingNotification">
   {{# if isHistory}}
-  <p>{{ name }} is inviting you in the group {{ this.group.name }}</p>
-  <input type="button" class="btn accept" value="Accept">
-  <input type="button" class="btn refuse" value="Decline">
-  <small>{{ prettifyDate }}</small>
+  <p>{{ name }} wants you to join the group {{ this.group.name }}</p>
+  <input type="button" class="btn btn-default btn-primary accept" value="Accept">
+  <input type="button" class="btn btn-default btn-danger refuse" value="Decline">
+  <small> {{ this.dateFromNow }}</small>
   {{else}}
   <p>You have been inviting by {{ name }} of the group {{ this.group.name }}</p>
   {{/if}}
@@ -37,7 +37,7 @@ N<span>otifications</span>
 <template name="unsubscribingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
   <p>You have been kick by the creator:<br/>of group <a href="">{{ this.group.name }}</a></p>
-  <small>{{ prettifyDate }}</small>
+  <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="leavingNotification">
@@ -49,7 +49,7 @@ N<span>otifications</span>
 <template name="kickingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
   <p>The group have been delete:<br/><a href="">{{ this.group.name }}</a></p>
-  <small>{{ prettifyDate }}</small>
+  <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="addBookmarkNotification">
@@ -57,21 +57,21 @@ N<span>otifications</span>
   <p>A new bookmark have been add in {{ this.group.name }}:
     <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
   </p>
-  <small>{{ prettifyDate }}</small>
+  <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="deleteBookmarkNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A Bookmark have been delete in {{ this.group.name }}:
+  <p>A Bookmark have been removed from {{ this.group.name }}:
     <br/><a href="{{ bookmarkUrl }}">{{ bookmarkUrl }}</a>
   </p>
-  <small>{{ prettifyDate }}</small>
+  <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="editBookmarkNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A Bookmark added in {{ this.group.name }}:
+  <p>Bookmark edited in {{ this.group.name }}:
     <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
   </p>
-  <small>{{ prettifyDate }}</small>
+  <small>{{ this.dateFromNow }}</small>
 </template>

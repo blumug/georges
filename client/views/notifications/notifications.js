@@ -52,16 +52,6 @@ Template.leavingNotification.helpers({
     } else {
       return user;
     }
-  },
-
-  'prettifyDate': function() {
-    var today = new Date();
-
-    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
-      return this.date.toLocaleTimeString();
-    } else {
-      return this.date.toLocaleDateString();
-    }
   }
 });
 
@@ -82,16 +72,6 @@ Template.subscribingNotification.helpers({
     } else {
       return true;
     }
-  },
-
-  'prettifyDate': function() {
-    var today = new Date();
-
-    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
-      return this.date.toLocaleTimeString();
-    } else {
-      return this.date.toLocaleDateString();
-    }
   }
 });
 
@@ -102,32 +82,12 @@ Template.addBookmarkNotification.helpers({
 
   'bookmarkUrl': function() {
     return this.bookmark.url;
-  },
-
-  'prettifyDate': function() {
-    var today = new Date();
-
-    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
-      return this.date.toLocaleTimeString();
-    } else {
-      return this.date.toLocaleDateString();
-    }
   }
 });
 
 Template.deleteBookmarkNotification.helpers({
   'bookmarkUrl': function() {
     return this.bookmark.url;
-  },
-
-  'prettifyDate': function() {
-    var today = new Date();
-
-    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
-      return this.date.toLocaleTimeString();
-    } else {
-      return this.date.toLocaleDateString();
-    }
   }
 });
 
@@ -138,16 +98,6 @@ Template.editBookmarkNotification.helpers({
 
   'bookmarkUrl': function() {
     return this.bookmark.url;
-  },
-
-  'prettifyDate': function() {
-    var today = new Date();
-
-    if (today.toLocaleDateString() == this.date.toLocaleDateString()) {
-      return this.date.toLocaleTimeString();
-    } else {
-      return this.date.toLocaleDateString();
-    }
   }
 });
 
