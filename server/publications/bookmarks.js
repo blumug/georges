@@ -2,6 +2,11 @@ Meteor.publish('bookmarks', function(option, filter) {
   if (!this.userId) {
     return;
   }
+
+  if (_.isEmpty(option.sort)) {
+    option.sort = {dateCreated: -1};
+  }
+
   var tab = [];
   var user = Meteor.users.findOne(this.userId);
   var membersId = [];
