@@ -1,29 +1,29 @@
 <template name="bookmarksList">
-<div class="row">
-    {{> favorite}}
-    {{> sort}}
-</div>
+    <div class="row">
+        {{> favorite}}
+        {{> sort}}
+    </div>
 
-<div class="row">
-  <div class="bookmarks">
-    {{#each bookmarks}}
-      {{> bookmarkItem}}
-    {{else}}
-    <p>You have no bookmark yet</p>
-    {{/each}}
-  </div>
-</div>
+    <div class="row">
+        <div class="bookmarks">
+            {{#each bookmarks}}
+                {{> bookmarkItem}}
+            {{else}}
+                <p>You have no bookmark yet</p>
+            {{/each}}
+        </div>
+    </div>
 
-<div class="row">
+    <div class="row spinner-container">
 
-  {{#if nextPath}}
-  <div class="load-more">
-  <a href="{{nextPath}}">Load more</a>
-  </div>
-  {{else}}
-    {{#unless ready}}
-      {{> spinner}}
-    {{/unless}}
-  {{/if}}
-</div>
+        {{#if nextPath}}
+            <div class="load-more">
+                <a href="{{nextPath}}">Load more</a>
+            </div>
+        {{else}}
+            {{#unless ready}}
+                {{> spinner}}
+            {{/unless}}
+        {{/if}}
+    </div>
 </template>
