@@ -67,7 +67,7 @@ Template.bookmarkPage.events({
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
 
       Meteor.call('bookmarkUpdate', bookmark, this._id, function() {
-        Router.go('/home');
+        GotoHome();
       });
     } else {
       DisplayErrorSubmit("You need to be connected.");
@@ -90,7 +90,7 @@ Template.bookmarkPage.events({
           className: "btn-danger",
           callback: function() {
             Meteor.call("removeBookmark", idDelete);
-            Router.go('/home');
+            GotoHome();
           }
         }
       }
@@ -105,7 +105,6 @@ Template.bookmarkPage.events({
 
   'click .refreshView': function(e) {
     e.preventDefault();
-    $("#nuage").css("color", "rgb(65, 65, 178)");
 
     var retry = 0;
     var new_bookmark = this;
@@ -121,14 +120,11 @@ Template.bookmarkPage.events({
           if (retry >= 10) {
 
             console.log("analyzeText Failed");
-            $("#nuage").css("color", "rgb(188, 0, 0)");
 
           } else if (result.status == "finished") {
 
             new_bookmark.summary = result;
             Meteor.call("bookmarkUpdate", new_bookmark, _id, function(error, result) {
-              if (error != undefined) $("#nuage").css("color", "rgb(188, 0, 0)");
-              else $("#nuage").css("color", "");
               console.log(error);
             });
 
@@ -155,7 +151,7 @@ Template.bookmarkPage.helpers({
   },
   favicon: function() {
     var url = this.url;
-    pathArray = url.split('/');
+    var pathArray = url.split('/');
     var protocol = pathArray[0];
     var host = pathArray[2];
     var domain = protocol + '//' + host;
