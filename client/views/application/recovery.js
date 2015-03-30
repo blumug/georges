@@ -1,15 +1,3 @@
- Meteor.autorun(function() {
- 	// Whenever this session variable changes, run this function.
- 	var message = Session.get('displayMessage');
- 	if (message) {
- 		var stringArray = message.split('&amp;');
- 		ui.notify(stringArray[0], stringArray[1])
- 			.effect('slide')
- 			.closable();
-
- 		Session.set('displayMessage', null);
- 	}
- });
 
  var trimInput = function(val) {
  	return val.replace(/^\s*|\s*$/g, "");
@@ -19,7 +7,7 @@
  	if (val.length >= 6) {
  		return true;
  	} else {
- 		Session.set('displayMessage', 'Error &amp; Too short.')
+        DisplayErrorSubmit('Error. Too short.');
  		return false;
  	}
  }
@@ -45,10 +33,11 @@
  			Accounts.forgotPassword({
  				email: email
  			}, function(err) {
- 				if (err)
- 					Session.set('displayMessage', 'Password Reset Error &amp; Doh')
+ 				if (err) {
+                    DisplayErrorSubmit('Password retrieval error: ' + err.reason);
+                }
  				else {
- 					Session.set('displayMessage', 'Email Sent &amp; Please check your email.')
+                    DisplaySuccessSubmit('Email sent. Please check your email.');
  				}
  				Session.set('loading', false);
  			});
@@ -63,7 +52,7 @@
  			Session.set('loading', true);
  			Accounts.resetPassword(Session.get('resetPassword'), pw, function(err) {
  				if (err)
- 					Session.set('displayMessage', 'Password Reset Error &amp; Sorry');
+                    DisplayErrorSubmit('Password reset error: ' + err.reason);
  				else {
  					Session.set('resetPassword', null);
  				}
