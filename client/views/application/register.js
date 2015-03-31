@@ -54,20 +54,15 @@ Template.register.events({
 
         var checkbox = t.find('#account-cgu');
         var checked = $(checkbox).prop("checked");
-
         var button = t.find('input[type="submit"]');
-
-        console.log("checked "+checked);
 
         if (checked === true) {
 
-            console.log("checked");
             Session.set('cguAccepted', true);
             $(button).removeClass("disabled");
         }
         else {
 
-            console.log("unchecked");
             Session.set('cguAccepted', null);
             $(button).addClass("disabled");
         }
