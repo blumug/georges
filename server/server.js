@@ -1,4 +1,4 @@
-Meteor.startup(function() {
+Meteor.startup(function () {
   try {
     Houston.add_collection(Meteor.users);
     Houston.add_collection(Houston._admins);
@@ -7,7 +7,7 @@ Meteor.startup(function() {
   }
 
   if (Meteor.users.find().count() === 0) {
-    _.each(Meteor.settings.users, function(user) {
+    _.each(Meteor.settings.users, function (user) {
       var id;
       id = Accounts.createUser({
         email: user.email,
@@ -24,4 +24,20 @@ Meteor.startup(function() {
       });
     });
   }
+
+
+  Meteor.methods({
+
+    getCGU: function() {
+
+      var txt = Assets.getText('terms_and_conditions.txt');
+      console.log("server : getCgu");
+      return txt;
+    }
+
+  });
+
 });
+
+
+

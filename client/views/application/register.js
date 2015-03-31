@@ -1,3 +1,5 @@
+
+
 Template.register.events({
     'submit #register-form': function (e, t) {
         e.preventDefault();
@@ -72,3 +74,19 @@ Template.register.events({
     }
 
 });
+
+
+Template.modalCGU.helpers({
+
+  'getCGU' : function() {
+
+    Meteor.call('getCGU', function(err, result) {
+
+      if (err)
+        return;
+      Session.set('CGU', result);
+    });
+    return Session.get('CGU');
+  }
+});
+

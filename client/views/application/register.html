@@ -1,6 +1,8 @@
 <template name="register">
 
-<div class="landing-background-top">
+  {{> modalCGU}}}
+
+  <div class="landing-background-top">
   <div class="container">
     <div class="row">
       <div class="inner">
@@ -13,7 +15,7 @@
               <input name="password" id="account-password" type="password" value="" placeholder="Password" class="form-control" required/>
 
               <input name="cgu" id="account-cgu" type="checkbox"/>
-              <span class="">&nbsp;&nbsp;I agree to the terms and conditions</span>
+              <span class="">&nbsp;&nbsp;I agree to the <a href="javascript:$('#modalCGU').modal('show', 'large')">terms and conditions</a></span>
 
               <br/>
 
@@ -21,9 +23,34 @@
           </form>
           <a href="{{pathFor 'login'}}" class="password-lost">Have an account?</a>
 
+
         </div>
       </div>
     </div>
   </div>
+</div>
+</template>
+
+
+
+<!-- Modal -->
+<template name="modalCGU">
+<div class="modal fade" id="modalCGU" tabindex="-1" role="dialog" aria-labelledby="modalCGULabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Terms and Conditions</h4>
+            </div>
+            <div class="modal-body">
+                {{#markdown}}
+                  {{getCGU}}
+                {{/markdown}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 </template>

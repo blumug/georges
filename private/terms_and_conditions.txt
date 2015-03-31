@@ -1,0 +1,92 @@
+Georges – Conditions Générales d’Utilisation
+
+Identification
+Propriétaire de la Plateforme.
+Objet 
+L’application « Georges » permet de créer son bookmark personnalisé.  L’application permet la sauvegarde d’un texte auquel sera annexé un court résumé en en-tête. Le texte pourra être consulté offline. 
+L’Application offre à l’Utilisateur l’accès à un espace de stockage pour conserver ses Contenus sous forme de textes et de les partager avec les personnes de son choix dans la limite des droits de propriété intellectuelle détenus par l’Utilisateur. Ces personnes, qui devront être acceptées par l’Utilisateur, pourront consulter les Contenus et/ou les télécharger.
+Respect des CGU
+Les présentes Conditions Générales d’Utilisation (« CGU ») doivent être respectées par tout Utilisateur de l’Application. Une fois l’Utilisateur connecté à l’Application, il est considéré comme ayant lu et accepté les CGU.
+L’Utilisateur est informé que les CGU peuvent évoluer. Il est recommandé à l’Utilisateur de se référer régulièrement aux CGU et de se tenir informé des éventuelles modifications. Toute violation des présentes pourra entraîner la fermeture du compte de l’Utilisateur. 
+Inscription et Accès
+L’accès à l’application est gratuit. L’Utilisateur bénéficie d’une licence d’utilisation personnelle non exclusive qui ne peut être ni cédée ni  vendue ni distribuée.
+L’Utilisateur accède à l’Application après avoir validé son Inscription et créé son compte. L’Utilisateur insère un identifiant et un mot de passe qui lui permettront par la suite de se connecter à l’Application. Les Identifiants et mots de passe sont strictement personnels et confidentiels. Les Utilisateurs s’engagent à les garder secrets et à ne les divulguer ni les transmettre sous quelque forme que ce soit. 
+L’Utilisateur doit se déconnecter à l’issue de chaque session de connexion à l’Application.
+En cas de perte ou de vol de l’identifiant ou mot de passe, l’Utilisateur doit en avertir Georges sans délai par email à l’adresse contact@georges.com. 
+Pour bénéficier des Services de Georges, le Client doit disposer d’un navigateur internet récent :
+Internet Explorer 10.0 ou plus ;
+Firefox, dernière version ;
+Safari, dernière version ;
+Google Chrome ;
+Opéra, dernière version.
+ Evolution des Services
+L’interface de l’Application et ses fonctionnalités peuvent être modifiées, des améliorations ou des mises à jour pouvant y être apportées. Ces modifications se dérouleront sans information préalable de l’Utilisateur.
+Georges se réserve la possibilité de cesser la fourniture du Service. L’Utilisateur sera prévenu par tout moyen et continuera d’avoir accès au service pour la durée minimum d’un préavis d’un mois avant que l’accès au Service ne soit définitivement interrompu. L’Utilisateur pourra, s’il le souhaite, prendre dans ce délai toutes les dispositions de sauvegarde nécessaires. 
+La cessation de la fourniture du Service par Georges ne pourra donner lieu à aucune indemnisation ni réparation quelconque. 
+Obligation et responsabilité de l’Utilisateur
+6.1. Création des Contenus
+L'Utilisateur procédera lui-même à la création de son bookmark, le contenu de celui-ci étant téléchargé sur les serveurs de Georges. 
+L’Utilisateur est seul responsable des Contenus et déclare être l'auteur ou disposer de l'ensemble des droits ou autorisations nécessaires sur l'ensemble des Contenus qu'il télécharge sur les serveurs ou qu'il utilise dans le cadre du Service offert par l’Application.
+A ce titre, l’Utilisateur déclare qu’il détient les droits et/ou autorisations de reproduction et de représentation, des Contenus qu’il télécharge via l’Application.
+L'Utilisateur s'engage à ne pas télécharger de Contenus contenant ou susceptibles de contenir des virus ou des programmes qui détruisent les données. L'Utilisateur s'engage également à vérifier de manière raisonnable que les Contenus qu'il utilise ne contiennent pas de virus ou de programmes susceptibles notamment de perturber le fonctionnement du Service ou de porter un quelconque préjudice aux autres utilisateurs du Service.
+L’Utilisateur est entièrement responsable de toute création, transmission ou publication de Contenu au moyen de l’Application et des conséquences de ses actes.
+L'utilisation du Service, et notamment le stockage des Contenus, s'effectue sous la seule responsabilité de l'Utilisateur et dans la limite des droits de propriété intellectuelle détenus et/ou obtenus par l’Utilisateur.
+L'Utilisateur s'engage à n’utiliser l’Application que pour des Contenus strictement conformes à l'ordre public et aux bonnes mœurs.
+L'Utilisateur s'engage notamment, sans que cette énumération puisse être considérée comme limitative :
+- à n'utiliser aucun contenu et à ne diffuser aucun message ou information à caractère injurieux, diffamatoire, raciste, xénophobe, révisionniste ou portant atteinte à l'honneur ou la réputation d'autrui, incitant à la discrimination, à la haine d'une personne ou d'un groupe de personnes en raison de leur origine ou de leur appartenance ou de leur non-appartenance à une ethnie, une nation, une race ou une religion déterminée, menaçant une personne ou un groupe de personnes, à caractère pornographique ou pédophile, incitant à commettre un délit, un crime ou un acte de terrorisme ou autre, portant atteinte aux droits d'autrui et à la sécurité des personnes et des biens ;
+- à respecter les droits d'autrui, et notamment : les droits de la personnalité (tels que droit à l'image, droit au respect de la vie privée), les droits des marques, les droits d'auteurs et les droits voisins du droit d’auteur, d'une manière générale, les droits des personnes et des biens.
+L'Utilisateur garantit de façon générale que ses Contenus sont conformes à la réglementation en vigueur et ne portent pas atteinte aux droits d'autrui.
+L'Utilisateur reconnaît que les Contenus considérés comme contrevenant aux lois ou réglementations en vigueur pourront être remis par Georges aux autorités chargées de faire respecter la loi.
+6.2 Obligations relatives à l’accès et au Partage des Contenus
+L’Utilisateur ne peut ignorer que l’auteur d’une œuvre protégée possède les droits d’exploitation, patrimoniaux ainsi que le droit moral attachés à celle-ci. Une œuvre ne peut en effet être divulguée à un public sans l’accord préalable de l’auteur ou du cessionnaire des droits sauf exceptions. 
+Il existe néanmoins des exceptions, une fois l’œuvre divulguée, en particulier l’exception pour copie privée définie à l’article L122-5 du code de la propriété intellectuelle (copie ou reproduction strictement réservée à l’usage privé du copiste et non destinée à une utilisation collective) et l’exception pour représentation dans le cercle de famille : les représentations privées et gratuites effectuées exclusivement dans un cercle de famille.
+L’Utilisateur s’engage à respecter les droits d’auteur et agir dans le cadre strict du code de la propriété intellectuelle. 
+L’Utilisateur s’engage à faire un usage uniquement privé de l’Application et en aucun cas un usage commercial de l’Application ou des documents sauvegardés grâce à elle.  
+L'Utilisateur pourra autoriser l'accès à une sélection de Contenus créés et téléchargés via l’Application aux personnes qu'il aura personnellement sélectionnées et expressément autorisées, dans la limite d’un nombre d’accès raisonnable (inférieur à 25 personnes) et qui appartiennent à un cercle très proche de l’Utilisateur.
+L'Utilisateur décide seul des autorisations d’accès à ses Contenus stockés et est l’unique responsable de la gestion des autorisations d'accès à ses Contenus téléchargés via l’Application.
+Il est strictement interdit à l'Utilisateur de conditionner l'accès à ses Contenus téléchargés via l’application à une quelconque rémunération directe ou indirecte.
+Par ailleurs, l'Utilisateur reconnaît être informé des risques face à la protection de la vie privée sur le réseau Internet et du piratage possible des informations circulant sur le réseau Internet. 
+L’Utilisateur s’interdit de reproduire, copier, vendre, revendre ou exploiter auprès de tiers, dans un but commercial ou à titre gratuit, tout ou partie de l’Application, toute utilisation de celle-ci, ou tout droit d’accès à l’Application.
+L’Utilisateur s’engage à respecter les droits des tiers, en particulier les droits relatifs à la propriété intellectuelle. L’Utilisateur ne doit pas utiliser Georges pour sauvegarder des documents illégaux ni violer les droits des tiers. Il s’engage à ne faire un usage de Georges que dans le respect du Code de la Propriété Intellectuelle et en particulier de l’article L.122-5 du code de la propriété intellectuelle relatif à l’exception de copie privée.
+L’Utilisateur s’engage à ne pas faire d’utilisation publique des documents sauvegardés en utilisant Georges. La possibilité de partager l’accès à des tiers n’est possible que dans le cadre familial proche et en dehors de toute représentation publique. 
+Sanction
+L’Utilisateur est informé que si Georges découvre que l’utilisation de l’Application est faite à l’encontre des règles légales, des droits des tiers ou des règles des présentes CGU, son compte peut être fermé sans préavis et sans indemnité, Georges se gardant la possibilité de demander des dommages et intérêts.
+Propriété des contenus
+Seule l’équipe de Georges est habilitée à travailler sur l’Application pour assurer sa maintenance et sa mise à jour.
+Le contenu sauvegardé par l’Utilisateur via l’Application reste la propriété de l’Utilisateur. Le contenu ne sera pas transmis à des tiers sauf sur requête d’autorités administratives ou judiciaires compétentes.
+Georges s’engage à garder ces contenus confidentiels, à n’en effectuer, en dehors des nécessités techniques requises pour la fourniture des Services, aucune copie et à n’en faire aucune utilisation autre que celles prévues pour l’exécution des présentes CGU.
+Afin de préserver la performance du Service, la taille et le nombre des fichiers transférés pourront être limités.
+Georges se réserve le droit de refuser la présence, sur ses serveurs, de fichiers importés par l’Utilisateur qui seraient jugés techniquement non conformes aux serveurs ou nuisant à leurs performances ou au contenu illégal.
+Propriété de l’Application
+L’Application mise à la disposition de l’Utilisateur est la propriété pleine, entière et exclusive de Georges.
+Georges, ses fournisseurs, ou leurs ayants droit sont titulaires de tous les droits de propriété intellectuelle relatifs à l’Application.
+L’Utilisateur ne peut, en aucun cas, reproduire, représenter, modifier, transmettre, publier, adapter, sur quelque support que ce soit, par quelque moyen que ce soit, ou exploiter de quelque manière que ce soit, les informations et l’Application développée par Georges.
+L’Application est une œuvre de l’esprit que l’Utilisateur s’interdit notamment :
+De copier ou de reproduire en tout ou partie par n’importe quel moyen et sous n’importe quelle forme ;
+D’utiliser autrement que selon les stipulations strictement interprétées des présentes CGU ;
+De traduire ou de transcrire dans tout autre langage ou langue, ou de l’adapter ou de lui adjoindre tout objet non conforme à sa spécification.
+L’Utilisateur s’interdit de décompiler ou désassembler le code source de l’Application.
+La licence souscrite par l’Utilisateur ne lui confère qu’un droit d’usage privé personnel, non transmissible et non exclusif sur l’Application. Les éléments téléchargeables restent la propriété de Georges et sont protégés au titre du droit d’auteur. Ils ne sont destinés qu’à un usage privatif.
+ Interruption des Services pour maintenance et amélioration
+L’Utilisateur est informé que l’Application peut être temporairement indisponible pour des raisons de maintenance ou d’amélioration. La responsabilité de Georges ne saurait être engagée pour cette indisponibilité.
+ Sauvegardes
+Georges s’engage à prendre toute précaution raisonnable pour assurer la protection matérielle des contenus. Des sauvegardes sont effectuées régulièrement. 
+Divers
+La nullité d’une des clauses des présentes CGU en application notamment d’une loi, d’un règlement ou à la suite d’une décision d’une juridiction compétente passée en force de chose jugée n’entraînera pas la nullité des autres clauses qui garderont leur plein effet et portée.
+Le fait que Georges ne se prévale pas à un moment donné de l’une quelconque des clauses des présentes et/ou d’un manquement par le Client à l’une quelconque de ses obligations ne peut être interprété comme valant renonciation par Georges à se prévaloir ultérieurement de l’une quelconque desdites clauses.
+Limites de responsabilité
+L’Utilisateur est informé des limites inhérentes à Internet et fait une utilisation de l’Application à ses risques et périls.
+L’Utilisateur reconnaît en particulier qu'il est parfaitement informé des caractéristiques et des contraintes d'Internet, notamment que les transmissions de données et d'informations sur Internet ne bénéficient que d'une fiabilité technique relative. L'Utilisateur reconnaît que les Contenus téléchargés et d'une manière plus générale tout site peut faire l'objet d'intrusion de tiers non-autorisés et être en conséquence corrompus.
+Georges n'assure ni le cryptage ni la protection des Contenus lors de leur transmission et ne peut garantir la sécurité et l'intégrité des Contenus à l'occasion des opérations de transfert.
+L'Utilisateur reconnaît en être parfaitement informé et accepte de télécharger les Contenus sous son entière et unique responsabilité et en toute connaissance de cause.
+Georges ne pourra en aucun cas être tenu responsable des dégâts accidentels ou volontaires subis par l'Utilisateur et provoqués ou non par des tiers ou par une mauvaise utilisation de l’Application par l’Utilisateur. L’Utilisateur accepte en particulier la possibilité que tout ou partie des Contenus lui appartenant soit divulgué à un tiers ou détruit et s’interdit de poursuivre Georges pour ce motif.
+L'Utilisateur reconnaît être le seul responsable des Contenus et plus généralement de toutes informations figurant dans ses Contenus ainsi que de l'utilisation qu'il en fait. Il assume en conséquence l'entière responsabilité civile et pénale des Contenus, commentaires et autres informations figurant sur ses Contenus, les revendications de tiers et les actions qu'ils suscitent notamment, mais non exclusivement, en matière de propriété intellectuelle, de droits de la personnalité et de protection des mineurs.
+Georges ne saurait voir sa responsabilité engagée notamment pour la mauvaise utilisation de l’Application par l'Utilisateur, la nature et la qualité des Contenus, les difficultés d'accès au Service du fait du non-respect total ou partiel d'une obligation de l'Utilisateur, de l'utilisation par l'Utilisateur d'un équipement non adapté aux caractéristiques du Service, d'une défaillance et/ou d'une saturation à certaines périodes des réseaux de transport vers le monde Internet sur lesquels Georges n’a pas de maîtrise, la contamination par virus des données et/ou logiciels de l'Utilisateur, dont la protection incombe à ce dernier, les intrusions malveillantes de tiers sur les Contenus d'un Utilisateur, malgré les mesures de sécurité mises en place par Georges, les dommages que pourraient subir les équipements de l'Utilisateur, ceux-ci étant sous l'entière responsabilité de l'Utilisateur, les détournements éventuels de mots de passe, codes confidentiels, et plus généralement de toute information à caractère sensible pour l'Utilisateur ceux-ci étant sous l'entière responsabilité de l'Utilisateur, et plus globalement l’ensemble des préjudices directs et indirects, l’accès à l’Application étant totalement libre et gratuit et sous la seule responsabilité de l’Utilisateur.
+Propriété intellectuelle
+George décline toute responsabilité sur l'utilisation frauduleuse ou la création illégale de Contenus, de même qu'il ne garantit aucun contenu créé et partagé par tout Utilisateur. Les Contenus relèvent de la responsabilité exclusive de l'Utilisateur titulaire de ces Contenus. L'Utilisateur décharge Georges de toute responsabilité en ce qui concerne les Contenus créés ou utilisés de quelque manière que ce soit par lui via l’application. 
+Tout tiers estimant ses droits violés par une utilisation de la Plateforme doit contacter Georges à … Toute plainte d'un tiers relative au contenu d’un Utilisateur sera redirigée vers celui-ci qui en assumera l'entière responsabilité.
+L'Utilisateur s'engage à garantir, à la première demande, y compris en cas de décision de justice non définitive, à indemniser et dédommager Georges de tous dommages qu’il pourrait subir si sa responsabilité se trouvait engagée par un tiers, du fait d'une revendication, d'une action ou d'une plainte liée à ses Contenus ou consécutive à une utilisation de l’Application en violation des règles légales ou des règles contenues dans les présentes CGU.
+Droit applicable
+Les présentes CGU sont soumises au droit français.
+
+
