@@ -31,3 +31,5 @@ momentjs:moment
 dburles:collection-helpers
 accounts-ui
 markdown
+velocity:html-reporter
+sanjo:jasmine
