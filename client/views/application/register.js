@@ -66,7 +66,13 @@ Template.register.events({
             Session.set('cguAccepted', null);
             $(button).addClass("disabled");
         }
+    },
+
+    'click a.cgu' : function(e, t) {
+      $('#modalCGU').modal('show', 'large');
     }
+
+
 
 });
 
