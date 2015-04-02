@@ -1,92 +1,182 @@
-Georges – Conditions Générales d’Utilisation
 
-Identification
-Propriétaire de la Plateforme.
-Objet 
-L’application « Georges » permet de créer son bookmark personnalisé.  L’application permet la sauvegarde d’un texte auquel sera annexé un court résumé en en-tête. Le texte pourra être consulté offline. 
-L’Application offre à l’Utilisateur l’accès à un espace de stockage pour conserver ses Contenus sous forme de textes et de les partager avec les personnes de son choix dans la limite des droits de propriété intellectuelle détenus par l’Utilisateur. Ces personnes, qui devront être acceptées par l’Utilisateur, pourront consulter les Contenus et/ou les télécharger.
-Respect des CGU
-Les présentes Conditions Générales d’Utilisation (« CGU ») doivent être respectées par tout Utilisateur de l’Application. Une fois l’Utilisateur connecté à l’Application, il est considéré comme ayant lu et accepté les CGU.
-L’Utilisateur est informé que les CGU peuvent évoluer. Il est recommandé à l’Utilisateur de se référer régulièrement aux CGU et de se tenir informé des éventuelles modifications. Toute violation des présentes pourra entraîner la fermeture du compte de l’Utilisateur. 
-Inscription et Accès
-L’accès à l’application est gratuit. L’Utilisateur bénéficie d’une licence d’utilisation personnelle non exclusive qui ne peut être ni cédée ni  vendue ni distribuée.
-L’Utilisateur accède à l’Application après avoir validé son Inscription et créé son compte. L’Utilisateur insère un identifiant et un mot de passe qui lui permettront par la suite de se connecter à l’Application. Les Identifiants et mots de passe sont strictement personnels et confidentiels. Les Utilisateurs s’engagent à les garder secrets et à ne les divulguer ni les transmettre sous quelque forme que ce soit. 
-L’Utilisateur doit se déconnecter à l’issue de chaque session de connexion à l’Application.
-En cas de perte ou de vol de l’identifiant ou mot de passe, l’Utilisateur doit en avertir Georges sans délai par email à l’adresse contact@georges.com. 
-Pour bénéficier des Services de Georges, le Client doit disposer d’un navigateur internet récent :
-Internet Explorer 10.0 ou plus ;
-Firefox, dernière version ;
-Safari, dernière version ;
-Google Chrome ;
-Opéra, dernière version.
- Evolution des Services
-L’interface de l’Application et ses fonctionnalités peuvent être modifiées, des améliorations ou des mises à jour pouvant y être apportées. Ces modifications se dérouleront sans information préalable de l’Utilisateur.
-Georges se réserve la possibilité de cesser la fourniture du Service. L’Utilisateur sera prévenu par tout moyen et continuera d’avoir accès au service pour la durée minimum d’un préavis d’un mois avant que l’accès au Service ne soit définitivement interrompu. L’Utilisateur pourra, s’il le souhaite, prendre dans ce délai toutes les dispositions de sauvegarde nécessaires. 
-La cessation de la fourniture du Service par Georges ne pourra donner lieu à aucune indemnisation ni réparation quelconque. 
-Obligation et responsabilité de l’Utilisateur
-6.1. Création des Contenus
-L'Utilisateur procédera lui-même à la création de son bookmark, le contenu de celui-ci étant téléchargé sur les serveurs de Georges. 
-L’Utilisateur est seul responsable des Contenus et déclare être l'auteur ou disposer de l'ensemble des droits ou autorisations nécessaires sur l'ensemble des Contenus qu'il télécharge sur les serveurs ou qu'il utilise dans le cadre du Service offert par l’Application.
-A ce titre, l’Utilisateur déclare qu’il détient les droits et/ou autorisations de reproduction et de représentation, des Contenus qu’il télécharge via l’Application.
-L'Utilisateur s'engage à ne pas télécharger de Contenus contenant ou susceptibles de contenir des virus ou des programmes qui détruisent les données. L'Utilisateur s'engage également à vérifier de manière raisonnable que les Contenus qu'il utilise ne contiennent pas de virus ou de programmes susceptibles notamment de perturber le fonctionnement du Service ou de porter un quelconque préjudice aux autres utilisateurs du Service.
-L’Utilisateur est entièrement responsable de toute création, transmission ou publication de Contenu au moyen de l’Application et des conséquences de ses actes.
-L'utilisation du Service, et notamment le stockage des Contenus, s'effectue sous la seule responsabilité de l'Utilisateur et dans la limite des droits de propriété intellectuelle détenus et/ou obtenus par l’Utilisateur.
-L'Utilisateur s'engage à n’utiliser l’Application que pour des Contenus strictement conformes à l'ordre public et aux bonnes mœurs.
-L'Utilisateur s'engage notamment, sans que cette énumération puisse être considérée comme limitative :
-- à n'utiliser aucun contenu et à ne diffuser aucun message ou information à caractère injurieux, diffamatoire, raciste, xénophobe, révisionniste ou portant atteinte à l'honneur ou la réputation d'autrui, incitant à la discrimination, à la haine d'une personne ou d'un groupe de personnes en raison de leur origine ou de leur appartenance ou de leur non-appartenance à une ethnie, une nation, une race ou une religion déterminée, menaçant une personne ou un groupe de personnes, à caractère pornographique ou pédophile, incitant à commettre un délit, un crime ou un acte de terrorisme ou autre, portant atteinte aux droits d'autrui et à la sécurité des personnes et des biens ;
-- à respecter les droits d'autrui, et notamment : les droits de la personnalité (tels que droit à l'image, droit au respect de la vie privée), les droits des marques, les droits d'auteurs et les droits voisins du droit d’auteur, d'une manière générale, les droits des personnes et des biens.
-L'Utilisateur garantit de façon générale que ses Contenus sont conformes à la réglementation en vigueur et ne portent pas atteinte aux droits d'autrui.
-L'Utilisateur reconnaît que les Contenus considérés comme contrevenant aux lois ou réglementations en vigueur pourront être remis par Georges aux autorités chargées de faire respecter la loi.
-6.2 Obligations relatives à l’accès et au Partage des Contenus
-L’Utilisateur ne peut ignorer que l’auteur d’une œuvre protégée possède les droits d’exploitation, patrimoniaux ainsi que le droit moral attachés à celle-ci. Une œuvre ne peut en effet être divulguée à un public sans l’accord préalable de l’auteur ou du cessionnaire des droits sauf exceptions. 
-Il existe néanmoins des exceptions, une fois l’œuvre divulguée, en particulier l’exception pour copie privée définie à l’article L122-5 du code de la propriété intellectuelle (copie ou reproduction strictement réservée à l’usage privé du copiste et non destinée à une utilisation collective) et l’exception pour représentation dans le cercle de famille : les représentations privées et gratuites effectuées exclusivement dans un cercle de famille.
-L’Utilisateur s’engage à respecter les droits d’auteur et agir dans le cadre strict du code de la propriété intellectuelle. 
-L’Utilisateur s’engage à faire un usage uniquement privé de l’Application et en aucun cas un usage commercial de l’Application ou des documents sauvegardés grâce à elle.  
-L'Utilisateur pourra autoriser l'accès à une sélection de Contenus créés et téléchargés via l’Application aux personnes qu'il aura personnellement sélectionnées et expressément autorisées, dans la limite d’un nombre d’accès raisonnable (inférieur à 25 personnes) et qui appartiennent à un cercle très proche de l’Utilisateur.
-L'Utilisateur décide seul des autorisations d’accès à ses Contenus stockés et est l’unique responsable de la gestion des autorisations d'accès à ses Contenus téléchargés via l’Application.
-Il est strictement interdit à l'Utilisateur de conditionner l'accès à ses Contenus téléchargés via l’application à une quelconque rémunération directe ou indirecte.
-Par ailleurs, l'Utilisateur reconnaît être informé des risques face à la protection de la vie privée sur le réseau Internet et du piratage possible des informations circulant sur le réseau Internet. 
-L’Utilisateur s’interdit de reproduire, copier, vendre, revendre ou exploiter auprès de tiers, dans un but commercial ou à titre gratuit, tout ou partie de l’Application, toute utilisation de celle-ci, ou tout droit d’accès à l’Application.
-L’Utilisateur s’engage à respecter les droits des tiers, en particulier les droits relatifs à la propriété intellectuelle. L’Utilisateur ne doit pas utiliser Georges pour sauvegarder des documents illégaux ni violer les droits des tiers. Il s’engage à ne faire un usage de Georges que dans le respect du Code de la Propriété Intellectuelle et en particulier de l’article L.122-5 du code de la propriété intellectuelle relatif à l’exception de copie privée.
-L’Utilisateur s’engage à ne pas faire d’utilisation publique des documents sauvegardés en utilisant Georges. La possibilité de partager l’accès à des tiers n’est possible que dans le cadre familial proche et en dehors de toute représentation publique. 
-Sanction
-L’Utilisateur est informé que si Georges découvre que l’utilisation de l’Application est faite à l’encontre des règles légales, des droits des tiers ou des règles des présentes CGU, son compte peut être fermé sans préavis et sans indemnité, Georges se gardant la possibilité de demander des dommages et intérêts.
-Propriété des contenus
-Seule l’équipe de Georges est habilitée à travailler sur l’Application pour assurer sa maintenance et sa mise à jour.
-Le contenu sauvegardé par l’Utilisateur via l’Application reste la propriété de l’Utilisateur. Le contenu ne sera pas transmis à des tiers sauf sur requête d’autorités administratives ou judiciaires compétentes.
-Georges s’engage à garder ces contenus confidentiels, à n’en effectuer, en dehors des nécessités techniques requises pour la fourniture des Services, aucune copie et à n’en faire aucune utilisation autre que celles prévues pour l’exécution des présentes CGU.
-Afin de préserver la performance du Service, la taille et le nombre des fichiers transférés pourront être limités.
-Georges se réserve le droit de refuser la présence, sur ses serveurs, de fichiers importés par l’Utilisateur qui seraient jugés techniquement non conformes aux serveurs ou nuisant à leurs performances ou au contenu illégal.
-Propriété de l’Application
-L’Application mise à la disposition de l’Utilisateur est la propriété pleine, entière et exclusive de Georges.
-Georges, ses fournisseurs, ou leurs ayants droit sont titulaires de tous les droits de propriété intellectuelle relatifs à l’Application.
-L’Utilisateur ne peut, en aucun cas, reproduire, représenter, modifier, transmettre, publier, adapter, sur quelque support que ce soit, par quelque moyen que ce soit, ou exploiter de quelque manière que ce soit, les informations et l’Application développée par Georges.
-L’Application est une œuvre de l’esprit que l’Utilisateur s’interdit notamment :
-De copier ou de reproduire en tout ou partie par n’importe quel moyen et sous n’importe quelle forme ;
-D’utiliser autrement que selon les stipulations strictement interprétées des présentes CGU ;
-De traduire ou de transcrire dans tout autre langage ou langue, ou de l’adapter ou de lui adjoindre tout objet non conforme à sa spécification.
-L’Utilisateur s’interdit de décompiler ou désassembler le code source de l’Application.
-La licence souscrite par l’Utilisateur ne lui confère qu’un droit d’usage privé personnel, non transmissible et non exclusif sur l’Application. Les éléments téléchargeables restent la propriété de Georges et sont protégés au titre du droit d’auteur. Ils ne sont destinés qu’à un usage privatif.
- Interruption des Services pour maintenance et amélioration
-L’Utilisateur est informé que l’Application peut être temporairement indisponible pour des raisons de maintenance ou d’amélioration. La responsabilité de Georges ne saurait être engagée pour cette indisponibilité.
- Sauvegardes
-Georges s’engage à prendre toute précaution raisonnable pour assurer la protection matérielle des contenus. Des sauvegardes sont effectuées régulièrement. 
-Divers
-La nullité d’une des clauses des présentes CGU en application notamment d’une loi, d’un règlement ou à la suite d’une décision d’une juridiction compétente passée en force de chose jugée n’entraînera pas la nullité des autres clauses qui garderont leur plein effet et portée.
-Le fait que Georges ne se prévale pas à un moment donné de l’une quelconque des clauses des présentes et/ou d’un manquement par le Client à l’une quelconque de ses obligations ne peut être interprété comme valant renonciation par Georges à se prévaloir ultérieurement de l’une quelconque desdites clauses.
-Limites de responsabilité
-L’Utilisateur est informé des limites inhérentes à Internet et fait une utilisation de l’Application à ses risques et périls.
-L’Utilisateur reconnaît en particulier qu'il est parfaitement informé des caractéristiques et des contraintes d'Internet, notamment que les transmissions de données et d'informations sur Internet ne bénéficient que d'une fiabilité technique relative. L'Utilisateur reconnaît que les Contenus téléchargés et d'une manière plus générale tout site peut faire l'objet d'intrusion de tiers non-autorisés et être en conséquence corrompus.
-Georges n'assure ni le cryptage ni la protection des Contenus lors de leur transmission et ne peut garantir la sécurité et l'intégrité des Contenus à l'occasion des opérations de transfert.
-L'Utilisateur reconnaît en être parfaitement informé et accepte de télécharger les Contenus sous son entière et unique responsabilité et en toute connaissance de cause.
-Georges ne pourra en aucun cas être tenu responsable des dégâts accidentels ou volontaires subis par l'Utilisateur et provoqués ou non par des tiers ou par une mauvaise utilisation de l’Application par l’Utilisateur. L’Utilisateur accepte en particulier la possibilité que tout ou partie des Contenus lui appartenant soit divulgué à un tiers ou détruit et s’interdit de poursuivre Georges pour ce motif.
-L'Utilisateur reconnaît être le seul responsable des Contenus et plus généralement de toutes informations figurant dans ses Contenus ainsi que de l'utilisation qu'il en fait. Il assume en conséquence l'entière responsabilité civile et pénale des Contenus, commentaires et autres informations figurant sur ses Contenus, les revendications de tiers et les actions qu'ils suscitent notamment, mais non exclusivement, en matière de propriété intellectuelle, de droits de la personnalité et de protection des mineurs.
-Georges ne saurait voir sa responsabilité engagée notamment pour la mauvaise utilisation de l’Application par l'Utilisateur, la nature et la qualité des Contenus, les difficultés d'accès au Service du fait du non-respect total ou partiel d'une obligation de l'Utilisateur, de l'utilisation par l'Utilisateur d'un équipement non adapté aux caractéristiques du Service, d'une défaillance et/ou d'une saturation à certaines périodes des réseaux de transport vers le monde Internet sur lesquels Georges n’a pas de maîtrise, la contamination par virus des données et/ou logiciels de l'Utilisateur, dont la protection incombe à ce dernier, les intrusions malveillantes de tiers sur les Contenus d'un Utilisateur, malgré les mesures de sécurité mises en place par Georges, les dommages que pourraient subir les équipements de l'Utilisateur, ceux-ci étant sous l'entière responsabilité de l'Utilisateur, les détournements éventuels de mots de passe, codes confidentiels, et plus généralement de toute information à caractère sensible pour l'Utilisateur ceux-ci étant sous l'entière responsabilité de l'Utilisateur, et plus globalement l’ensemble des préjudices directs et indirects, l’accès à l’Application étant totalement libre et gratuit et sous la seule responsabilité de l’Utilisateur.
-Propriété intellectuelle
-George décline toute responsabilité sur l'utilisation frauduleuse ou la création illégale de Contenus, de même qu'il ne garantit aucun contenu créé et partagé par tout Utilisateur. Les Contenus relèvent de la responsabilité exclusive de l'Utilisateur titulaire de ces Contenus. L'Utilisateur décharge Georges de toute responsabilité en ce qui concerne les Contenus créés ou utilisés de quelque manière que ce soit par lui via l’application. 
-Tout tiers estimant ses droits violés par une utilisation de la Plateforme doit contacter Georges à … Toute plainte d'un tiers relative au contenu d’un Utilisateur sera redirigée vers celui-ci qui en assumera l'entière responsabilité.
-L'Utilisateur s'engage à garantir, à la première demande, y compris en cas de décision de justice non définitive, à indemniser et dédommager Georges de tous dommages qu’il pourrait subir si sa responsabilité se trouvait engagée par un tiers, du fait d'une revendication, d'une action ou d'une plainte liée à ses Contenus ou consécutive à une utilisation de l’Application en violation des règles légales ou des règles contenues dans les présentes CGU.
-Droit applicable
-Les présentes CGU sont soumises au droit français.
+## 1. Identification
+
+La Plateforme appartient &agrave; la soci&eacute;t&eacute; JBL42 SAS.
+
+## 2. Objet
+
+L&rsquo;application &laquo; Georges &raquo; permet de cr&eacute;er son bookmark personnalis&eacute;.  L&rsquo;application permet la sauvegarde d&rsquo;une page &agrave; laquelle sera annex&eacute; un court r&eacute;sum&eacute; en en-t&ecirc;te. La page pourra &ecirc;tre consult&eacute;e offline.
+
+L&rsquo;Application offre &agrave; l&rsquo;Utilisateur l&rsquo;acc&egrave;s &agrave; un espace de stockage pour conserver ses Contenus sous forme de pages Internet et &eacute;ventuellement les partager avec les autres utilisateurs de son choix dans la limite des droits de propri&eacute;t&eacute; intellectuelle d&eacute;tenus par l&rsquo;Utilisateur. Ces personnes, qui devront &ecirc;tre accept&eacute;es par l&rsquo;Utilisateur, pourront consulter les Contenus et/ou y acc&eacute;der dans leur version originale.
+
+## 3. D&eacute;finitions
+  - Application : l&rsquo;outil de cr&eacute;ation de Bookmark d&eacute;velopp&eacute; par JBL42 SAS et accessible &agrave; l&rsquo;adresse [https://www.georges.io](https://www.georges.io). Cette Application est d&eacute;nomm&eacute;e &laquo; Georges &raquo;.
+  - Contenus : les pages ou documents pour lesquels l&rsquo;Utilisateur a fait un usage de Georges et qu&rsquo;il a sauvegard&eacute;s dans son espace utilisateur.
+  - Service : terme regroupant toutes les fonctionnalit&eacute;s offertes par Georges.
+  - Utilisateur : toute personne faisant usage de l&rsquo;Application.
 
 
+## 4. Respect des CGU
+
+Les pr&eacute;sentes Conditions G&eacute;n&eacute;rales d&rsquo;Utilisation (&laquo; CGU &raquo;) doivent &ecirc;tre respect&eacute;es par tout Utilisateur de l&rsquo;Application. Une fois l&rsquo;Utilisateur connect&eacute; &agrave; l&rsquo;Application, il est consid&eacute;r&eacute; comme ayant lu et accept&eacute; les CGU.
+
+L&rsquo;Utilisateur est inform&eacute; que les CGU peuvent &eacute;voluer. Il est recommand&eacute; &agrave; l&rsquo;Utilisateur de se r&eacute;f&eacute;rer r&eacute;guli&egrave;rement aux CGU et de se tenir inform&eacute; des &eacute;ventuelles modifications. Toute violation des pr&eacute;sentes pourra entra&icirc;ner la fermeture du compte de l&rsquo;Utilisateur.
+
+## 5. Inscription et Acc&egrave;s
+
+L&rsquo;acc&egrave;s &agrave; l&rsquo;Application est gratuit.
+
+L&rsquo;Utilisateur acc&egrave;de &agrave; l&rsquo;Application apr&egrave;s avoir valid&eacute; son Inscription et cr&eacute;&eacute; son compte. L&rsquo;Utilisateur ins&egrave;re un identifiant et un mot de passe qui lui permettront par la suite de se connecter &agrave; l&rsquo;Application. Les Identifiants et mots de passe sont strictement personnels et confidentiels. Les Utilisateurs s&rsquo;engagent &agrave; les garder secrets et &agrave; ne les divulguer ni les transmettre sous quelque forme que ce soit. L&rsquo;acc&egrave;s &agrave; l&rsquo;Application ne peut &ecirc;tre ni c&eacute;d&eacute;, ni vendu, ni distribu&eacute; de quelque mani&egrave;re que ce soit.
+
+En cas de perte ou de vol de l&rsquo;identifiant ou mot de passe, l&rsquo;Utilisateur doit en avertir JBL42 SAS sans d&eacute;lai par email &agrave; l&rsquo;adresse contact@georges.io.
+
+Pour b&eacute;n&eacute;ficier des Services de l&rsquo;Application, le Client doit disposer d&rsquo;un navigateur internet r&eacute;cent. La responsabilit&eacute; de JBL42 SAS ne pourra &ecirc;tre engag&eacute;e en cas d&rsquo;impossibilit&eacute; d&rsquo;utiliser l&rsquo;Application sur le navigateur de l&rsquo;Utilisateur.
+
+## 6. Evolution des Services
+
+L&rsquo;interface de l&rsquo;Application et ses fonctionnalit&eacute;s peuvent &ecirc;tre modifi&eacute;es par JBL42 SAS, des am&eacute;liorations ou des mises &agrave; jour pouvant y &ecirc;tre apport&eacute;es. Ces modifications se d&eacute;rouleront sans information pr&eacute;alable de l&rsquo;Utilisateur.
+
+JBL42 SAS se r&eacute;serve la possibilit&eacute; de cesser la fourniture du Service. L&rsquo;Utilisateur sera pr&eacute;venu par tout moyen et continuera d&rsquo;avoir acc&egrave;s au service pour la dur&eacute;e minimum d&rsquo;un pr&eacute;avis d&rsquo;un mois avant que l&rsquo;acc&egrave;s au Service ne soit d&eacute;finitivement interrompu. L&rsquo;Utilisateur pourra, s&rsquo;il le souhaite, prendre dans ce d&eacute;lai toutes les dispositions de sauvegarde n&eacute;cessaires.
+
+La cessation de la fourniture du Service par JBL42 SAS ne pourra donner lieu &agrave; aucune indemnisation ni r&eacute;paration quelconque.
+
+## 7. Obligation et responsabilit&eacute; de l&rsquo;Utilisateur
+
+### 7.1. Cr&eacute;ation des Contenus
+
+L'Utilisateur proc&eacute;dera lui-m&ecirc;me &agrave; la cr&eacute;ation de son bookmark, le contenu de celui-ci &eacute;tant t&eacute;l&eacute;charg&eacute; sur les serveurs de JBL42 SAS.
+
+L&rsquo;Utilisateur est seul responsable des Contenus et d&eacute;clare &ecirc;tre l'auteur ou disposer de l'ensemble des droits ou autorisations n&eacute;cessaires sur l'ensemble des Contenus qu'il t&eacute;l&eacute;charge sur les serveurs ou qu'il utilise dans le cadre du Service offert par l&rsquo;Application.
+
+A ce titre, l&rsquo;Utilisateur d&eacute;clare qu&rsquo;il d&eacute;tient les droits de propri&eacute;t&eacute; intellectuelle et/ou autorisations de reproduction et de repr&eacute;sentation des Contenus qu&rsquo;il t&eacute;l&eacute;charge et pour lesquels il fait usage de l&rsquo;Application. JBL42 SAS ne saurait &ecirc;tre tenu responsable du non-respect de cette clause. Si l&rsquo;Utilisateur a un doute quant &agrave; l&rsquo;&eacute;tendue des droits qu&rsquo;il d&eacute;tient, il s&rsquo;engage &agrave; s&rsquo;informer aupr&egrave;s de l&rsquo;&eacute;diteur du site internet pour lequel il souhaite faire usage de l&rsquo;Application et &agrave; acqu&eacute;rir les droits n&eacute;cessaires avant de cr&eacute;er son Contenu.
+
+L'Utilisateur s'engage &agrave; ne pas t&eacute;l&eacute;charger de Contenus contenant ou susceptibles de contenir des virus ou des programmes qui d&eacute;truisent les donn&eacute;es. L'Utilisateur s'engage &eacute;galement &agrave; v&eacute;rifier de mani&egrave;re raisonnable que les Contenus qu'il utilise ne contiennent pas de virus ou de programmes susceptibles notamment de perturber le fonctionnement du Service ou de porter un quelconque pr&eacute;judice aux autres utilisateurs du Service.
+
+L&rsquo;Utilisateur est enti&egrave;rement responsable de toute cr&eacute;ation, transmission ou publication de Contenu au moyen de l&rsquo;Application et des cons&eacute;quences de ses actes.
+
+L'utilisation du Service, et notamment le stockage des Contenus, s'effectue sous la seule responsabilit&eacute; de l'Utilisateur et dans la limite des droits de propri&eacute;t&eacute; intellectuelle d&eacute;tenus et/ou obtenus par l&rsquo;Utilisateur. Il revient &agrave; chaque Utilisateur de respecter les droits des tiers.
+
+L'Utilisateur s'engage &agrave; n&rsquo;utiliser l&rsquo;Application que pour des Contenus strictement conformes &agrave; la loi, &agrave; l'ordre public et aux bonnes m&oelig;urs.
+
+L'Utilisateur s'engage notamment, sans que cette &eacute;num&eacute;ration puisse &ecirc;tre consid&eacute;r&eacute;e comme limitative :
+
+  - &agrave; n'utiliser aucun contenu et &agrave; ne diffuser aucun message ou information &agrave; caract&egrave;re injurieux, diffamatoire, raciste, x&eacute;nophobe, r&eacute;visionniste ou portant atteinte &agrave; l'honneur ou la r&eacute;putation d'autrui, incitant &agrave; la discrimination, &agrave; la haine d'une personne ou d'un groupe de personnes en raison de leur origine ou de leur appartenance ou de leur non-appartenance &agrave; une ethnie, une nation, une race ou une religion d&eacute;termin&eacute;e, mena&ccedil;ant une personne ou un groupe de personnes, &agrave; caract&egrave;re pornographique ou p&eacute;dophile, incitant &agrave; commettre un d&eacute;lit, un crime ou un acte de terrorisme ou autre, portant atteinte aux droits d'autrui et &agrave; la s&eacute;curit&eacute; des personnes et des biens ;
+
+  - &agrave; respecter les droits d'autrui, et notamment : les droits de la personnalit&eacute; (tels que droit &agrave; l'image, droit au respect de la vie priv&eacute;e), les droits des marques, les droits d'auteur et les droits voisins du droit d&rsquo;auteur, et d'une mani&egrave;re g&eacute;n&eacute;rale les droits des personnes et des biens.
+
+
+L'Utilisateur garantit de fa&ccedil;on g&eacute;n&eacute;rale que ses Contenus sont conformes &agrave; la r&eacute;glementation en vigueur et ne portent pas atteinte aux droits d'autrui.
+
+L'Utilisateur reconna&icirc;t que les Contenus consid&eacute;r&eacute;s comme contrevenant aux lois ou r&eacute;glementations en vigueur pourront &ecirc;tre remis par JBL42 SAS aux autorit&eacute;s charg&eacute;es de faire respecter la loi.
+
+### 7.2 Obligations relatives &agrave; l&rsquo;acc&egrave;s et au Partage des Contenus
+
+L&rsquo;Utilisateur ne peut ignorer que l&rsquo;auteur d&rsquo;une &oelig;uvre prot&eacute;g&eacute;e poss&egrave;de les droits d&rsquo;exploitation, patrimoniaux ainsi que le droit moral attach&eacute;s &agrave; celle-ci. Une &oelig;uvre ne peut en effet &ecirc;tre divulgu&eacute;e &agrave; un public sans l&rsquo;accord pr&eacute;alable de l&rsquo;auteur ou du cessionnaire des droits sauf exceptions et en particulier celles d&eacute;finies &agrave; l&rsquo;article L.122-5 du code de la propri&eacute;t&eacute; intellectuelle dont en particulier:
+
+  - l&rsquo;exception pour copie priv&eacute;e (copie ou reproduction strictement r&eacute;serv&eacute;e &agrave; l&rsquo;usage priv&eacute; du copiste et non destin&eacute;e &agrave; une utilisation collective),
+
+  - l&rsquo;exception pour repr&eacute;sentation dans le cercle de famille : les repr&eacute;sentations priv&eacute;es et gratuites effectu&eacute;es exclusivement dans un cercle de famille.
+
+
+L&rsquo;Utilisateur s&rsquo;engage &agrave; respecter les droits d&rsquo;auteur et &agrave; agir dans le cadre strict du code de la propri&eacute;t&eacute; intellectuelle.
+
+L&rsquo;Utilisateur s&rsquo;engage &agrave; faire un usage uniquement priv&eacute; de l&rsquo;Application et en aucun cas un usage commercial de l&rsquo;Application ou des documents sauvegard&eacute;s gr&acirc;ce &agrave; elle.
+
+L'Utilisateur pourra autoriser l'acc&egrave;s &agrave; une s&eacute;lection de Contenus cr&eacute;&eacute;s et t&eacute;l&eacute;charg&eacute;s via l&rsquo;Application aux personnes qu'il aura personnellement s&eacute;lectionn&eacute;es et express&eacute;ment autoris&eacute;es.
+
+L'Utilisateur d&eacute;cide seul des autorisations d&rsquo;acc&egrave;s &agrave; ses Contenus stock&eacute;s et est l&rsquo;unique responsable de la gestion des autorisations d'acc&egrave;s &agrave; ses Contenus t&eacute;l&eacute;charg&eacute;s via l&rsquo;Application.
+
+Il est strictement interdit &agrave; l'Utilisateur de conditionner l'acc&egrave;s &agrave; ses Contenus t&eacute;l&eacute;charg&eacute;s via l&rsquo;application &agrave; une quelconque r&eacute;mun&eacute;ration directe ou indirecte.
+
+L&rsquo;Utilisateur s&rsquo;engage &agrave; respecter les droits des tiers, en particulier les droits relatifs &agrave; la propri&eacute;t&eacute; intellectuelle. L&rsquo;Utilisateur ne doit pas utiliser l&rsquo;Application pour sauvegarder des documents sur lesquels il ne d&eacute;tient pas de droits ou des documents ill&eacute;gaux. L&rsquo;Utilisateur s&rsquo;engage &agrave; ne pas violer les droits des tiers. Il s&rsquo;engage &agrave; ne faire un usage de l&rsquo;Application que dans le respect du Code de la Propri&eacute;t&eacute; Intellectuelle et en particulier de l&rsquo;article L.122-5 du code de la propri&eacute;t&eacute; intellectuelle.
+
+### 7.3. Obligation d&rsquo;information
+
+Il est demand&eacute; &agrave; tout Utilisateur d&eacute;couvrant un Contenu illicite tel que d&eacute;fini &agrave; l&rsquo;article 7.1 ci-dessus d&rsquo;en informer sans d&eacute;lai JBL42 SAS &agrave; l&rsquo;adresse : contact@georges.io.
+
+### 7.4. Sanction
+
+L&rsquo;Utilisateur est inform&eacute; que si JBL42 SAS d&eacute;couvre que l&rsquo;utilisation de l&rsquo;Application est faite &agrave; l&rsquo;encontre des r&egrave;gles l&eacute;gales, des droits des tiers ou des r&egrave;gles des pr&eacute;sentes CGU, son compte peut &ecirc;tre ferm&eacute; sans pr&eacute;avis et sans indemnit&eacute;, JBL42 SAS se gardant la possibilit&eacute; de demander en justice le versement de dommages et int&eacute;r&ecirc;ts.
+
+## 8. Propri&eacute;t&eacute; des contenus
+
+Le Contenu sauvegard&eacute; par l&rsquo;Utilisateur via l&rsquo;Application reste la propri&eacute;t&eacute; de l&rsquo;Utilisateur. Le Contenu ne sera pas transmis &agrave; des tiers sauf sur requ&ecirc;te d&rsquo;autorit&eacute;s administratives ou judiciaires comp&eacute;tentes.
+
+JBL42 SAS s&rsquo;engage &agrave; garder ces Contenus confidentiels, &agrave; n&rsquo;en effectuer, en dehors des n&eacute;cessit&eacute;s techniques requises pour la fourniture des Services, aucune copie et &agrave; n&rsquo;en faire aucune utilisation autre que celles pr&eacute;vues pour l&rsquo;ex&eacute;cution des pr&eacute;sentes CGU.
+
+Afin de pr&eacute;server la performance du Service, la taille et le nombre des fichiers transf&eacute;r&eacute;s pourront &ecirc;tre limit&eacute;s.
+
+JBL42 SAS se r&eacute;serve le droit de refuser la pr&eacute;sence sur ses serveurs, de fichiers import&eacute;s par l&rsquo;Utilisateur qui seraient jug&eacute;s techniquement non conformes aux serveurs ou nuisant &agrave; leurs performances ou au contenu ill&eacute;gal.
+
+## 9. Propri&eacute;t&eacute; de l&rsquo;Application
+
+L&rsquo;Application mise &agrave; la disposition de l&rsquo;Utilisateur est la propri&eacute;t&eacute; pleine, enti&egrave;re et exclusive de JBL42 SAS.
+
+JBL42 SAS, ses fournisseurs, ou leurs ayants droit sont titulaires de tous les droits de propri&eacute;t&eacute; intellectuelle relatifs &agrave; l&rsquo;Application.
+
+Seule l&rsquo;&eacute;quipe de JBL42 SAS est habilit&eacute;e &agrave; travailler sur l&rsquo;Application pour assurer sa maintenance et sa mise &agrave; jour.
+
+L&rsquo;Application est une &oelig;uvre de l&rsquo;esprit que l&rsquo;Utilisateur s&rsquo;interdit notamment :
+
+  - de copier ou de reproduire, de repr&eacute;senter, modifier, transmettre, publier, adapter en tout ou partie par n&rsquo;importe quel moyen et sous n&rsquo;importe quelle forme ;
+
+  - d&rsquo;utiliser autrement que selon les stipulations strictement interpr&eacute;t&eacute;es des pr&eacute;sentes CGU ;
+
+  - de traduire ou de transcrire dans tout autre langage ou langue, ou de l&rsquo;adapter ou de lui adjoindre tout objet non conforme &agrave; sa sp&eacute;cification.
+
+
+L&rsquo;Application et le Site restent la propri&eacute;t&eacute; de JBL42 SAS et sont prot&eacute;g&eacute;s au titre du droit d&rsquo;auteur. Ils ne sont destin&eacute;s qu&rsquo;&agrave; un usage privatif et non commercial.
+
+## 10. Interruption des Services pour maintenance et am&eacute;lioration
+
+L&rsquo;Utilisateur est inform&eacute; que l&rsquo;Application peut &ecirc;tre indisponible pour des raisons de maintenance ou d&rsquo;am&eacute;lioration. La responsabilit&eacute; de JBL42 SAS ne saurait &ecirc;tre engag&eacute;e pour cette indisponibilit&eacute;.
+
+## 11. Sauvegardes
+
+JBL42 SAS s&rsquo;engage &agrave; prendre toute pr&eacute;caution raisonnable pour assurer la protection mat&eacute;rielle des contenus. Des sauvegardes sont effectu&eacute;es r&eacute;guli&egrave;rement.
+
+## 12. Limites de responsabilit&eacute;
+
+Georges est un service gratuit. JBL42 SAS n&rsquo;offre aucune garantie d&rsquo;aucune sorte quant &agrave; son utilisation. JBL42 SAS ne garantit en aucune fa&ccedil;on non plus le fonctionnement et la disponibilit&eacute; de l&rsquo;Application.
+
+### 12.1. Limites de responsabilit&eacute; concernant l&rsquo;utilisation de l&rsquo;Application
+
+JBL42 SAS ne garantit en aucune fa&ccedil;on que l&rsquo;Application soit de nature &agrave; satisfaire les besoins de l'Utilisateur.
+
+JBL42 SAS ne pourra &ecirc;tre tenu pour responsable de tout dommage direct ou indirect (perte et/ou divulgation de documents et/ou de donn&eacute;es, pertes financi&egrave;res et/ou manque &agrave; gagner, interruption d'activit&eacute;s...) d&eacute;coulant de l'utilisation de l&rsquo;Application ou de l'impossibilit&eacute; d'utiliser celle-ci.
+
+JBL42 SAS ne saurait ainsi voir sa responsabilit&eacute; engag&eacute;e notamment pour la bonne ou mauvaise utilisation de l&rsquo;Application par l'Utilisateur, la nature et la qualit&eacute; des Contenus, les difficult&eacute;s d'acc&egrave;s au Service quelles qu&rsquo;en soit la cause, de l'utilisation par l'Utilisateur d'un &eacute;quipement non adapt&eacute; aux caract&eacute;ristiques du Service, d'une d&eacute;faillance et/ou d'une saturation &agrave; certaines p&eacute;riodes du r&eacute;seau Internet sur lequel JBL42 SAS n&rsquo;a pas de ma&icirc;trise, la contamination par virus des donn&eacute;es et/ou logiciels de l'Utilisateur, dont la protection incombe &agrave; ce dernier, les intrusions malveillantes de tiers sur les Contenus de l&rsquo;Utilisateur, malgr&eacute; les mesures de s&eacute;curit&eacute; mises en place par JBL42 SAS, les dommages que pourraient subir les &eacute;quipements de l'Utilisateur, ceux-ci &eacute;tant sous l'enti&egrave;re responsabilit&eacute; de l'Utilisateur, les d&eacute;tournements &eacute;ventuels de mots de passe, codes confidentiels, et plus g&eacute;n&eacute;ralement de toute information &agrave; caract&egrave;re sensible pour l'Utilisateur ceux-ci &eacute;tant sous l'enti&egrave;re responsabilit&eacute; de l'Utilisateur.
+
+L&rsquo;Utilisateur est inform&eacute; des limites inh&eacute;rentes &agrave; Internet et fait une utilisation de l&rsquo;Application &agrave; ses risques et p&eacute;rils.
+
+L&rsquo;Utilisateur reconna&icirc;t en particulier qu'il est parfaitement inform&eacute; des caract&eacute;ristiques et des contraintes d'Internet, notamment que les transmissions de donn&eacute;es et d'informations sur Internet ne b&eacute;n&eacute;ficient que d'une fiabilit&eacute; technique relative. L'Utilisateur reconna&icirc;t que les Contenus t&eacute;l&eacute;charg&eacute;s et d'une mani&egrave;re plus g&eacute;n&eacute;rale tout site peut faire l'objet d'intrusion de tiers non-autoris&eacute;es et &ecirc;tre en cons&eacute;quence corrompus.
+
+JBL42 SAS assure le cryptage des donn&eacute;es lors de leur transport, mais non lors de leur stockage. JBL42 SAS ne peut n&eacute;anmoins garantir la s&eacute;curit&eacute; et l'int&eacute;grit&eacute; des Contenus &agrave; l'occasion des op&eacute;rations de transfert. L&rsquo;Utilisateur accepte en particulier la possibilit&eacute; que tout ou partie des Contenus lui appartenant soit divulgu&eacute; &agrave; un tiers ou d&eacute;truit et s&rsquo;interdit de poursuivre JBL42 SAS pour ce motif.
+
+L'Utilisateur reconna&icirc;t &ecirc;tre parfaitement inform&eacute; des risques et accepte d&rsquo;utiliser l&rsquo;Application et les Contenus sous son enti&egrave;re et unique responsabilit&eacute; et en toute connaissance de cause.
+
+### 12.2. Limites de responsabilit&eacute;s concernant les Contenus
+
+L'Utilisateur reconna&icirc;t &ecirc;tre le seul responsable des Contenus et plus g&eacute;n&eacute;ralement de toute information figurant dans ses Contenus ainsi que de l'utilisation qu'il en fait. Il assume en cons&eacute;quence l'enti&egrave;re responsabilit&eacute; civile et p&eacute;nale des Contenus, commentaires et autres informations figurant sur ses Contenus, les revendications de tiers et les actions qu'ils suscitent notamment, mais non exclusivement, en mati&egrave;re de propri&eacute;t&eacute; intellectuelle, de droits de la personnalit&eacute; et de protection des mineurs.
+
+## 13. Propri&eacute;t&eacute; intellectuelle
+
+George d&eacute;cline toute responsabilit&eacute; sur l'utilisation frauduleuse ou la cr&eacute;ation ill&eacute;gale de Contenus, de m&ecirc;me qu'il ne garantit aucun contenu cr&eacute;&eacute; et partag&eacute; par tout Utilisateur. Les Contenus rel&egrave;vent de la responsabilit&eacute; exclusive de l'Utilisateur titulaire de ces Contenus. L'Utilisateur d&eacute;charge JBL42 SAS de toute responsabilit&eacute; en ce qui concerne les Contenus cr&eacute;&eacute;s ou utilis&eacute;s de quelque mani&egrave;re que ce soit par lui via l&rsquo;Application.
+
+Tout tiers estimant ses droits viol&eacute;s par un Utilisateur de la Plateforme doit contacter JBL42 SAS &agrave; contact@georges.io. Toute plainte d'un tiers relative au contenu d&rsquo;un Utilisateur sera redirig&eacute;e vers celui-ci qui en assumera l'enti&egrave;re responsabilit&eacute;. JBL42 SAS se r&eacute;serve le droit de fermer le compte objet de la plainte.
+
+L'Utilisateur s'engage &agrave; garantir, &agrave; la premi&egrave;re demande, y compris en cas de d&eacute;cision de justice non d&eacute;finitive, &agrave; indemniser et d&eacute;dommager JBL42 SAS de tous dommages qu&rsquo;il pourrait subir si sa responsabilit&eacute; se trouvait engag&eacute;e par un tiers, du fait d'une revendication, d'une action ou d'une plainte li&eacute;e &agrave; ses Contenus ou cons&eacute;cutive &agrave; une utilisation de l&rsquo;Application en violation des r&egrave;gles l&eacute;gales ou des r&egrave;gles contenues dans les pr&eacute;sentes CGU.
+
+## 14. Divers
+
+La nullit&eacute; d&rsquo;une des clauses des pr&eacute;sentes CGU en application notamment d&rsquo;une loi, d&rsquo;un r&egrave;glement ou &agrave; la suite d&rsquo;une d&eacute;cision d&rsquo;une juridiction comp&eacute;tente pass&eacute;e en force de chose jug&eacute;e n&rsquo;entra&icirc;nera pas la nullit&eacute; des autres clauses qui garderont leur plein effet et port&eacute;e.
+
+Le fait que JBL42 SAS ne se pr&eacute;vale pas &agrave; un moment donn&eacute; de l&rsquo;une quelconque des clauses des pr&eacute;sentes et/ou d&rsquo;un manquement par le Client &agrave; l&rsquo;une quelconque de ses obligations ne peut &ecirc;tre interpr&eacute;t&eacute; comme valant renonciation par JBL42 SAS &agrave; se pr&eacute;valoir ult&eacute;rieurement de l&rsquo;une quelconque desdites clauses.
+
+## 15. Droit applicable
+
+Les pr&eacute;sentes CGU sont soumises au droit fran&ccedil;ais.
+
+## 16. Litiges
+
+L&rsquo;Utilisateur s&rsquo;engage &agrave; entrer en contact avec JBL42 SAS et &agrave; rechercher un compromis avant toute action judiciaire.
