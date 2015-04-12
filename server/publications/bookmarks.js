@@ -29,7 +29,7 @@ Meteor.publish('bookmarks', function(option, filter) {
   }).fetch();
   for (var i = 0; i < groups.length; i++) {
     tab.push(groups[i]._id);
-  };
+  }
 
   if (!filter || filter === '') {
     return (Bookmarks.find({
