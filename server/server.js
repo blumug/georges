@@ -31,7 +31,6 @@ Meteor.startup(function () {
     getCGU: function() {
 
       var txt = Assets.getText('terms_and_conditions.txt');
-      console.log("server : getCgu");
       return txt;
     }
 

@@ -39,7 +39,7 @@ Template.bookmarkItem.events({
   'click .btnPreviewDelete': function(event) {
     var idDelete = this._id;
     bootbox.dialog({
-      message: "Do you want delete this bookmark",
+      message: "Do you want to delete this bookmark?",
       title: "Warning",
       buttons: {
         main: {
