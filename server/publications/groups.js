@@ -1,5 +1,5 @@
 Meteor.publish('groups', function() {
-  var membersId = [];
+  var groupsId = [];
   if (this.userId) {
     var user = Meteor.users.findOne(this.userId);
     var members = Members.find({
@@ -7,15 +7,15 @@ Meteor.publish('groups', function() {
     }).fetch();
 
     _.each(members, function(member) {
-      membersId.push(member._id);
+      groupsId.push(member.groupId);
     });
   }
   return Groups.find({
     $or: [{
       creator: this.userId
     }, {
-      members: {
-        $in: membersId
+      _id: {
+        $in: groupsId
       }
     }]
   });

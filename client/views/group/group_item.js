@@ -116,11 +116,7 @@ Template.groupItem.events({
 
 Template.groupItem.helpers({
   'allMembers': function() {
-    return Members.find({
-      _id: {
-        $in: this.members
-      }
-    });
+    return Members.find({groupId: this._id});
   },
   'isCreator': function() {
     if (Meteor.userId() == this.creator) {

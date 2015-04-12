@@ -26,9 +26,9 @@ reactive-var
 djedi:sanitize-html
 chrismbeckett:toastr
 fongandrew:find-and-modify
-meteorhacks:kadira@2.20.1
 momentjs:moment
 dburles:collection-helpers
 markdown
 velocity:html-reporter
 sanjo:jasmine
+meteorhacks:kadira@2.20.1

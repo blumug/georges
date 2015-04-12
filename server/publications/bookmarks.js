@@ -9,21 +9,21 @@ Meteor.publish('bookmarks', function(option, filter) {
 
   var tab = [];
   var user = Meteor.users.findOne(this.userId);
-  var membersId = [];
+  var groupsId = [];
   var members = Members.find({
     email: user.emails[0].address,
     accepted: true
   }).fetch();
 
   _.each(members, function(member) {
-    membersId.push(member._id);
+    groupsId.push(member.groupId);
   });
   var groups = Groups.find({
     $or: [{
       creator: this.userId
     }, {
-      members: {
-        $in: membersId
+      _id: {
+        $in: groupsId
       }
     }]
   }).fetch();
