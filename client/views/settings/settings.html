@@ -2,50 +2,78 @@
   <div role="tabpanel">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#groups" aria-controls="groups" role="tab" data-toggle="tab">Groups</a>
+      <li role="presentation" class="active"><a href="#groups" aria-controls="groups" role="tab"
+                                                data-toggle="tab">Groups</a>
       </li>
-      <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Import / Export</a>
+      <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Import /
+        Export</a>
       </li>
-      <li role="presentation"><a href="#historical" aria-controls="historical" role="tab" data-toggle="tab">Notification History</a>
+      <li role="presentation"><a href="#historical" aria-controls="historical" role="tab" data-toggle="tab">Notification
+        History</a>
       </li>
     </ul>
+
+
     <!-- Tab panes -->
     <div class="tab-content">
+
       <div role="tabpanel" class="tab-pane active" id="groups">
         <div class="groups">
           {{> groupList}}
         </div>
       </div>
+
+
       <div role="tabpanel" class="tab-pane" id="data">
-        <div class="form-group">
-          <label class="control-label" for="url">Import</label>
-          <div class="controls">
-            <input type="file" id="import" class="import" name="import" value="Import Favorites" multiple/>
-            <progress name="progressBar" class="progressBar" id="progressBar"></progress>
+        <div class=" import-export">
+
+          <div class="form-group">
+            <label class="control-label" for="url">Import your bookmarks</label>
+
+            <div class="controls">
+
+              <div>
+              <div class="btn-import btn btn-plus">
+                <span>Browse</span>
+                <input type="file" id="import" class="import" name="import" value="" multiple/>
+              </div>
+                <small>select an exported json file</small>
+              </div>
+
+              <progress name="progressBar" class="progressBar" id="progressBar"></progress>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label" for="tags">Export</label>
-          <div class="controls">
-            <a href="{{pathFor 'export'}}" target="_blank">Export</a>
+
+          <div class="form-group">
+            <label class="control-label" for="tags">Export your bookmarks</label>
+
+            <div class="controls">
+              <a class="btn btn-plus export" href="{{pathFor 'export'}}" target="_blank">Export</a>
+            </div>
           </div>
+
         </div>
       </div>
+
+
       <div role="tabpanel" class="tab-pane" id="historical">
-        <div class="notifications">
-          {{# if notificationCount}}
-          <input type="button" class="btn-clean" value="Clean">
-          <ul>
-            {{#each listNotifications}}
-            <li class="notification">
-              {{> notificationItem}}
-            </li>
-            {{/each}}
-          </ul>
-          {{else}}
+        {{# if notificationCount}}
+          <input type="button" class="btn btn-warning" value="Clean">
+
+          <div class="notifications">
+            <ul>
+              {{#each listNotifications}}
+                <li class="notification">
+                  {{> notificationItem}}
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        {{else}}
           <span>No notification</span> {{/if}}
-        </div>
       </div>
+
     </div>
+
   </div>
 </template>
