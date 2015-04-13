@@ -30,13 +30,13 @@ N<span>otifications</span>
   <input type="button" class="btn btn-default btn-danger refuse" value="Decline">
   <small> {{ this.dateFromNow }}</small>
   {{else}}
-  <p>You have been inviting by {{ name }} of the group {{ this.group.name }}</p>
+  <p>You have been invited by {{ name }} of the group {{ this.group.name }}</p>
   {{/if}}
 </template>
 
 <template name="unsubscribingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>You have been kick by the creator:<br/>of group <a href="">{{ this.group.name }}</a></p>
+  <p>You have been kicked by the creator:<br/>of group <a href="">{{ this.group.name }}</a></p>
   <small>{{ this.dateFromNow }}</small>
 </template>
 
@@ -48,13 +48,13 @@ N<span>otifications</span>
 
 <template name="kickingNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>The group have been delete:<br/><a href="">{{ this.group.name }}</a></p>
+  <p>The group have been deleted:<br/><a href="">{{ this.group.name }}</a></p>
   <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="addBookmarkNotification">
   <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A new bookmark have been add in {{ this.group.name }}:
+  <p>A new bookmark have been added in {{ this.group.name }}:
     <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
   </p>
   <small>{{ this.dateFromNow }}</small>
