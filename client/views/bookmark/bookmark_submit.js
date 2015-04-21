@@ -36,10 +36,10 @@ Template.bookmarkSubmit.events({
 
       Meteor.call('bookmarkInsert', bookmark, function(error, res) {
         if (res) {
-          DisplayErrorSubmit("Bookmark already exist.");
+          DisplayErrorSubmit("Bookmark exists already.");
           return ;
         } else {
-          DisplayErrorSubmit("Bookmark is create.");          
+          DisplayErrorSubmit("Bookmark added.");
         }
         Router.go('/home');
       });
