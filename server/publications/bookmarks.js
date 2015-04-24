@@ -87,49 +87,51 @@ Meteor.publish('bookmarks', function(option, filter) {
         }
       }, option)
     } else {
-      return Bookmarks.find({
-        $or: [{
-          userId: this.userId
-        }, {
-          groups: {
-            $elemMatch: {
-              _id: {
-                $in: tab
+      var query = {
+        $and: [{
+          $or: [{
+            userId: this.userId
+          }, {
+            groups: {
+              $elemMatch: {
+                _id: {
+                  $in: tab
+                }
               }
             }
-          }
-        }],
-        $or: [{
-          url: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          title: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          description: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          tags: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          groups: {
-            $elemMatch: {
-              name: {
-                $regex: filter,
-                $options: "si"
+          }]}, {
+          $or: [{
+            url: {
+              $regex: filter,
+              $options: "si"
+            }
+          }, {
+            title: {
+              $regex: filter,
+              $options: "si"
+            }
+          }, {
+            description: {
+              $regex: filter,
+              $options: "si"
+            }
+          }, {
+            tags: {
+              $regex: filter,
+              $options: "si"
+            }
+          }, {
+            groups: {
+              $elemMatch: {
+                name: {
+                  $regex: filter,
+                  $options: "si"
+                }
               }
             }
-          }
-        }]
-      }, option);
+          }]}]
+      };
+      return Bookmarks.find(query, option);
     }
   }
 });
