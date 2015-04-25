@@ -1,7 +1,11 @@
 <template name="layout">
 
     <div class="side-menu">
-        Hello, world
+        <ul>
+            <li><a href=""><i class="fa fa-clock-o"></i> Recent</a></li>
+            <li><a href=""><i class="fa fa-eye"></i> Most viewed</a></li>
+            <li><a href="{{pathFor 'bookmarkSetting'}}"><i class="fa fa-wrench"></i> Settings</a></li>
+        </ul>
     </div>
 
     <div class="container-fluid">
