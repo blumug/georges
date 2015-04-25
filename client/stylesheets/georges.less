@@ -277,6 +277,8 @@ body {
 
   .settings {
     width: 60px;
+    margin-left: 0px !important;
+    padding-left: 0 !important;
     display: block;
     color: black;
     i {
@@ -285,6 +287,18 @@ body {
       position: absolute;
       top: calc(50% - 17px);
     }
+    .transition(0.3s);
+    &:hover {
+      text-decoration: none;
+      border-top: 6px solid white !important;
+      color: #888888;
+    }
+
+    &:focus {
+      text-decoration: none;
+      border-top: 6px solid white !important;
+    }
+
   }
 
   @media (max-width: 599px) {
