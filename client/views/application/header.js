@@ -35,6 +35,10 @@ Template.header.events({
         filter: filter
       }
     });
+  },
+
+  'click .toggle-menu': function (e) {
+    $('.side-menu').toggleClass('show');
   }
 
 });
