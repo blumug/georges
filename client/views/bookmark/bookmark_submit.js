@@ -35,8 +35,8 @@ Template.bookmarkSubmit.events({
       if (bookmark.url.indexOf("://") == -1) bookmark.url = "http://" + bookmark.url;
 
       Meteor.call('bookmarkInsert', bookmark, function(error, res) {
-        if (res) {
-          DisplayErrorSubmit("Bookmark exists already.");
+        if (res && res.error) {
+          DisplayErrorSubmit("Bookmark already exists.");
           return ;
         } else {
           DisplayErrorSubmit("Bookmark added.");
