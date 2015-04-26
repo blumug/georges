@@ -1648,8 +1648,9 @@ div.view {
   box-shadow: 0 1px 0 #cfcfcf;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
+  background-color: white;
   border: 1px solid #e3e3e3;
+  border-top: none;
   min-height:280px;
 
   label {
@@ -1757,7 +1758,6 @@ div.view {
 
 .groups {
   .filter-groups {
-    margin-top: 18px;
     .font-futura-light(15px, normal);
     height: 40px;
     border-radius: 4px;
@@ -1842,5 +1842,12 @@ div.view {
   }
   &.show {
     left:0;
+  }
+}
+
+.nav-tabs {
+  .active {
+    border-bottom: none;
+    font-weight: bold;
   }
 }

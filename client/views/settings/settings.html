@@ -5,8 +5,7 @@
       <li role="presentation" class="active"><a href="#groups" aria-controls="groups" role="tab"
                                                 data-toggle="tab">Groups</a>
       </li>
-      <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Import /
-        Export</a>
+      <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Backup / Restore</a>
       </li>
       <li role="presentation"><a href="#historical" aria-controls="historical" role="tab" data-toggle="tab">Notification
         History</a>
@@ -28,7 +27,7 @@
         <div class=" import-export">
 
           <div class="form-group">
-            <label class="control-label" for="url">Import your bookmarks</label>
+            <label class="control-label" for="url">Restore your bookmarks</label>
 
             <div class="controls">
 
@@ -37,7 +36,7 @@
                 <span>Browse</span>
                 <input type="file" id="import" class="import" name="import" value="" multiple/>
               </div>
-                <small>select an exported json file</small>
+                <small>select a backup json file</small>
               </div>
 
               <progress name="progressBar" class="progressBar" id="progressBar"></progress>
@@ -45,10 +44,10 @@
           </div>
 
           <div class="form-group">
-            <label class="control-label" for="tags">Export your bookmarks</label>
+            <label class="control-label" for="tags">Backup your bookmarks</label>
 
             <div class="controls">
-              <a class="btn btn-plus export" href="{{pathFor 'export'}}" target="_blank">Export</a>
+              <a class="btn btn-plus export" href="{{pathFor 'export'}}" target="_blank">Backup</a>
             </div>
           </div>
 
