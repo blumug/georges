@@ -1,7 +1,36 @@
+var parseFilterString = function (filter) {
+
+  var tags = [];
+  var groups = [];
+  var terms = [];
+  if (filter) {
+    var tokens = filter.split(' ');
+    _.each(tokens, function (token) {
+      if (token.length == 0) {
+        return;
+      }
+      if (token[0] == '#') {
+        tags.push(token.substr(1));
+      } else if (token[0] == '@') {
+        groups.push(token.substr(1));
+      } else {
+        terms.push(token);
+      }
+    });
+  }
+  return {
+    terms: terms.join(" "),
+    tags: tags,
+    groups: groups
+  }
+};
+
 Meteor.publish('bookmarks', function(option, filter) {
   if (!this.userId) {
     return;
   }
+
+  var parsedFilter = parseFilterString(filter);
 
   if (_.isEmpty(option.sort)) {
     option.sort = {dateCreated: -1};
@@ -30,8 +59,80 @@ Meteor.publish('bookmarks', function(option, filter) {
   for (var i = 0; i < groups.length; i++) {
     tab.push(groups[i]._id);
   }
+  console.log(parsedFilter);
 
-  if (!filter || filter === '') {
+  var queryTerms;
+  var queryTags;
+  var queryGroups;
+
+  if (parsedFilter.terms) {
+    queryTerms = [{
+      url: {
+        $regex: parsedFilter.terms,
+        $options: "si"
+      }
+    }, {
+      title: {
+        $regex: parsedFilter.terms,
+        $options: "si"
+      }
+    }, {
+      description: {
+        $regex: parsedFilter.terms,
+        $options: "si"
+      }
+    }];
+  }
+  if (parsedFilter.tags.length > 0) {
+    queryTags = [{
+      tags: {
+        $in: parsedFilter.tags
+      }
+    }];
+  }
+  if (parsedFilter.groups.length > 0) {
+    queryGroups = [
+      {
+        groups: {
+          $elemMatch: {
+            name: {
+              $in: parsedFilter.groups
+            }
+          }
+        }
+      }
+    ];
+  }
+
+  var query = {
+    $and: [{
+      $or: [{
+        userId: this.userId
+      }, {
+        groups: {
+          $elemMatch: {
+            _id: {
+              $in: tab
+            }
+          }
+        }
+      }]}, {
+      $or: []
+    }]
+  };
+
+  if (queryTerms) {
+    query.$and[1].$or = query.$and[1].$or.concat(queryTerms);
+  }
+  if (queryTags) {
+    query.$and[1].$or = query.$and[1].$or.concat(queryTags);
+    console.log('foo')
+  }
+  if (queryGroups) {
+    query.$and[1].$or = query.$and[1].$or.concat(queryGroups);
+  }
+
+  if (query.$and[1].$or.length == 0) {
     return (Bookmarks.find({
       $or: [{
         userId: this.userId
@@ -45,93 +146,8 @@ Meteor.publish('bookmarks', function(option, filter) {
         }
       }]
     }, option));
-  } else {
-    if (filter.indexOf("#") != -1) {
-      var parsedTags = ParsedTags(filter);
-      return Bookmarks.find({
-        $or: [{
-          userId: this.userId
-        }, {
-          groups: {
-            $elemMatch: {
-              _id: {
-                $in: tab
-              }
-            }
-          }
-        }],
-        tags: {
-          $in: parsedTags
-        }
-      }, option)
-    } else if (filter.indexOf("@") != -1) {
-      var parsedGroups = ParsedGroupsToTable(filter);
-      return Bookmarks.find({
-        $or: [{
-          userId: this.userId
-        }, {
-          groups: {
-            $elemMatch: {
-              _id: {
-                $in: tab
-              }
-            }
-          }
-        }],
-        groups: {
-          $elemMatch: {
-            name: {
-              $in: parsedGroups
-            }
-          }
-        }
-      }, option)
-    } else {
-      return Bookmarks.find({
-        $or: [{
-          userId: this.userId
-        }, {
-          groups: {
-            $elemMatch: {
-              _id: {
-                $in: tab
-              }
-            }
-          }
-        }],
-        $or: [{
-          url: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          title: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          description: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          tags: {
-            $regex: filter,
-            $options: "si"
-          }
-        }, {
-          groups: {
-            $elemMatch: {
-              name: {
-                $regex: filter,
-                $options: "si"
-              }
-            }
-          }
-        }]
-      }, option);
-    }
   }
+  return Bookmarks.find(query, option);
 });
 
 

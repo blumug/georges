@@ -119,7 +119,7 @@ body {
   border-bottom: 3px solid #e5e5e5;
   height: 109px;
 
-  .navbar-collapse a.icon {
+  .nav-menu a.icon {
     height: 100px;
     margin-left: 20px;
     .transition(.3s);
@@ -277,15 +277,28 @@ body {
 
   .settings {
     width: 60px;
+    margin-left: 0px !important;
+    padding-left: 0 !important;
     display: block;
+    color: black;
     i {
       display: block;
-      background: url('/images/sprites.png') no-repeat -162px -16px;
-      width: 26px;
-      height: 28px;
+      font-size:32px;
       position: absolute;
-      top: calc(50% - 15px);
+      top: calc(50% - 17px);
     }
+    .transition(0.3s);
+    &:hover {
+      text-decoration: none;
+      border-top: 6px solid white !important;
+      color: #888888;
+    }
+
+    &:focus {
+      text-decoration: none;
+      border-top: 6px solid white !important;
+    }
+
   }
 
   @media (max-width: 599px) {
@@ -309,7 +322,7 @@ body {
 .navbar-jbl42.smaller {
   height: 67px;
 
-  .navbar-collapse a.icon {
+  .nav-menu a.icon {
     height: 32px;
   }
   .navbar-form {
@@ -338,7 +351,7 @@ body {
 }
 
 .navbar_menu() {
-  .navbar-collapse a.icon {
+  .nav-menu a.icon {
     width: 100%;
     margin-left: 0;
     height: 100px;
@@ -352,7 +365,7 @@ body {
 .navbar_collapse() {
   height: 67px;
 
-  .navbar-collapse a.icon {
+  .nav-menu a.icon {
     margin-left: 0;
     height: 100%;
   }
@@ -640,6 +653,14 @@ html {
 
   height: 60px;
   background-color: white;
+  border-top: 1px solid #e5e5e5;
+
+  .container {
+    p {
+      margin-bottom: 0;
+    }
+
+  }
 }
 
 body > .container {
@@ -1639,8 +1660,9 @@ div.view {
   box-shadow: 0 1px 0 #cfcfcf;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
+  background-color: white;
   border: 1px solid #e3e3e3;
+  border-top: none;
   min-height:280px;
 
   label {
@@ -1748,7 +1770,6 @@ div.view {
 
 .groups {
   .filter-groups {
-    margin-top: 18px;
     .font-futura-light(15px, normal);
     height: 40px;
     border-radius: 4px;
@@ -1790,4 +1811,55 @@ div.view {
 
   height: 400px;
   overflow-y: scroll;
+}
+
+
+.side-menu {
+  .transition(0.3s);
+  position: fixed;
+  left: -200px;
+  top: 106px;
+  width:200px;
+  height: 100%;
+  background: white;
+  color: black;
+  padding: 0;
+  z-index: 1000;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+  border:1px solid #d9d9d9;
+  .font-century(14px, bold);
+  &.smaller {
+    top: 67px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 20px;
+      list-style: none;
+      cursor: pointer;
+      &:hover {
+        background: #e5e5e5;
+      }
+      a {
+        color: black;
+        &:hover {
+          text-decoration: none;
+        }
+        i {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+  &.show {
+    left:0;
+  }
+}
+
+.nav-tabs {
+  .active {
+    border-bottom: none;
+    font-weight: bold;
+  }
 }

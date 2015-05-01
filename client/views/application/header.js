@@ -35,6 +35,10 @@ Template.header.events({
         filter: filter
       }
     });
+  },
+
+  'click .toggle-menu': function (e) {
+    $('.side-menu').toggleClass('show');
   }
 
 });
@@ -50,6 +54,7 @@ Template.header.helpers({
 
 Template.header.rendered = function() {
   var header = $('.navbar-jbl42');
+  var sideMenu = $('.side-menu');
 
   window.addEventListener('scroll', function(e) {
     var distanceY = window.pageYOffset || document.documentElement.scrollTop;
@@ -57,9 +62,11 @@ Template.header.rendered = function() {
 
     if (distanceY > shrinkOn) {
       header.addClass('smaller');
+      sideMenu.addClass('smaller');
     } else {
       if (header.hasClass('smaller')) {
         header.removeClass('smaller');
+        sideMenu.removeClass('smaller');
       }
     }
   });

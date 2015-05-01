@@ -2,15 +2,23 @@
 <div class="group-list">
     <div class="row">
         <div class="col-md-8">
-            <a href='' class='btn btn-primary new-group'>New group</a>
+
         </div>
         <div class="col-md-4 text-right">
-            <input type="text" placeholder="Filter group" id="filter-groups" class='filter-groups form-control'>
+
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-          <h2>Groups</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <a href='' class='btn btn-primary new-group'>Create new group...</a>
+                </div>
+                <div class="col-md-4 text-right">
+                    <input type="text" placeholder="Filter group" id="filter-groups" class='filter-groups form-control'>
+                </div>
+            </div>
+
             {{#each groupList}}
             {{> groupItem}}
             {{/each}}
