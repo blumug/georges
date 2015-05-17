@@ -11,8 +11,6 @@ ian:accounts-ui-bootstrap-3
 underscore
 sacha:spin
 mizzao:bootboxjs
-mrt:cookies
-chuangbo:cookie
 http
 texapi
 houston:admin
@@ -33,3 +31,4 @@ velocity:html-reporter
 sanjo:jasmine
 meteorhacks:kadira@2.20.1
 mizzao:jquery-ui
+mrt:cookies
