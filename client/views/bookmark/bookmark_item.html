@@ -1,49 +1,66 @@
 <template name="bookmarkItem">
-  <div class="bookmark">
-    <div class="bookmark-header">
-      <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
-      <a href="{{ url }}" class="target" target="_blank">{{ domain }}</a>
-      <div class="actions">
-          <a href="{{pathFor 'bookmarkView'}}" class="{{ status }}"><i class="icon-view"></i></a>
-          <a href="{{pathFor 'bookmarkPage'}}" class=""><i class="icon-settings"></i></a>
-          <a href="" class="btnPreviewDelete"><i class="icon-delete"></i></a>
-      </div>
+    <div class="bookmark">
+        <div class="bookmark-header">
+            <img src="{{favicon}}" onError="this.src = '/default_icon.png'" class="favicon">
+            <a href="{{ url }}" class="target" target="_blank">{{ domain }}</a>
+            {{> titleItem_displayList}}
 
-    </div>
-    <div class="bookmark-body">
-      {{> titleItem}}
-    </div>
+            <div class="actions">
+                <a href="{{pathFor 'bookmarkView'}}" class="{{ status }}"><i class="icon-view"></i></a>
+                <a href="{{pathFor 'bookmarkPage'}}" class=""><i class="icon-settings"></i></a>
+                <a href="" class="btnPreviewDelete"><i class="icon-delete"></i></a>
+            </div>
 
-    {{#if hasDescription }}
-    <div class="bookmark-description">
-      {{ description }}
-    </div>
-    {{/if}}
+        </div>
 
-    {{#if hasTagsOrGroups }}
-    <div class="bookmark-footer">
-          <div class="tags">
-          {{#each tags}}
-          {{> tag}}
-          {{/each}}
-          {{#each groups}}
-          {{> group}}
-          {{/each}}
-          </div>
+        <div class="bookmark-body">
+            {{> titleItem}}
+        </div>
+
+        {{#if hasDescription }}
+            <div class="bookmark-description">
+                {{ description }}
+            </div>
+        {{/if}}
+
+        {{#if hasTagsOrGroups }}
+            <div class="bookmark-footer">
+                <div class="tags">
+                    {{#each tags}}
+                        {{> tag}}
+                    {{/each}}
+                    {{#each groups}}
+                        {{> group}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
     </div>
-    {{/if}}
-  </div>
 </template>
+
 
 <template name="tag">
-<a href="" class="tag">#{{this}}</a>
+    <a href="" class="tag">#{{this}}</a>
 </template>
+
+
 <template name="group">
-<a href="" class="group">@{{name}}</a>
+    <a href="" class="group">@{{name}}</a>
 </template>
+
+
 <template name="titleItem">
-{{#if title}}
-<h3><a href="{{url}}" class="target" target="_blank">{{title}}</a></h3>
-{{ /if }}
-<h4><a href="{{url}}" class="target" target="_blank">{{url}}</a></h4>
+    {{#if title}}
+        <h3><a href="{{url}}" class="target" target="_blank">{{title}}</a></h3>
+    {{/if}}
+    <h4><a href="{{url}}" class="target" target="_blank">{{url}}</a></h4>
 </template>
+
+
+
+<template name="titleItem_displayList">
+    {{#if title}}
+        <span class="titleInline"><a href="{{url}}" class="target" target="_blank">{{title}}</a></span>
+    {{/if}}
+</template>
+

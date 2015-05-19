@@ -425,6 +425,8 @@ body {
   column-gap: 1em;
 }
 
+
+
 .bookmarks {
   .column-layout(@bookmark-columns);
   @media (max-width: 599px) {
@@ -437,6 +439,8 @@ body {
     .column-layout(@bookmark-columns-tablet);
   }
 }
+
+
 
 .bookmark {
   display: inline-block;
@@ -470,10 +474,15 @@ body {
       margin-right: 10px;
     }
     a {
-      text-color: #4ea5ff;
+      color: #4ea5ff;
     }
 
-    .actions {
+    .titleInline {
+      display: none;
+    }
+
+
+      .actions {
       float: right;
       margin-top: 1px;
       a {

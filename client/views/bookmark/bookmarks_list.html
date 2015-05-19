@@ -1,10 +1,17 @@
 <template name="bookmarksList">
-    <div class="row">
+
+    <div class="row options-bar">
+
+        <button type="button"  class="btn btn-default switch-view-list"><i class="fa fa-bars"></i></button>
+        <button type="button"  class="btn btn-default active switch-view-cards"><i class="fa fa-th"></i></button>
+    </div>
+
+    <div class="row bookmarksList">
         {{> favorite}}
         {{> sort}}
     </div>
 
-    <div class="row">
+    <div class="row  bookmarksList">
         <div class="bookmarks">
             {{#each bookmarks}}
                 {{> bookmarkItem}}
