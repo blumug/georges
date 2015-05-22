@@ -1,12 +1,14 @@
 <template name="header">
 <div class="navbar navbar-jbl42 navbar-fixed-top" role="navigation">
-    <span class="navbar-brand">Georges</span>
+
+    <ul class="nav navbar-nav nav-menu">
+        <li><a href="" class="toggle-menu icon settings"><i class="fa fa-bars"></i></a></li>
+        <li><span class="navbar-brand">Georges</span></li>
+        <li><a href="{{pathFor 'bookmarksList'}}" class='icon list'><i></i></a></li>
+    </ul>
+
+
     <div class="container">
-        <ul class="nav navbar-nav nav-menu">
-            <li>
-                <a href="" class="toggle-menu icon settings"><i class="fa fa-bars"></i></a>
-            </li>
-        </ul>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -17,7 +19,6 @@
         </div>
         <div class="navbar-collapse collapse nav-menu">
             <ul class="nav navbar-nav">
-                <li><a href="{{pathFor 'bookmarksList'}}" class='icon list'><i></i></a></li>
                 <li><a href="{{pathFor 'bookmarkSubmit'}}" class='icon add-bookmark'><i></i></a></li>
             </ul>
             <div class="navbar-form navbar-left">
@@ -42,17 +43,25 @@
                 </div>
 
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    {{> notifications}}
-                </li>
-                {{> loginButtons}}
-            </ul>
         </div>
+
         <div id="alertConnexion" style="position: absolute; right: 27px; top: 20px; width: 227px">
         </div>
     </div>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            {{> notifications}}
+        </li>
+        {{> loginButtons}}
+    </ul>
+
 </div>
+
+
+
+
+
 </template>
 <template name="optionDropdown">
 <li role="presentation"><a role="menuitem" tabindex="-1" href="{{pathFor 'bookmarksList'}}?filter={{ query }}">{{ this.favorite }}</a></li>
