@@ -38,6 +38,7 @@ Template.header.events({
   },
 
   'click .toggle-menu': function (e) {
+    e.preventDefault();
     $('.side-menu').toggleClass('show');
   }
 

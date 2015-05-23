@@ -49,6 +49,12 @@
   }
 }
 
+.navbar {
+  .container-fluid {
+    width: 100%;
+  }
+}
+
 body {
   padding-top: 106px;
   /* Margin bottom by footer height */
@@ -106,6 +112,18 @@ body {
   transition: @duration ease-in-out;
 }
 
+.navbar-form .input-group {
+  display: table;
+}
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn {
+  white-space: nowrap;
+  width: 1%;
+}
+.navbar-form .input-group .form-control {
+  width: 100%;
+}
+
 .navbar-jbl42 {
 
   .transition(.3s);
@@ -121,10 +139,9 @@ body {
   border-bottom: 3px solid #e5e5e5;
   height: 109px;
 
-  .nav-menu a.icon {
+  a.icon {
     height: 100px;
-    margin-left: 20px;
-    .transition(.3s);
+    margin-left: 10px;
   }
   .navbar-form {
     margin-top: 32px;
@@ -132,7 +149,7 @@ body {
   }
 
   #login-dropdown-list a {
-    padding-top: 34px;
+    padding-top: 38px;
     .transition(.3s);
   }
 
@@ -141,7 +158,7 @@ body {
   }
 
   #notifications {
-    padding-top: 34px;
+    padding-top: 38px;
     .transition(.3s);
   }
 
@@ -149,10 +166,6 @@ body {
     margin-right: 20px;
   }
   .navbar-form {
-
-    #tagSearch {
-      width: 240px;
-    }
 
     input {
       font-family: 'futura_ltlight';
@@ -271,33 +284,7 @@ body {
     }
   }
 
-  .settings {
-    width: 60px;
-    margin-left: 10px !important;
-    padding-left: 0 !important;
-    display: block;
-    color: black;
-    i {
-      display: block;
-      font-size:32px;
-      position: absolute;
-      top: calc(50% - 17px);
-    }
-    .transition(0.3s);
-    &:hover {
-      text-decoration: none;
-      border-top: 6px solid white !important;
-      color: #888888;
-    }
-
-    &:focus {
-      text-decoration: none;
-      border-top: 6px solid white !important;
-    }
-
-  }
-
-  .brand {
+  a.navbar-brand {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
     font-size: 28px;
@@ -305,10 +292,21 @@ body {
     color: black;
     margin-left: 0px;
     padding: 0px;
+    padding-left: 20px;
     height: 100%;
-    padding-top:35px;
-
-
+    padding-top:38px;
+    i {
+      display: inline-block;
+      font-size:32px;
+      margin-right:20px;
+      margin-top:-5px;
+    }
+    &:hover {
+      color: black;
+    }
+    &:focus {
+      color: black;
+    }
   }
 
 
@@ -336,10 +334,11 @@ body {
 .navbar-jbl42.smaller {
   height: 67px;
 
-  .brand {
-    padding-top: 15px;
+  a.navbar-brand {
+    padding-top: 18px;
   }
-  .nav-menu a.icon {
+
+  a.icon {
     height: 32px;
   }
   .navbar-form {
@@ -347,7 +346,7 @@ body {
   }
 
   #login-dropdown-list a {
-    padding-top: 12px;
+    padding-top: 18px;
   }
 
   #login-dropdown-list.open a.dropdown-toggle {
@@ -355,12 +354,12 @@ body {
   }
 
   #notifications {
-    padding-top: 12px;
+    padding-top: 18px;
   }
 }
 
 .navbar_menu() {
-  .nav-menu a.icon {
+  a.icon {
     width: 100%;
     margin-left: 0;
     height: 100px;
@@ -374,24 +373,20 @@ body {
 .navbar_collapse() {
   height: 67px;
 
-  .brand {
-    padding-top: 15px;
+  a.navbar-brand {
+    padding-top: 18px;
   }
 
-  .nav-menu a.icon {
+  a.icon {
     margin-left: 0;
     height: 100%;
   }
   .navbar-form {
     margin-top: 10px;
-
-    #tagSearch {
-      width: 120px;
-    }
   }
 
   #login-dropdown-list a {
-    padding-top: 12px;
+    padding-top: 18px;
   }
 
   #login-dropdown-list.open a.dropdown-toggle {
@@ -399,7 +394,7 @@ body {
   }
 
   #notifications {
-    padding-top: 12px;
+    padding-top: 18px;
 
     span {
       display: none;
