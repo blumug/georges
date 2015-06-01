@@ -13,4 +13,4 @@ Don’t bother skim thought an article, Georges does it for you and creates auto
 Georges search tool is great and lets you save your search results to easily access a bucket of links. folders are sooo 1998 (hi yahoo!)
 And guess what, Georges doesn’t give a rat’s ass about your private life. So you’re staying in control with your data with simple export/import function. No MEGA algorithm to suggest you incredible links…
 
-Georges is available here! (and as he is an enlightened gentleman, a community version here)
+Georges is available [here](https://georges.io)! (and as he is an enlightened gentleman, a community version [here](https://github.com/blumug/georges))
