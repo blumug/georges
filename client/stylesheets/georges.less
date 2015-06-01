@@ -1810,8 +1810,30 @@ div.view {
   position: relative;
 }
 
+
 .about {
-  background-color: white;
+  background: url('/images/landing-background-top.png') repeat-x center center;
+  height: 646px;
+  position: relative;
+  top: -8px;
+
+  @media (max-width: 599px) {
+    position: relative;
+    top: -48px;
+  }
+  @media (min-width: 600px) and (max-width: 767px) {
+    position: relative;
+    top: -48px;
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    position: relative;
+    top: -48px;
+  }
+  @media (min-width: 980px) and (max-width: 1199px) {
+    position: relative;
+    top: -48px;
+  }
+
   padding: 68px;
   font-family: 'Bitter', serif;
   font-size: 18px;
