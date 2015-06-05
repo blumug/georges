@@ -1742,11 +1742,14 @@ div.view {
 
 
 
-.notifications:not(.tab-pane .notifications) {
+.dropdown-menu.notifications {
 
   width: 400px;
   padding: 6px;
   font-size: 12px;
+  height: auto;
+  max-height: 400px;
+  overflow-x: hidden;
 
   .notification {
     border-bottom: 1px solid #9e9e9e;
@@ -1754,7 +1757,7 @@ div.view {
     margin-bottom: 4px;
 
     .btn-remove-notification {
-      position: absolute;
+      float:right;
       right: -11px;
       top: 0px;
     }
