@@ -1,14 +1,4 @@
 {
-    "texapi": "267cd991b46e724f69dad4f12359ffdf96732255",
-    "users": [{
-        "name": "flavien",
-        "email": "flavien.pensato@gmail.com",
-        "password": "flavien",
-        "roles": ["admin"]
-    }, {
-        "name": "admin",
-        "email": "admin@jbl42.com",
-        "password": "admin",
-        "roles": ["admin"]
-    }]
+    "texapi": "",
+    "users": []
 }
