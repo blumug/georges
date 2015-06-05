@@ -1,8 +1,13 @@
 var delayed;
 Template.header.events({
 
+  'keypress #tagSearch': function (e) {
+    if (e.keyCode == 10 || e.keyCode == 13) {
+      e.preventDefault();
+    }
+  },
+
   'input #tagSearch': function(e) {
-    console.log('input #tagSearch')
     Session.set("searchBar", $("#tagSearch").val());
     if (delayed) {
       clearTimeout(delayed);
