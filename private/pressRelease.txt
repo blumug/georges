@@ -6,10 +6,14 @@ Hand-crafted by a passionate french team, Georges is a **simple yet powerful boo
 Stop managing your bookmarks like it’s 1999 again. Georges helps go straight into 2015 using tag, advanced search options, saved list of links, TL;DR versions, etc.  
   
 Once you skim through interesting link simply add it. Then you can add tags to retrieve it. Georges takes it from here so you stop losing time finding this article your friend sent you or this video you saw last week… Simply ask Georges.  
-- Georges takes care of your bookmarks in one click thanks to Chrome and Firefox extensions.  
-- Georges sorts out your bookmarks based on their popularity to quickly spot your favorite links.  
-- Don’t bother skim thought an article, Georges does it for you and creates automagic TL;DR versions of your bookmarks.  
-- Georges search tool is great and lets you save your search results to easily access a bucket of links. folders are sooo 1998 (hi yahoo!).  
+
+* Georges takes care of your bookmarks in one click thanks to Chrome and Firefox extensions.  
+
+* Georges sorts out your bookmarks based on their popularity to quickly spot your favorite links.  
+
+* Don’t bother skim thought an article, Georges does it for you and creates automagic TL;DR versions of your bookmarks.  
+
+* Georges search tool is great and lets you save your search results to easily access a bucket of links. folders are sooo 1998 (hi yahoo!).  
   
 And guess what, Georges doesn’t give a rat’s ass about your private life. So you’re staying in control with your data with simple export/import function. No MEGA algorithm to suggest you incredible links…  
   
