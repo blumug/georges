@@ -3,7 +3,9 @@ Template.notifications.helpers({
     return Notifications.find({
       history: false
     }, {
-      limit: 10
+      sort: {
+        date: -1
+      }
     });
   },
   'notificationCount': function() {
