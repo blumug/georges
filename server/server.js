@@ -26,17 +26,15 @@ Meteor.startup(function () {
   }
 
 
-
-
   Meteor.methods({
 
-    getCGU: function() {
+    getCGU: function () {
 
       var txt = Assets.getText('terms_and_conditions.txt');
       return txt;
     },
 
-    pressRelease: function() {
+    pressRelease: function () {
 
       var txt = Assets.getText("pressRelease.txt");
       return txt;

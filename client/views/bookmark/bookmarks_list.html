@@ -11,12 +11,24 @@
         {{> sort}}
     </div>
 
-    <div class="row  bookmarksList">
+    {{#if isEmpty}}
+        <div class="row downloadChromeExtension">
+            <div class="pane">
+                <img src="/images/googleChromeExtension.jpg"/>
+                    <p class="title">Georges for Chrome</p>
+                    <p class="text">Install the Google chrome extension to save your bookmarks in a single click.</p>
+                <button type="button" class="btn btn-danger">Install</button>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    {{/if}}
+
+
+
+        <div class="row  bookmarksList">
         <div class="bookmarks">
             {{#each bookmarks}}
                 {{> bookmarkItem}}
-            {{else}}
-                <p>You have no bookmark yet</p>
             {{/each}}
         </div>
     </div>
