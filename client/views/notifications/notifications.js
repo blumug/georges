@@ -15,6 +15,16 @@ Template.notifications.helpers({
   }
 });
 
+
+Template.notifications.events({
+
+  'click .btn-notifications-clear-all': function(e) {
+
+    Meteor.call("pushToHistory", "all");
+  }
+});
+
+
 Template.subscribingNotification.events({
   'click .accept': function() {
     var email = Meteor.user().emails[0].address;

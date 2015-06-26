@@ -1,77 +1,87 @@
 <template name="notifications">
-  <a id='notifications' href="#" class="dropdown-toggle btn-notifications" data-toggle="dropdown">
-N<span>otifications</span>
-{{#if notificationCount}}
-<span class="badge badge-inverse">{{notificationCount}}</span>
-{{/if}}
-<b class="caret"></b>
-</a>
-  <ul class="notifications dropdown-menu">
-    {{#if notificationCount}} 
-    {{#each notifications}}
-    <li class="notification">
-      {{> notificationItem}}
-    </li>
-    {{/each}} {{else}}
-    <li><span>No notification</span>
-    </li>
-    {{/if}}
-  </ul>
+    <a id='notifications' href="#" class="dropdown-toggle btn-notifications" data-toggle="dropdown">
+        N<span>otifications</span>
+        {{#if notificationCount}}
+            <span class="badge badge-inverse badge-notifications">{{notificationCount}}</span>
+        {{/if}}
+        <b class="caret"></b>
+    </a>
+
+    <ul class="notifications dropdown-menu">
+        {{#if notificationCount}}
+
+            <button type="button" class="btn-link btn-notifications-clear-all">Clear all</button>
+
+            {{#each notifications}}
+                <li class="notification">
+                    {{> notificationItem}}
+                </li>
+            {{/each}} {{else}}
+            <li><span>No notification</span>
+            </li>
+        {{/if}}
+    </ul>
 </template>
 
 <template name="notificationItem">
-  {{> displayNotification }}
+    {{> displayNotification }}
 </template>
 
 <template name="subscribingNotification">
-  {{# if isHistory}}
-  <p>{{ name }} wants you to join the group {{ this.group.name }}</p>
-  <input type="button" class="btn btn-default btn-primary accept" value="Accept">
-  <input type="button" class="btn btn-default btn-danger refuse" value="Decline">
-  <small> {{ this.dateFromNow }}</small>
-  {{else}}
-  <p>You have been invited by {{ name }} of the group {{ this.group.name }}</p>
-  {{/if}}
+    {{# if isHistory}}
+        <p>{{ name }} wants you to join the group {{ this.group.name }}</p>
+        <input type="button" class="btn btn-default btn-primary accept" value="Accept">
+        <input type="button" class="btn btn-default btn-danger refuse" value="Decline">
+        <small> {{ this.dateFromNow }}</small>
+    {{else}}
+        <p>You have been invited by {{ name }} of the group {{ this.group.name }}</p>
+    {{/if}}
 </template>
 
 <template name="unsubscribingNotification">
-  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>You have been kicked by the creator:<br/>of group <a href="">{{ this.group.name }}</a></p>
-  <small>{{ this.dateFromNow }}</small>
+    <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+
+    <p>You have been kicked by the creator:<br/>of group <a href="">{{ this.group.name }}</a></p>
+    <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="leavingNotification">
-  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>{{ name }} left the group:<br/><a href="">{{ this.group.name }}</a></p>
-  <small>{{ prettifyDate }}</small>
+    <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+
+    <p>{{ name }} left the group:<br/><a href="">{{ this.group.name }}</a></p>
+    <small>{{ prettifyDate }}</small>
 </template>
 
 <template name="kickingNotification">
-  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>The group have been deleted:<br/><a href="">{{ this.group.name }}</a></p>
-  <small>{{ this.dateFromNow }}</small>
+    <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+
+    <p>The group have been deleted:<br/><a href="">{{ this.group.name }}</a></p>
+    <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="addBookmarkNotification">
-  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A new bookmark have been added in {{ this.group.name }}:
-    <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
-  </p>
-  <small>{{ this.dateFromNow }}</small>
+    <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+
+    <p>A new bookmark have been added in {{ this.group.name }}:
+        <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
+    </p>
+    <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="deleteBookmarkNotification">
-  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>A Bookmark have been removed from {{ this.group.name }}:
-    <br/><a href="{{ bookmarkUrl }}">{{ bookmarkUrl }}</a>
-  </p>
-  <small>{{ this.dateFromNow }}</small>
+    <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+
+    <p>A Bookmark have been removed from {{ this.group.name }}:
+        <br/><a href="{{ bookmarkUrl }}">{{ bookmarkUrl }}</a>
+    </p>
+    <small>{{ this.dateFromNow }}</small>
 </template>
 
 <template name="editBookmarkNotification">
-  <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
-  <p>Bookmark edited in {{ this.group.name }}:
-    <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
-  </p>
-  <small>{{ this.dateFromNow }}</small>
+    <a href="" class="btn-remove-notification"><i class="fa fa-times"></i></a>
+
+    <p>Bookmark edited in {{ this.group.name }}:
+        <br/><a class="btn-bookmark" href="/bookmark/{{ bookmarkId }}">{{ bookmarkUrl }}</a>
+    </p>
+    <small>{{ this.dateFromNow }}</small>
 </template>
